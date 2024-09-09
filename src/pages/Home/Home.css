@@ -1,0 +1,112 @@
+.Banner-title{
+  color: #02111B;
+font-family: "Fira Sans";
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 125%;
+letter-spacing: -0.96px;
+
+@media screen and (max-width: 1440px) {
+  font-size: 40px;
+}
+@media screen and (max-width: 1280px) {
+  font-size: 32px;
+}
+}
+.Banner-subtitle{
+  color: #51535B;
+font-family: "Fira Sans";
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; 
+letter-spacing: -0.44px;
+
+@media screen and (max-width: 1280px) {
+  font-size: 16px;
+  
+}
+}
+.Banner-subtitle2{
+  color: #54565A;
+  font-family: "Fira Sans Condensed";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 48px */
+  font-variant: all-small-caps;
+  letter-spacing: 9.6px;
+  @media screen and (max-width: 1280px) {
+    font-size: 20px;
+    
+  }
+}
+.Slider-count{
+  color: #1A3F7C;
+font-family: "Fira Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; 
+letter-spacing: 6px;
+}
+.productImage{
+  width: 254px;
+  height: 240px;
+  object-fit: contain;
+}
+.productTitle{
+  color: #02111B;
+  font-family: "Fira Code";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 135%; /* 75.6px */
+  letter-spacing: -4.48px;
+}
+.expertiseSectorTitle{
+  color: #473828;
+font-family: "Fira Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; 
+letter-spacing: -0.28px;
+}
+.WeldingImage{
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  position: absolute;
+  bottom:0
+}
+.contactTitle{
+  color: #000;
+  font-family: "Fira Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 150%; 
+  letter-spacing: -0.8px;
+}
+.contactSubtitle{
+  color: #1D3D7C;
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 1.28px;
+  text-transform: uppercase;
+}
+.contactDescription{
+  color: #51565B;
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+  margin-top: 8px;
+}

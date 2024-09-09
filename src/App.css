@@ -1,0 +1,147 @@
+.Container{
+  display: flex;
+  flex-direction: column;
+  padding: 0 88px;
+  
+}
+
+/* Default styles (for screens larger than 1440px) */
+.main-logo {
+  width: 240px;
+  height: 112.444px;
+  flex-shrink: 0;
+}
+
+.contact-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.hamburger-logo {
+  width: 180px;
+  height: 80.444px;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-style: normal;
+  /* font-family: "Fira Sans"; */
+  font-weight: 500;
+  line-height: 130%; /* 26px */
+  letter-spacing: -0.4px;
+  padding: 8px 12px;
+}
+
+.nav-link.active {
+  color: #FFF;
+  background-color: #F2623B;
+}
+
+/* Forms */
+.form-container{
+  display: inline-flex; 
+  padding: 32px 56px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ECF3FB 0%, #B7D4EF 173.4%);
+  box-shadow: 0px 1.5px 1px 0px #FFF;
+  /* backdrop-filter: blur(1px); */
+  z-index: 30;
+  position: relative;
+}
+
+.form-sub-container{
+  display: flex;
+    flex-direction: column;
+   gap: 16px;
+}
+.form-heading{
+  color: #02111B;
+font-size: 48px;
+font-weight: 400;
+line-height: 110%; /* 52.8px */
+letter-spacing: -1.92px;
+
+}
+.form-input{
+padding: 21px 26px 21px 24px;
+align-items: center;
+flex-shrink: 0;
+width: 100%;
+}
+
+/* Responsive styles */
+
+/* For 1440px screen width and below */
+@media screen and (max-width: 1440px) {
+  .main-logo {
+    width: 187.827px;
+    height: 88px;
+  }
+}
+
+/* For 768px screen width and below */
+@media screen and (max-width: 768px) {
+  .main-logo {
+    width: 94px;
+    height: 88px;
+    flex-shrink: 0;
+  }
+   .form-container{
+   padding: 40px;
+}
+  .contact-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hamburger-logo {
+    width: 80px;
+    height: 60.444px;
+  }
+  .form-input{
+padding: 21px 26px 21px 24px;
+
+}
+}
+
+/* For 375px screen width and below */
+@media screen and (max-width: 375px) {
+  .main-logo {
+    width: 59.818px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+
+  .product-label-text{
+font-size: 16px;
+letter-spacing: -0.32px;
+  }
+  
+  .form-container{
+   padding: 40px 24px;
+}
+
+  .contact-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hamburger-logo {
+    width: 36.75px;
+    height: 24.15px;
+  }
+
+
+
+.form-heading{
+font-size: 32px;
+letter-spacing: -1.28px;
+}
+.form-input{
+padding: 16px 26px 16px 24px;
+
+}
+}

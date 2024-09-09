@@ -1,0 +1,230 @@
+.product-label-text{
+font-size: 18px;
+font-style: normal;
+font-weight: 350;
+line-height: 130%; /* 23.4px */
+letter-spacing: -0.36px; 
+}
+
+.product-label-text-black{
+   color: #02111B;
+}
+
+.product-label-text-blue{
+  color: #3B78BD;
+}
+.product-label-text-orange{
+  color:#F2623B;
+}
+.product-label-text-green{
+  color:#07B9AE;
+}
+
+.product-label-text-2{
+  color: #51565B;
+font-size: 16px;
+font-style: normal;
+font-weight: 350;
+line-height: 130%; 
+letter-spacing: -0.32px;
+}
+.border-end{
+  border-right:1px solid
+#50555B;
+}
+
+.product-navigator-container{
+  display: flex;
+  justify-content: center;
+  /* flex-direction:justify-center; */
+  align-items: start;
+  gap: 16px;
+  display: flex;
+padding: 0px 750px 0px 160px;
+justify-content: center;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
+
+.product-container-2{
+ padding: 4rem 1.2rem 2rem 8rem;
+ position: relative;
+}
+
+.product-banner-1{
+ width: 172px;
+height: 737px;
+}
+
+.product-primary-title{
+  color: #483729;
+font-family: "Fira Sans";
+font-size: 48px;
+font-style: normal;
+font-weight: 350;
+line-height: 105%; /* 50.4px */
+letter-spacing: -0.96px;
+text-transform: capitalize;
+}
+.product-spool-number{
+  color: #02111B;
+font-family: "Fira Code";
+font-size: 56px;
+font-style: normal;
+font-weight: 300;
+line-height: 135%; /* 75.6px */
+letter-spacing: -4.48px;
+}
+.product-spool-title{
+  color: #003088;
+
+/* Headline3 */
+font-family: "Fira Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 350;
+line-height: 105%; /* 25.2px */
+letter-spacing: -0.48px;
+text-transform: capitalize;
+}
+
+.product-1-title{
+           color: #50555B;
+            /* Subtitle */
+            font-family: "Fira Sans Condensed";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 48px */
+            font-variant: all-small-caps;
+            letter-spacing: 9.6px;
+}
+
+.product-description{
+  color: #000;
+/* T1 */
+font-family: "Fira Sans";
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 33px */
+letter-spacing: -0.44px;
+}
+.product-image{
+      width: 539px;
+      position: relative;
+    height: 511px;
+    z-index: 30;
+}
+
+.product-des-container{
+  width:90%;
+  padding-left: 1.5rem;
+}
+.product-spool-image{
+  width: 142.685px;
+height: 99.138px;
+flex-shrink: 0;
+}
+.product-des-sub-container{
+    width:60%;
+}
+/* @media screen and (max-width:1728px) {
+  .product-banner-1{
+ width: 172px;
+height: 737px;
+}
+} */
+
+/* For 1440px screen width and below */
+@media screen and (max-width: 1440px) {
+.product-navigator-container{
+ display: flex;
+padding:0px 0px 0px  80px;
+align-items: center;
+}
+
+.product-1-title{
+            font-size: 24px;
+            line-height: 125%; /* 48px */
+            font-variant: all-small-caps;
+            letter-spacing: 7.2px;
+}
+
+
+.product-image{
+    width: 427px;
+height: 405px;
+}
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .product-navigator-container{
+  display: flex;
+padding: 0px 40px 0px 40px;
+align-items: center;
+align-content: center;
+gap: 16px;
+align-self: stretch;
+flex-wrap: wrap;
+  }
+  .product-banner-1{
+width: 120px;
+height: 510px;
+flex-shrink: 0;
+}
+.product-1-title{
+font-size: 20px;
+letter-spacing: 6px;
+}
+
+
+.product-description{
+  font-size: 16px;
+font-weight: 350;
+line-height: 150%; /* 24px */
+letter-spacing: -0.32px;
+}
+
+.product-container-2{
+ padding: 2rem 1rem 1rem 2rem;
+ position: relative;
+}
+.product-image{
+    width: 306px;
+    height: 291px;
+   }
+}
+
+@media screen and (max-width: 375px) {
+  .product-navigator-container{
+ display: flex;
+width: 375px;
+padding: 0px 8px;
+align-items: center;
+align-content: center;
+flex-wrap: wrap;
+  }
+  
+  .product-container-2{
+ padding: 6rem .5rem .5rem 1rem;
+ position: relative;
+}
+
+.product-des-sub-container{
+    width:80%;
+}
+
+.product-des-container {
+    width: 90%;
+    padding-left: 0;
+}
+ 
+  .product-1-title{
+font-size: 20px;
+letter-spacing: 6px;
+}
+}
