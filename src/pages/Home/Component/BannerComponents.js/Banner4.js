@@ -18,11 +18,6 @@ const Banner4 = ({ index = 4, total = 5 }) => {
   const subtitle = `Wide range of powders with varying chemical and physical properties, all with low levels of impurities and narrow specifications, helps enhancing the characteristics and performance of covered electrodes as well
   as flux-cored and metal-cored wires.`
   const subtitle2 = `Experts in the Industries`
-  const contents = [
-    "21 states - Supply within India & worldwide.",
-    "Average 6000 MT material handled annually.",
-    "Delivered in 3-5 business days",
-  ]
   const expertise = [
     { title: "Jeep", image: Jeep },
     { title: "Construction", image: Crane },

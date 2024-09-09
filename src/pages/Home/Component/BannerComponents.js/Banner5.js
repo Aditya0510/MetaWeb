@@ -9,7 +9,6 @@ import BannerContainer from "./BannerContainer"
 import Jeep from "./../../../../assets/images/expertise/Jeep.svg"
 import Crane from "./../../../../assets/images/expertise/Crane.svg"
 import Rocket from "./../../../../assets/images/expertise/Rocket.svg"
-import Sail from "./../../../../assets/images/expertise/Sailboat.svg"
 import Fan from "./../../../../assets/images/expertise/Fan.svg"
 import Cube from "./../../../../assets/images/expertise/Cube.svg"
 import Medical from "./../../../../assets/images/expertise/Medical.svg"
@@ -18,11 +17,6 @@ const Banner5 = ({ index = 5, total = 5 }) => {
   const title = `Additive Metal Powder`
   const subtitle = `A production-scale microwave plasma process`
   const subtitle2 = `Experts in the Industries`
-  const contents = [
-    "21 states - Supply within India & worldwide.",
-    "Average 6000 MT material handled annually.",
-    "Delivered in 3-5 business days",
-  ]
   const expertise = [
     { title: "Aerospace", image: Rocket },
     { title: "Automotive", image: Jeep },

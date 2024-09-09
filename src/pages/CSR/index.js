@@ -14,7 +14,7 @@ const CSRScreen = () => {
       <CSRIntro />
       <OurActivities />
       <div>
-        <img src={Banner} className="w-[100vw]"/>
+        <img src={Banner} alt="banner" className="w-[100vw]"/>
       </div>
       <OurApproach />
       <CSRFunds />

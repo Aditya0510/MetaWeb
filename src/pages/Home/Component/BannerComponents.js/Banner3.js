@@ -7,14 +7,12 @@ import brand3 from "./../../../../assets/images/Banner/BRands-03.png"
 import advanceCraft from "../../../../assets/images/productImages/advanceCraft.png"
 import advancePro from "../../../../assets/images/productImages/advancePro.png"
 import advanceForge from "../../../../assets/images/productImages/advanceForge.png"
-import BannerImage from "./../../../../assets/images/Banner/BannerImg1.svg"
 import Button from "../../../../components/Button"
 import BannerContainer from "./BannerContainer"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner3.png"
 const Banner3 = ({ index = 3, total = 5 }) => {
   const title = `The Ultimate Welding Allies`
   const subtitle = `The ability to supply large quantities of wires and powders in various grades, chemistries, and forms, with customization options for specific supplier needs.`
-  const brands = [brand1, brand2, brand3]
 
   const weldingProducts = [
     {

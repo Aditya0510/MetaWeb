@@ -2,9 +2,7 @@ import React from "react"
 import "./../../../App.css"
 import "../../Home/Home.css"
 import "./../CSR.css"
-import BannerImage from "./../../../assets/images/CSR/CSR.png"
 import BannerContainer from "../../Home/Component/BannerComponents.js/BannerContainer"
-import WeldingImage from "./../../../assets/images/Banner/WeldingBanner1.png"
 
 const OurActivities = () => {
   const title = `Our Activities`

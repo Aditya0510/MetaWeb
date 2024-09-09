@@ -3,7 +3,6 @@ import CSRFundsTankIcon from "../../../assets/images/CSR/CSRFundsTank.svg"
 const CSRFunds = () => {
   const title = `CSR Funds`
   const description = `The corpus for the purpose of carrying on the aforesaid activities would include the followings-`
-  const description2 = "This would include"
 
   const list = [
     " 2% of the average Net Profit made by the Company during immediately preceding three Financial Years.",

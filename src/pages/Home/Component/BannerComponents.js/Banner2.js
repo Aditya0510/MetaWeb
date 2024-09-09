@@ -4,15 +4,10 @@ import "./../../Home.css"
 import brand1 from "./../../../../assets/images/Banner/Hoganas-logo.png"
 import brand2 from "./../../../../assets/images/Banner/6k-logo.png"
 import BannerImage from "./../../../../assets/images/Banner/BannerImg2.svg"
-import Button from "../../../../components/Button"
 import BannerContainer from "./BannerContainer"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner2.png"
 const Banner1 = ({ index = 2, total = 5 }) => {
   const title = `High Quality Welding Consumables, Hoganas Iron Powder and 6K Additive Metal Powder`
-  const subtitle = `Advance Metal Powder is India’s leading manufacturer and supplier
-  of wide variety stainless steel wires, high performance nickel
-  alloy wires, other alloy wires in popular forms of for welding
-  applications`
   const contents = [
     "21 states - Supply within India & worldwide.",
     "Average 6000 MT material handled annually.",
