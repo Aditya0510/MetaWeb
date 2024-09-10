@@ -7,12 +7,14 @@ import Banner3 from "./Component/BannerComponents.js/Banner3"
 import Banner4 from "./Component/BannerComponents.js/Banner4"
 import Banner5 from "./Component/BannerComponents.js/Banner5"
 import ContactSection from "./Component/ContactSection"
+import Navbar from "./Navbar"
 
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 1280 })
   return (
-    <div>
-       {/* <Navbar /> */}
+    <div >
+      <Navbar showMenu={false}/>
+      <div className="pt-[100px]">
       {isMobile ? (
         <>
           <Banner1 />
@@ -24,7 +26,7 @@ const Home = () => {
         </>
       ) : (
         <FullPage>
-          <Slide>
+          <Slide >
             <Banner1 />
           </Slide>
           <Slide>
@@ -44,6 +46,7 @@ const Home = () => {
           </Slide>
         </FullPage>
       )}
+      </div>
     </div>
   )
 }
