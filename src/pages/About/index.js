@@ -27,6 +27,7 @@ import order from "../../assets/images/Banner/booking (1).png";
 import report from "../../assets/images/Banner/report.png";
 import coins from "../../assets/images/Banner/coins.png";
 import shipment from "../../assets/images/Banner/shipment (1).png";
+import stepAsset from "../../assets/images/Banner/deliveryStepBanner.png";
 export default function About() {
   const AboutText = {
     title: "About",
@@ -140,9 +141,9 @@ export default function About() {
     <div class="pt-[150px] relative">
       <HorizontalLine />
 
-      <div className="pt-[100px] pb-[80px] ps-48 relative">
-        <div className="flex flex-col gap-[72px] max-w-[800px]">
-          <div className="flex flex-col gap-4">
+      <div className="pt-[100px] pb-[80px] ps-48 max-sm:px-[100px] relative">
+        <div className="flex flex-col gap-[72px] max-w-[800px] relative z-10">
+          <div className="flex flex-col gap-4 max-lg:w-[80%]">
             <PageHeading title={AboutText?.title} />
             <div className="flex flex-col gap-8">
               <ProductDesText text={AboutText?.aboutDesc?.desc1} />
@@ -151,9 +152,9 @@ export default function About() {
             </div>
             {/* <p className="product-description">{AboutText?.aboutDesc?.desc}</p> */}
           </div>
-          <div className="flex gap-[40px]">
+          <div className="flex gap-[40px] max-sm:flex-wrap">
             {AboutText?.features?.map((feature, index) => (
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 relative z-10 w-1/3">
                 <NumberHeading number={index + 1} />
                 <BlueText title={feature?.title} />
                 <AboutDesText title={feature?.text} />
@@ -167,8 +168,9 @@ export default function About() {
             className="-z-1"
           />
         </div>
-        <div className="absolute right-64 top-8">
+        <div className="absolute right-64 top-8 max-xl:right-[50px] max-md:right-[35px] max-sm:right-[-40px]">
           <img
+            className="max-xl:w-[404.8px] max-xl:h-[563px]"
             src={drillMachine}
           />
         </div>
@@ -177,26 +179,28 @@ export default function About() {
         src={ShutterStock}
         className="w-full h-[550px]"
       />
-      <div className="pt-[100px] pb-[80px] ps-48 relative">
+      <div className="pt-[100px] pb-[80px] ps-48 max-sm:px-[100px]  relative  max-md:ps-[88px]">
         <div
-          className="flex justify-between p-[80]"
+          className="flex justify-between p-[80] "
         >
           <MainTitleHeading title="The Company is led by forward thinking partners Mr. Mukesh Purohit and Mr. Siddhant Purohit." />
         </div>
-        <div className="flex gap-[120px] pt-[200px] pe-[120px] ">
+        <div className="flex gap-[120px] max-xl:gap-[56px]  pt-[200px] pe-[120px] max-lg:gap-[22px] 
+       
+        ">
           <div
-            class="flex flex-wrap  w-1/2  items-start content-start gap-[48px]"
+            class="flex flex-wrap  w-[50%]  items-start content-start gap-[48px] max-lg:gap-[48px]"
           // className="flex"
           >
             {AboutText?.people?.map((item) =>
               <div className="flex flex-col gap-[14px] ">
                 <BlueText title={item?.name} />
                 <BlueText title={item.post} />
-                <p className="max-w-[280px]">{item?.des}</p>
+                <p className="max-w-[240px]">{item?.des}</p>
                 {/* <AboutDesText title={item?.des} /> */}
               </div>)}
           </div>
-          <div className="flex flex-col w-1/2 gap-[36px]">
+          <div className="flex flex-col w-[50%] gap-[36px]">
             <PageHeading title={"Founder"} />
             <ProductDesText text={"Advance Metal Powder was founded in 1988 by Late Mr. Parasram G Purohit. With a vision to serve the welding industry, the humble beginnings were marked by supplying iron powder to various clients across India. Late Mr. Purohit, a pioneering visionary of the industry, established the Company on strong founding values of business ethics and commitment to excellence and service. Over the next decade the Company grew and diversified in to supplying stainless steel wires. The standards of customer service, product quality and timely deliveries set by him continue to guide the Company even today in commanding respect and position of a preferred supplier across India."} />
           </div>
@@ -213,8 +217,8 @@ export default function About() {
           alt="Mechanical Picker" />
       </div>
     </div>
-    <div className="flex justify-center items-center pt-[200px]">
-      <div className="flex  gap-[104px]">
+    <div className="flex justify-center items-center relative pt-[200px]">
+      <div className="flex  gap-[104px] max-xl:gap-[56px]">
         <div className="flex flex-col gap-[160px] max-w-[800px]"
         // style={{ width: "800px" }}
         >
@@ -301,14 +305,15 @@ export default function About() {
       </div>
 
     </div>
-    <BannerContainer containerStyle="bg-[#ECF3FB] py-[120px]">
+    <BannerContainer containerStyle="bg-[#ECF3FB] relative py-[120px]">
       <div className="flex flex-col gap-[48px]">
         <PageHeading title={"How it works?"} />
         <div className="relative">
-          <div className="absolute top-0 left-[17%] transform -translate-x-1/2 -translate-y-1/2">
+
+          <div className="absolute top-0 left-[34%] transform -translate-x-1/2 -translate-y-1/2">
             <img src={eclipseIcon} alt="Eclipse Icon" />
           </div>
-          <div className="absolute top-0 left-[34%] transform -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute top-0 left-[18 %] transform -translate-x-1/2 -translate-y-1/2">
             <img src={eclipseIcon} alt="Eclipse Icon" />
           </div>
           <div className="absolute top-0 left-[51%] transform -translate-x-1/2 -translate-y-1/2">
@@ -325,12 +330,12 @@ export default function About() {
           </div>
           <img
             src={line}
-            className="w-[1385.009px] h-[2px]"
+            className="w-[1385.009px] h-[2px] max-lg:w-[1103.354px]"
             alt="Line"
           />
         </div>
-        <div className="flex gap-[24px]">
-          {itemsArray?.map((item) => <div className="flex flex-col max-w-[250px] gap-[8px]">
+        <div className="flex gap-[24px] max-xl:gap-[12px]">
+          {itemsArray?.map((item) => <div className="flex flex-col max-w-[250px] max-xl:max-w-[200px] gap-[8px]">
             <img
               src={item?.imgSrc}
               className="w-[45px] h-[45px]"
@@ -342,6 +347,9 @@ export default function About() {
             <p>{item?.description}</p>
           </div>)}
         </div>
+      </div>
+      <div className="absolute right-0 bottom-0">
+        <img src={stepAsset} />
       </div>
     </BannerContainer>
     <Footer />

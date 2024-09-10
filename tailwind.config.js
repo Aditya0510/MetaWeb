@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -16,6 +17,7 @@ module.exports = {
       }
     },
     screens: {
+
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -33,9 +35,16 @@ module.exports = {
 
       '3xl': '1728px',
       // => @media (min-width: 1728px) { ... }
-      
+
       '4xl': '1920px',
       // => @media (min-width: 1920px) { ... }
+
+      // '2xl': '1920px',
+      // 'xl': '1728px',
+      // 'lg': '1440px',
+      // 'md': '1280px',
+      // 'sm': '768px',
+      // 'xs': '375px',
     }
   },
   plugins: [],
