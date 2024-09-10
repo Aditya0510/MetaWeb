@@ -10,6 +10,15 @@
   width: 240px;
   height: 112.444px;
   flex-shrink: 0;
+  object-fit: contain;
+}
+.navbar img {
+  transition: all 0.5s;
+}
+
+.navbar img.small {
+  width: 120px;
+  height: 56px;
 }
 
 .contact-logo {
@@ -80,6 +89,7 @@ width: 100%;
     width: 187.827px;
     height: 88px;
   }
+  
 }
 
 /* For 768px screen width and below */
@@ -88,6 +98,10 @@ width: 100%;
     width: 94px;
     height: 88px;
     flex-shrink: 0;
+  }
+  .navbar img.small {
+    width: 70px;
+    height: 44px;
   }
    .form-container{
    padding: 40px;
@@ -110,9 +124,13 @@ padding: 21px 26px 21px 24px;
 /* For 375px screen width and below */
 @media screen and (max-width: 375px) {
   .main-logo {
-    width: 59.818px;
+    width: 90.818px;
     height: 56px;
     flex-shrink: 0;
+  }
+  .navbar img.small {
+    width: 45px;
+    height: 30px;
   }
 
   .product-label-text{
