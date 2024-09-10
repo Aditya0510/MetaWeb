@@ -3,7 +3,7 @@ import OrangeButton from "../../../components/OrangeButton";
 
 export default function ProductDetail1({ product1 }) {
   return (<>
-    <div className="max-w-[40%] flex flex-col gap-6 z-20 max-sm:max-w-none">
+    <div className=" flex flex-col gap-6 z-20 md:max-w-[50%]">
       <h4 className="product-primary-title">{product1?.productTitle}</h4>
       <div>
         <img

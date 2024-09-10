@@ -27,8 +27,10 @@ export default function Footer() {
       className="flex flex-col items-start  bg-[#1D3D7C]
       px-[40px] pt-[80px] pb-[24px] gap-[24px]
       md:px-[40px]
-       md:flex-row md:items-center md:flex-wrap
-        xl:gap-[24px] 4xl:px-[160px] 4xl:pt-[80px] 4xl:pb-[24px]"
+       md:flex-row  md:flex-wrap
+        xl:gap-[24px] 4xl:px-[160px] 4xl:pt-[80px] 4xl:pb-[24px]
+        xl:justify-between xl:items-start xl:self-stretch
+        "
     //   className="flex px-[160px] 
     // max-sm:px-[40px] pt-[80px] pb-[24px] justify-between items-start 
     // max-md:gap-[24px] 
@@ -86,7 +88,11 @@ export default function Footer() {
           <p className="text-white  text-[20px]">{info?.openHour}</p>
         </div>
       </div>
-      <div class="flex max-w-[25%] max-xs:max-w-none  flex-col justify-between items-end gap-[128px] flex-shrink-0 self-stretch max-sm:self-auto">
+      <div
+        className="flex flex-col justify-between self-stretch"
+      // class="flex max-w-[25%] max-xs:max-w-none  flex-col justify-between items-end gap-[128px] flex-shrink-0 self-stretch max-sm:self-auto"
+
+      >
         <div className="hidden  justify-end gap-2 xl:flex">
           <img
             src={toTop}

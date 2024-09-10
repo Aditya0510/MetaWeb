@@ -197,6 +197,9 @@ letter-spacing: -0.32px;
     width: 306px;
     height: 291px;
    }
+   .product-des-sub-container{
+    width:100%;
+}
 }
 
 @media screen and (max-width: 375px) {
@@ -214,9 +217,7 @@ flex-wrap: wrap;
  position: relative;
 }
 
-.product-des-sub-container{
-    width:80%;
-}
+
 
 .product-des-container {
     width: 90%;

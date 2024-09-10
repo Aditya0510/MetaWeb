@@ -153,11 +153,11 @@ export default function Product1() {
   return (
     <>
       <MainContainer>
-        <div className="product-container-2 flex flex-col gap-28 lg:gap-24  xs:gap-8 ">
+        <div className="product-container-2 flex flex-col gap-8  lg:gap-24  md:gap-28">
           <div className="relative">
-            <div className="flex flex-col gap-28 max-xs:gap-[8px] relative z-10">
+            <div className="flex flex-col gap-[8px] md:gap-28 relative z-10">
               <h6 className="product-1-title">{productTitle1}</h6>
-              <div className="flex flex-row  items-center product-des-container gap-2 max-xs:flex-col">
+              <div className="flex  product-des-container gap-2 flex-col sm:flex-row sm:items-center">
                 <div className="inline-flex flex-col items-start gap-6 product-des-sub-container">
                   <img
                     src={brandImage}
@@ -186,20 +186,20 @@ export default function Product1() {
                 </div>
               </div>
             </div>
-            <div className="absolute right-2 top-0 max-xs:right-0">
+            <div className="absolute right-0  top-0 md:right-2">
               <img
                 src={Product1Banner}
                 className="product-banner-1 -z-1"
               />
             </div>
           </div>
-          <div className="flex flex-col gap-28 max-xs:gap-28 w-[90%]">
+          <div className="flex flex-col gap-28 w-[90%]">
             <h6 className="product-1-title">{productTitle2}</h6>
-            <div className="flex  items-end gap-[80px] max-md:gap-[56px] max-lg:items-start max-sm:flex-col">
+            <div className="flex flex-col items-start gap-[56px] xl:gap-[56px] 2xl:items-end md:flex-row">
               <ProductDetail1
                 product1={product1}
               />
-              <div className="flex max-w-[40%] max-lg:max-w-[50%] max-sm:max-w-none gap-3 flex-wrap">
+              <div className="flex 4xl:max-w-[40%] 2xl:max-w-[50%] gap-3 flex-wrap">
                 {product1?.spoolImages?.map((item, index) => <ProductCard item={item} index={index} />
                 )}
               </div>
@@ -208,11 +208,17 @@ export default function Product1() {
           <div>
           </div>
         </div>
-        <BannerContainer containerStyle="bg-[#ECF3FB] py-16 max-xs:py-28 max-xs:ps-[20px] relative">
+        <BannerContainer containerStyle="bg-[#ECF3FB] py-28 ps-[20px]
+        md:py-16 md:ps-[20px]
+          relative">
           <div className="relative">
-            <div className="flex flex-wrap items-center gap-[88px] max-sm:gap-[24px] justify-end pe-[150px] relative z-10 max-sm:ps-[40px]
-            max-md:pe-[80px]
-            max-sm:pe-[40px] max-sm:justify-start">
+            <div
+              //   className="flex flex-wrap items-center gap-[88px] max-sm:gap-[24px] justify-end pe-[150px] relative z-10 max-sm:ps-[40px]
+              // max-md:pe-[80px]
+              // max-sm:pe-[40px] max-sm:justify-start"
+              className="flex flex-wrap md:items-center
+               px-[40px]  gap-[24px] xl:gap-[88px] md:justify-end"
+            >
               <ProductCard
                 item={productSub}
                 index={0}
@@ -227,7 +233,7 @@ export default function Product1() {
           </div>
           <div className="absolute left-0 top-0">
             <img src={ProductGroup}
-              className="max-xs:h-[367] max-xs:w-[204]"
+              className="h-[367] w-[204]"
             />
           </div>
           <div className="absolute right-0 bottom-0 ">
@@ -239,7 +245,14 @@ export default function Product1() {
 
             <div className="flex flex-col gap-12">
               <h6 className="product-1-title z-10">{productTitle3}</h6>
-              <div className="flex flex-wrap items-center gap-[88px] max-lg:gap-[56px] max-sm:gap-[20px] product-des-container">
+              <div className="flex flex-col items-center 
+               3xl:gap-[88px] 
+                2xl:gap-[56px]
+               md:gap-[20px]
+               product-des-container
+               gap-20px 
+               md:flex-row
+               ">
                 <ProductDetail1
                   product1={productSaw}
                 />
@@ -262,17 +275,22 @@ export default function Product1() {
             <img
               src={assetRelative}
               className="-z-0 max-sm:w-[288px] max-sm:h-[297px]"
-
             // className="product-banner-1"
             />
           </div>
         </div>
         <BannerContainer containerStyle="bg-[#ECF3FB] py-16 relative">
-          <div className="flex flex-wrap items-center gap-[88px] justify-end pe-[150px] max-sm:pe-[40px] relative z-10 max-sm:justify-start max-sm:ps-[20px]" >
-            {productCore?.spoolImages?.map((product, index) => <ProductCard
-              item={product}
-              index={index}
-            />)}
+          <div
+            className="flex flex-col relative z-10 gap-[88px]
+             md:justify-end pe-[40px] ps-[20px] md:pe-[150px] md:flex-row"
+          // className="flex flex-wrap items-center  justify-end pe-[150px] max-sm:pe-[40px] relative z-10 max-sm:justify-start max-sm:ps-[20px]"
+          >
+            <div className="flex gap-2  md:justify-end flex-wrap">
+              {productCore?.spoolImages?.map((product, index) => <ProductCard
+                item={product}
+                index={index}
+              />)}
+            </div>
             <ProductDetail1
               product1={productCore}
             />
@@ -286,7 +304,7 @@ export default function Product1() {
         </BannerContainer>
         <div className="flex justify-center items-center relative py-28">
           <FormContainer formTitle={"Send Enquiry"}>
-            <div className="flex max-xs:flex-col max-xs:gap-[16px] gap-2">
+            <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
               <div>
                 <FormInput
                   placeholder="first name"
@@ -324,10 +342,10 @@ export default function Product1() {
               className={"form-input"}
             />
             <FormSelect
-              className={"form-input"}
+              className={"form-input relative"}
             />
             <FormSelect
-              className={"form-input"}
+              className={"form-input relative"}
             />
             <FormTextArea
               className={"form-input"}

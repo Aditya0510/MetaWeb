@@ -26,11 +26,10 @@ export default function Product3() {
 
   return (<MainContainer>
     <div className="product-container-2 flex flex-col gap-28 relative">
-      <div className="flex flex-col gap-28 relative z-10 max-sm:pe-[50px]">
+      <div className="flex flex-col gap-28 relative z-10 pe-[50px] md:pe-[0px]">
         <MainTitleHeading title={product3Slogan} />
-
-        <div className="flex flex-row max-w-[1600px] gap-[88px] max-xl:gap-[56px]  max-sm:flex-wrap">
-          <div className="flex flex-col items-start  gap-[24px] max-w-[60%]    max-sm:max-w-none">
+        <div className="flex flex-col max-w-[1600px] gap-[56px]  3xl:gap-[88px]  md:flex-row">
+          <div className="flex flex-col items-start  gap-[24px] md:max-w-[60%]">
             <img
               src={additive}
               className=""
@@ -40,7 +39,6 @@ export default function Product3() {
                 title={ProductDetail?.prodTitle}
               />
             </div>
-
             <div className="flex flex-col gap-4">
               <ProductDesText text={ProductDetail?.prodDesc1} />
               <ProductDesText text={ProductDetail?.prodDesc2} />
@@ -61,13 +59,15 @@ export default function Product3() {
               <Button title={"Download Brochure"} />
             </div>
           </div>
-          <div className="inline-flex flex-col items-start gap-6 max-w-[40%]
-            max-sm:max-w-none
+          <div className="inline-flex flex-col items-start gap-6 
+            md:max-w-[40%]
             ">
             <img
               src={particles}
-              className="w-[465px] h-[460px] max-sm:w-[485px]  max-sm:h-[460px] 
-                max-xs:w-[266px] max-xs:h-[252px]"
+              className="xl:w-[465px] xl:h-[460px] md:w-[485px]  md:h-[460px] 
+                w-[762.74px] h-[426.365px] 
+                
+                "
             />
 
           </div>

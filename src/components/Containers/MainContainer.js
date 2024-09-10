@@ -7,7 +7,7 @@ export default function MainContainer({ children }) {
   return (<>
     <Navbar />
     <div class="pt-[160px] max-xs:pt-[100px]">
-      <div class="flex flex-col justify-center items-start gap-1 px-[8px] sm:px-[80px] xs:px-[40px]">
+      <div class="flex flex-col justify-center items-start gap-1 px-[8px] xl:px-[80px] md:px-[40px] md:pb-[12px]">
         <div
           class="flex flex-wrap"
         >

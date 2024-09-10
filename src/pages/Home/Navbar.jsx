@@ -42,7 +42,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
         />
 
         {showMenu ? (
-          <div className="hidden sm:flex">
+          <div className="hidden md:flex">
             {TabsArray?.map(({ link, label }, index) => (
               <NavLink key={index} className={"nav-link"} to={link}>
                 {label}
@@ -52,7 +52,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
         ) : null}
 
         {showMenu ? (
-          <div class="sm:hidden">
+          <div class="md:hidden">
             <button
               class="navbar-burger flex items-center text-[#3C3C3B] p-3"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -73,6 +73,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
 
       {isMenuOpen ? (
         <>
+          
           <nav
             className="sm:hidden bg-white flex flex-col 
         h-screen
@@ -98,7 +99,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
               </ul>
             </div>
           </nav>
-          <div className="sm:hidden relative z-10">
+          <div className="relative z-10">
             <Footer />
           </div>
         </>
