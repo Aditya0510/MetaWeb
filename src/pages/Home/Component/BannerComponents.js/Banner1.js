@@ -54,7 +54,7 @@ const Banner1 = ({ index = 1 }) => {
             </div>
 
             {/* column 2  */}
-            <div className="col-span-5 md:col-span-3 lg:col-span-2 flex flex-col justify-center items-center">
+            <div className="col-span-5 md:col-span-3 lg:col-span-2 flex flex-col justify-center items-center mt-[32px] md:[0px]">
               <img src={BannerImage} alt="banner" className="Banner" />
             </div>
           </div>
