@@ -21,18 +21,27 @@ export default function Footer() {
       { icon: "facebook", link: "#" },
     ]
   }
+
   return (
-    <div className="flex px-[160px] 
-    max-sm:px-[40px] pt-[80px] pb-[24px] justify-between items-start bg-[#1D3D7C] 
-    max-md:gap-[24px] 
-    max-sm:flex-wrap 
-     max-sm:items-center
-     max-xs:flex-col
-     max-xs:items-start
-    ">
-      <div className="flex flex-col items-start gap-[128px] max-xs:gap-[12px]
-      max-xs:pb-[4px]
-      ">
+    <div
+      className="flex flex-col items-start  bg-[#1D3D7C]
+      px-[40px] pt-[80px] pb-[24px] gap-[24px]
+      md:px-[40px]
+       md:flex-row md:items-center md:flex-wrap
+        xl:gap-[24px] 4xl:px-[160px] 4xl:pt-[80px] 4xl:pb-[24px]"
+    //   className="flex px-[160px] 
+    // max-sm:px-[40px] pt-[80px] pb-[24px] justify-between items-start 
+    // max-md:gap-[24px] 
+    // "
+    >
+      <div
+        className="flex flex-col items-start
+        gap-12px pb-[4px]
+        md:gap-[128px]"
+      //   className="flex flex-col items-start gap-[128px] max-xs:gap-[12px]
+      // max-xs:pb-[4px]
+      // "
+      >
         <div className="flex  items-start gap-2">
           <h4 class="text-white  text-[56px]">{brochureText}</h4>
           <img
@@ -46,10 +55,14 @@ export default function Footer() {
           text-[16px]">{item?.label} {" /"}</Link>)}
         </div>
       </div>
-      <div className="hidden max-sm:block">
+      <div className="block  xl:hidden">
         <img src={toTop} />
       </div>
-      <div class="flex max-w-[25%] max-xs:max-w-none flex-col items-start gap-[32px] flex-shrink-0 self-stretch max-sm:items-center max-sm:self-auto">
+      <div
+        className="flex flex-col 
+        items-center self-auto gap-[32px] "
+      // class="flex max-w-[25%] max-xs:max-w-none flex-col items-start gap-[32px] flex-shrink-0 self-stretch max-sm:items-center max-sm:self-auto"
+      >
         <div>
           <h4 class="text-[#D4D5D9]  text-[14px] leading-[18.2px] tracking-[1.12px] uppercase">{info?.contactLabel}</h4>
           <p className="text-white  text-[20px]">{info?.phone}</p>
@@ -60,7 +73,10 @@ export default function Footer() {
         </div>
 
       </div>
-      <div class="flex max-w-[25%] max-xs:max-w-none flex-col items-start gap-[32px] flex-shrink-0 self-stretch">
+      <div
+        // class="flex max-w-[25%] max-xs:max-w-none flex-col items-start gap-[32px] flex-shrink-0 self-stretch"
+        className="flex md:max-w-[25%] flex-col items-start gap-[32px] flex-shrink-0 self-stretch"
+      >
         <div>
           <h4 class="text-[#D4D5D9]  text-[14px] leading-[18.2px] tracking-[1.12px] uppercase">{info?.addressLabel}</h4>
           <p className="text-white  text-[20px]">{info?.address}</p>
@@ -71,7 +87,7 @@ export default function Footer() {
         </div>
       </div>
       <div class="flex max-w-[25%] max-xs:max-w-none  flex-col justify-between items-end gap-[128px] flex-shrink-0 self-stretch max-sm:self-auto">
-        <div className="flex justify-end gap-2 max-sm:hidden">
+        <div className="hidden  justify-end gap-2 xl:flex">
           <img
             src={toTop}
           />
