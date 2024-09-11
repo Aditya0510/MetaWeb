@@ -138,23 +138,21 @@ export default function About() {
 
   return (<>
     <Navbar />
-    <div class="pt-[150px] relative">
+    <div class="pt-[100px] relative">
       <HorizontalLine />
-
-      <div className="pt-[100px] pb-[80px] ps-48 max-sm:px-[100px] relative">
-        <div className="flex flex-col gap-[72px] max-w-[800px] relative z-10">
-          <div className="flex flex-col gap-4 max-lg:w-[80%]">
+      <div className="pt-[100px] px-[32px] md:ps-[101px] relative">
+        <div className="flex flex-col gap-[72px] max-w-[800px] pb-[150px] relative z-10">
+          <div className="flex flex-col gap-4">
             <PageHeading title={AboutText?.title} />
             <div className="flex flex-col gap-8">
               <ProductDesText text={AboutText?.aboutDesc?.desc1} />
               <ProductDesText text={AboutText?.aboutDesc?.desc2} />
               <ProductDesText text={AboutText?.aboutDesc?.desc3} />
             </div>
-            {/* <p className="product-description">{AboutText?.aboutDesc?.desc}</p> */}
           </div>
-          <div className="flex gap-[40px] max-sm:flex-wrap">
+          <div className="flex flex-col md:flex-row gap-[40px]">
             {AboutText?.features?.map((feature, index) => (
-              <div className="flex flex-col gap-4 relative z-10 w-1/3">
+              <div className="flex flex-col gap-4 relative z-10 w-[75%] md:w-[33%]">
                 <NumberHeading number={index + 1} />
                 <BlueText title={feature?.title} />
                 <AboutDesText title={feature?.text} />
@@ -162,15 +160,17 @@ export default function About() {
             ))}
           </div>
         </div>
-        <div className="absolute left-0 bottom-0">
+        <div className="absolute left-[-25px] bottom-0">
           <img
-            src={absoluteImage}
             className="-z-1"
+            src={absoluteImage}
           />
         </div>
-        <div className="absolute right-64 top-8 max-xl:right-[50px] max-md:right-[35px] max-sm:right-[-40px]">
+        <div className="absolute right-[0px]   top-8 
+        2xl:right-[50px] xl:right-[35px]">
           <img
-            className="max-xl:w-[404.8px] max-xl:h-[563px]"
+            className="w-[342.78px] h-[435px] xl:w-[404.8px] xl:h-[563px]"
+            // className="max-xl:w-[404.8px] max-xl:h-[563px] w-[342.78px] h-[435px]"
             src={drillMachine}
           />
         </div>
@@ -179,18 +179,15 @@ export default function About() {
         src={ShutterStock}
         className="w-full h-[550px]"
       />
-      <div className="pt-[100px] pb-[80px] ps-48 max-sm:px-[100px]  relative  max-md:ps-[88px]">
+      <div className="pt-[100px] pb-[80px]  ps-[32px]  relative  xl:ps-[88px]">
         <div
           className="flex justify-between p-[80] "
         >
           <MainTitleHeading title="The Company is led by forward thinking partners Mr. Mukesh Purohit and Mr. Siddhant Purohit." />
         </div>
-        <div className="flex gap-[120px] max-xl:gap-[56px]  pt-[200px] pe-[120px] max-lg:gap-[22px] 
-       
-        ">
+        <div className="flex flex-col xl:flex-row gap-[22px] 3xl:gap-[120px] 2xl:gap-[56px]  pt-[200px] pe-[120px] ">
           <div
-            class="flex flex-wrap  w-[50%]  items-start content-start gap-[48px] max-lg:gap-[48px]"
-          // className="flex"
+            class="flex flex-wrap  xl:max-w-[50%]  items-start content-start gap-[48px]"
           >
             {AboutText?.people?.map((item) =>
               <div className="flex flex-col gap-[14px] ">
@@ -200,7 +197,7 @@ export default function About() {
                 {/* <AboutDesText title={item?.des} /> */}
               </div>)}
           </div>
-          <div className="flex flex-col w-[50%] gap-[36px]">
+          <div className="flex flex-col xl:max-w-[50%] gap-[36px]">
             <PageHeading title={"Founder"} />
             <ProductDesText text={"Advance Metal Powder was founded in 1988 by Late Mr. Parasram G Purohit. With a vision to serve the welding industry, the humble beginnings were marked by supplying iron powder to various clients across India. Late Mr. Purohit, a pioneering visionary of the industry, established the Company on strong founding values of business ethics and commitment to excellence and service. Over the next decade the Company grew and diversified in to supplying stainless steel wires. The standards of customer service, product quality and timely deliveries set by him continue to guide the Company even today in commanding respect and position of a preferred supplier across India."} />
           </div>
@@ -217,20 +214,20 @@ export default function About() {
           alt="Mechanical Picker" />
       </div>
     </div>
-    <div className="flex justify-center items-center relative pt-[200px]">
-      <div className="flex  gap-[104px] max-xl:gap-[56px]">
-        <div className="flex flex-col gap-[160px] max-w-[800px]"
+    <div className="flex ps-[37px] xl:ps-[88px] 2xl:ps-[180px]  items-center relative pt-[200px]">
+      <div className="flex flex-col xl:flex-row gap-[56px]   xl:gap-[104px]">
+        <div className="flex flex-col gap-[160px] max-w-[600px] 3xl:max-w-[800px]"
         // style={{ width: "800px" }}
         >
           <MainTitleHeading title=" Different chemistries that make for a stronger bond." />
-          <div className="flex flex-col gap-[36px]">
+          <div className="flex flex-col gap-[36px] pe-[10px]">
             <PageHeading title={"Services"} />
             <ProductDesText text={"With our commitment to excellence, we have become the preferred single source of supply for all their stainless steel and metal powder requirements for our customers. We provide immediate delivery, as all products are in stock, round the clock."} />
           </div>
         </div>
-        <div class="flex flex-wrap max-w-[529px] items-start content-start gap-[24px]">
+        <div class="flex flex-wrap  xl:max-w-[529px] items-start content-start gap-[24px]">
           {AboutText?.services?.map((item, index) => (
-            <div className="flex flex-col gap-[14px] max-w-[180px]">
+            <div className="flex flex-col gap-[14px] max-w-[280px] xl:max-w-[180px]">
               {/* <BlueText title={item?.name} /> */}
               <NumberHeading number={index + 1} />
               <BlueText title={item.title} />
@@ -244,7 +241,7 @@ export default function About() {
     </div>
     <div className="flex justify-center items-center relative pt-[300px] pb-28">
       <FormContainer formTitle={"Send Enquiry"}>
-        <div className="flex max-xs:flex-col max-xs:gap-[16px] gap-2">
+        <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
           <div>
             <FormInput
               placeholder="first name"
@@ -257,9 +254,8 @@ export default function About() {
               className={"form-input"}
             />
           </div>
-
         </div>
-        <div className="flex max-sm:flex-col max-sm:gap-[16px] gap-2">
+        <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
           <div>
             <FormInput
               placeholder="Mobile Number"
@@ -282,10 +278,10 @@ export default function About() {
           className={"form-input"}
         />
         <FormSelect
-          className={"form-input"}
+          className={"form-input relative"}
         />
         <FormSelect
-          className={"form-input"}
+          className={"form-input relative"}
         />
         <FormTextArea
           className={"form-input"}
@@ -305,48 +301,54 @@ export default function About() {
       </div>
 
     </div>
-    <BannerContainer containerStyle="bg-[#ECF3FB] relative py-[120px]">
+    <BannerContainer containerStyle=" bg-[#ECF3FB] relative py-[120px] xl:px-[56px]
+    xl:py-[156px]
+    ">
       <div className="flex flex-col gap-[48px]">
         <PageHeading title={"How it works?"} />
-        <div className="relative">
-
-          <div className="absolute top-0 left-[34%] transform -translate-x-1/2 -translate-y-1/2">
-            <img src={eclipseIcon} alt="Eclipse Icon" />
-          </div>
-          <div className="absolute top-0 left-[18 %] transform -translate-x-1/2 -translate-y-1/2">
-            <img src={eclipseIcon} alt="Eclipse Icon" />
-          </div>
-          <div className="absolute top-0 left-[51%] transform -translate-x-1/2 -translate-y-1/2">
-            <img src={eclipseIcon} alt="Eclipse Icon" />
-          </div>
-          <div className="absolute top-0 left-[68%] transform -translate-x-1/2 -translate-y-1/2">
-            <img src={eclipseIcon} alt="Eclipse Icon" />
-          </div>
-          <div className="absolute top-0 left-[85%] transform -translate-x-1/2 -translate-y-1/2">
-            <img src={eclipseIcon} alt="Eclipse Icon" />
-          </div>
-          <div className="absolute top-0  transform -translate-x-1/2 -translate-y-1/2">
-            <img src={eclipseIcon} alt="Eclipse Icon" />
-          </div>
-          <img
+        <div className="flex flex-row gap-[23px] xl:flex-col">
+          <div className="relative">
+            <div className="absolute top-[0%] left-0 transform -translate-x-1/2 -translate-y-1/2">
+              <img src={eclipseIcon} className="max-w-[20px]" alt="Eclipse Icon" />
+            </div>
+            <div className="absolute top-[20%] left-0 xl:left-[22%] transform -translate-x-1/2 -translate-y-1/2">
+              <img src={eclipseIcon} className="max-w-[20px]" alt="Eclipse Icon" />
+            </div>
+            <div className="absolute top-[38%] left-1/2 xl:left-[38%] transform -translate-x-1/2 -translate-y-1/2">
+              <img src={eclipseIcon} className="max-w-[20px]" alt="Eclipse Icon" />
+            </div>
+            <div className="absolute top-[55%] left-1/2 xl:left-[52%] transform -translate-x-1/2 -translate-y-1/2">
+              <img src={eclipseIcon} alt="Eclipse Icon" className="max-w-[20px]" />
+            </div>
+            <div className="absolute top-[75%] left-1/2 xl:left-[70%] transform -translate-x-1/2 -translate-y-1/2">
+              <img src={eclipseIcon} alt="Eclipse Icon" className="max-w-[20px]" />
+            </div>
+            <div className="absolute top-[92%] left-1/2 xl:left-[85%] transform -translate-x-1/2 -translate-y-1/2">
+              <img src={eclipseIcon} alt="Eclipse Icon" className="max-w-[20px]" />
+            </div>
+            <div className="border-dotted border-[1px] w-[1px] h-[1103.35px] border-gray-500 xl:w-[85%]
+xl:h-[1px]"></div>
+            {/* <img
             src={line}
-            className="w-[1385.009px] h-[2px] max-lg:w-[1103.354px]"
+            className="w-[1px] h-[1103.35px] md:w-[1385.009px] md:h-[2px] max-lg:w-[1103.354px]"
             alt="Line"
-          />
+          /> */}
+          </div>
+          <div className="flex flex-col xl:flex-row gap-[12px] xl:gap-[24px]">
+            {itemsArray?.map((item) => <div className="flex flex-col max-w-[250px] max-xl:max-w-[200px] gap-[8px]">
+              <img
+                src={item?.imgSrc}
+                className="w-[45px] h-[45px]"
+              />
+              <h6 class="text-[#02111B] font-[Fira Sans] text-[24px] font-[350] leading-[105%] tracking-[-0.48px]">
+                {item?.title1}<br />
+                {item?.title2}
+              </h6>
+              <p>{item?.description}</p>
+            </div>)}
+          </div>
         </div>
-        <div className="flex gap-[24px] max-xl:gap-[12px]">
-          {itemsArray?.map((item) => <div className="flex flex-col max-w-[250px] max-xl:max-w-[200px] gap-[8px]">
-            <img
-              src={item?.imgSrc}
-              className="w-[45px] h-[45px]"
-            />
-            <h6 class="text-[#02111B] font-[Fira Sans] text-[24px] font-[350] leading-[105%] tracking-[-0.48px]">
-              {item?.title1}<br />
-              {item?.title2}
-            </h6>
-            <p>{item?.description}</p>
-          </div>)}
-        </div>
+
       </div>
       <div className="absolute right-0 bottom-0">
         <img src={stepAsset} />

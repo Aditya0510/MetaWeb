@@ -317,9 +317,8 @@ export default function Product1() {
                   className={"form-input"}
                 />
               </div>
-
             </div>
-            <div className="flex max-sm:flex-col max-sm:gap-[16px] gap-2">
+            <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
               <div>
                 <FormInput
                   placeholder="Mobile Number"

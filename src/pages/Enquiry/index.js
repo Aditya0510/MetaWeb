@@ -13,7 +13,7 @@ export default function Enquiry() {
     <div class="pt-[120px]">
       <div className="flex justify-center items-center relative py-28">
         <FormContainer formTitle={"Send Enquiry"}>
-          <div className="flex max-xs:flex-col max-xs:gap-[16px] gap-2">
+          <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
             <div>
               <FormInput
                 placeholder="first name"
@@ -26,9 +26,8 @@ export default function Enquiry() {
                 className={"form-input"}
               />
             </div>
-
           </div>
-          <div className="flex max-sm:flex-col max-sm:gap-[16px] gap-2">
+          <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
             <div>
               <FormInput
                 placeholder="Mobile Number"
@@ -51,10 +50,10 @@ export default function Enquiry() {
             className={"form-input"}
           />
           <FormSelect
-            className={"form-input"}
+            className={"form-input relative"}
           />
           <FormSelect
-            className={"form-input"}
+            className={"form-input relative"}
           />
           <FormTextArea
             className={"form-input"}
@@ -72,6 +71,7 @@ export default function Enquiry() {
           // className="product-banner-1"
           />
         </div>
+
       </div>
     </div>
     <Footer />
