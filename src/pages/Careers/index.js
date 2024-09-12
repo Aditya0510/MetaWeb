@@ -19,7 +19,7 @@ export default function Careers() {
           formTitle={"careers"}
           formDescription={"Join us and find numerous opportunities for advancement and professional development"}
         >
-          <div className="flex max-xs:flex-col max-xs:gap-[16px] gap-2">
+          <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
             <div>
               <FormInput
                 placeholder="first name"
