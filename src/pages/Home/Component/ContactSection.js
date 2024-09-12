@@ -22,7 +22,8 @@ const contactData = [
 ]
 const ContactSection = () => {
   return (
-    <div className="p-[32px]">
+    <div className="containerHeight">
+    <div className="p-[32px] containerHeight">
       <h2 className="contactTitle">Contact</h2>
       <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-x-4 ">
         {contactData?.map(({ title, description }, i) => (
@@ -32,6 +33,7 @@ const ContactSection = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   )
 }

@@ -110,3 +110,11 @@ letter-spacing: -0.28px;
   letter-spacing: -0.32px;
   margin-top: 8px;
 }
+.containerHeight {
+  margin-top: 100px;
+  @media screen and (min-width: 1280px) {
+    margin-top: 80px;
+    height: calc(100vh - 100px);
+    
+  }
+}

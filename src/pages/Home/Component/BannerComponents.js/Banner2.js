@@ -20,7 +20,7 @@ const Banner1 = ({ index = 2, total = 5 }) => {
       containerStyle="pd-[60px] xl:pb-[0px]"
       position="bottom right"
     >
-      <div className="min-h-[100vh] items-center  flex">
+      <div className="containerHeight items-center  flex">
         <div className="flex flex-col  px-[15px] xl:px-[150px] my-[40px]">
           <p className="Slider-count mx-[15px] xl:mx-[0px]">{`${index}/${total}`}</p>
 

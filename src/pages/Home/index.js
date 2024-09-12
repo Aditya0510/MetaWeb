@@ -14,7 +14,6 @@ const Home = () => {
   return (
     <div >
       <Navbar showMenu={false}/>
-      <div className="pt-[100px]">
       {isMobile ? (
         <>
           <Banner1 />
@@ -46,7 +45,6 @@ const Home = () => {
           </Slide>
         </FullPage>
       )}
-      </div>
     </div>
   )
 }

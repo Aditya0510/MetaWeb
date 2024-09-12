@@ -37,7 +37,7 @@ const Banner3 = ({ index = 3, total = 5 }) => {
       bgImage={WeldingImage}
       position="bottom -30px left "
     >
-      <div className="min-h-[100vh] items-center  flex">
+      <div className="containerHeight items-center  flex">
         <div className="flex flex-col  px-[15px] xl:px-[150px] my-[40px]">
           <p className="Slider-count  mx-[15px] xl:mx-[0px]">{`${index}/${total}`}</p>
 
