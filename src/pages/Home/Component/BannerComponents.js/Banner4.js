@@ -44,24 +44,24 @@ const Banner4 = ({ index = 4, total = 5 }) => {
             </div>
 
             {/* column 2  */}
-            <div className="col-span-6  md:col-span-3 lg:col-span-4 flex flex-col justify-center xl:ml-[80px] mt-[60px] md:mt[0px]">
+            <div className="col-span-6  md:col-span-3 lg:col-span-4 flex flex-col justify-center xl:ml-[80px] mt-[60px] md:mt-[0px]">
               <img
                 src={brand1}
                 alt="product"
                 className="w-[190px] h-[68px] object-contain"
               />
-              <h2 className="Banner-title mt-[24px]">{title}</h2>
+              <h2 className="Banner-title mt-[12px] 2xl:mt-[24px]">{title}</h2>
 
               {/* description      */}
-              <p className="Banner-subtitle mt-[24px]">{subtitle}</p>
+              <p className="Banner-subtitle mt-[12px] 2xl:mt-[24px]">{subtitle}</p>
 
-              <p className="Banner-subtitle2 my-[24px]">{subtitle2}</p>
+              <p className="Banner-subtitle2 mt-[12px] 2xl:mt-[24px]">{subtitle2}</p>
 
-              <div className="grid 4xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 my-[24px] ">
+              <div className="grid 4xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 mt-[12px] 2xl:mt-[24px] ">
                 {expertise.map(({ title, image }, i) => (
                   <span
                     key={i}
-                    className="flex flex-col justify-center items-center mb-[35px]"
+                    className="flex flex-col justify-center items-center mb-[12px] 3xl:mb-[35px]"
                   >
                     <img src={image} alt="Jeep" className="w-[40px] h-[40px]" />
                     <span className="expertiseSectorTitle text-center">

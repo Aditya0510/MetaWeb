@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "../../../components/Footer"
 const contactData = [
   {
     title: "OFFICE ADDRESS",
@@ -22,8 +23,8 @@ const contactData = [
 ]
 const ContactSection = () => {
   return (
-    <div className="containerHeight">
-    <div className="p-[32px] containerHeight">
+    <div className="containerHeight ">
+    <div className="p-[32px]">
       <h2 className="contactTitle">Contact</h2>
       <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-x-4 ">
         {contactData?.map(({ title, description }, i) => (
@@ -34,6 +35,7 @@ const ContactSection = () => {
         ))}
       </div>
     </div>
+    <Footer />
     </div>
   )
 }
