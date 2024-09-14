@@ -11,6 +11,7 @@ import Practice from "../pages/Practice"
 import Careers from "../pages/Careers"
 import Enquiry from "../pages/Enquiry"
 import Product3 from "../pages/Poducts/Product3"
+import ScrollToTop from "../Utility/ScrollToTop"
 const routeConfig = [{
   path: RoutesLink?.Home,
   element: <Home />,
@@ -53,15 +54,17 @@ const routeConfig = [{
 const CommonRoutes = () => {
   return (
     <Router>
-      <Routes>
-      {routeConfig.map((route) => <Route exact path={route?.path} element={route?.element} />
-        )}
-        {/* <Route exact path="/" element={<Home/>} />
+      <ScrollToTop>
+        <Routes>
+          {routeConfig.map((route) => <Route exact path={route?.path} element={route?.element} />
+          )}
+          {/* <Route exact path="/" element={<Home/>} />
         <Route path="/home" element={<Home/>} /> 
         <Route path="/csr" element={<CSRScreen/>} />  */}
-        {/* <Route path="/contact" component={Contact} /> */}
-        {/* <Route component={NotFound} /> */}
-      </Routes>
+          {/* <Route path="/contact" component={Contact} /> */}
+          {/* <Route component={NotFound} /> */}
+        </Routes>
+      </ScrollToTop>
     </Router>
   )
 }

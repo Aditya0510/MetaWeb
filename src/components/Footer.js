@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import upperArrow from "../assets/images/Banner/upperArrow.svg";
-import toTop from "../assets/images/Banner/to-top.svg";
+
+import ScrollToTopButton from "./ScrollToTop";
 
 export default function Footer() {
   const brochureText = "Brochure";
@@ -24,10 +25,12 @@ export default function Footer() {
 
   return (
     <div
-      className="flex flex-col items-start  bg-[#1D3D7C]
+      className="flex flex-col items-start 
+       md:flex-row 
+       md:flex-wrap  md:items-center  bg-[#1D3D7C]
       px-[40px] pt-[80px] pb-[24px] gap-[24px]
       md:px-[40px]
-       md:flex-row  md:flex-wrap
+       
         xl:gap-[24px] 4xl:px-[160px] 4xl:pt-[80px] 4xl:pb-[24px]
         xl:justify-between xl:items-start xl:self-stretch
         "
@@ -58,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="block  xl:hidden">
-        <img src={toTop} />
+        <ScrollToTopButton />
       </div>
       <div
         className="flex flex-col 
@@ -89,17 +92,20 @@ export default function Footer() {
         </div>
       </div>
       <div
-        className="flex flex-col justify-between self-stretch"
+        class="flex flex-row justify-between md:flex-[2_1_0%] xl:flex-col items-center self-stretch w-full"
       // class="flex max-w-[25%] max-xs:max-w-none  flex-col justify-between items-end gap-[128px] flex-shrink-0 self-stretch max-sm:self-auto"
 
       >
         <div className="hidden  justify-end gap-2 xl:flex">
-          <img
-            src={toTop}
-          />
+          {/* <a href="#">
+            <img
+              src={toTop}
+            />
+          </a> */}
+          <ScrollToTopButton />
         </div>
-        <div>
-          <p className="text-[#AFB2B3] text-[16px]">© 2024 — Copyright</p>
+        <div class="md:flex-grow md:flex md:justify-center md:items-center">
+          <p class="text-[#AFB2B3] text-[16px] text-center">© 2024 — Copyright</p>
         </div>
       </div>
     </div>

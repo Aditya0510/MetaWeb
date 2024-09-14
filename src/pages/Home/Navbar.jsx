@@ -75,7 +75,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
         <>
           
           <nav
-            className="sm:hidden bg-white flex flex-col 
+            className="md:hidden bg-white flex flex-col 
         h-screen
         justify-between"
           >
@@ -98,10 +98,11 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
                 </div>
               </ul>
             </div>
-          </nav>
-          <div className="relative z-10">
+            <div className="relative z-10">
             <Footer />
           </div>
+          </nav>
+          
         </>
       ) : null}
     </header>

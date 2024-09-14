@@ -76,18 +76,6 @@ font-weight: 300;
 line-height: 135%; /* 75.6px */
 letter-spacing: -4.48px;
 }
-.product-spool-title{
-  color: #003088;
-
-/* Headline3 */
-font-family: "Fira Sans";
-font-size: 24px;
-font-style: normal;
-font-weight: 350;
-line-height: 105%; /* 25.2px */
-letter-spacing: -0.48px;
-text-transform: capitalize;
-}
 
 .product-1-title{
            color: #50555B;

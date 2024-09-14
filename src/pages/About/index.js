@@ -20,7 +20,7 @@ import FormTextArea from "../../components/Forms/FormTextArea";
 import Button from "../../components/Button";
 import BannerContainer from "../Home/Component/BannerComponents.js/BannerContainer";
 import eclipseIcon from "../../assets/images/Banner/Ellipse 2.svg";
-import line from "../../assets/images/Banner/Line 6.svg";
+
 import email from "../../assets/images/Banner/email.png";
 import response from "../../assets/images/Banner/response 1.png";
 import order from "../../assets/images/Banner/booking (1).png";
@@ -179,30 +179,30 @@ export default function About() {
         src={ShutterStock}
         className="w-full h-[550px]"
       />
-      <div className="pt-[100px] pb-[80px]  ps-[32px]  relative  xl:ps-[88px]">
+      <div className="pt-[100px] pb-[80px]  ps-[32px]  relative  xl:ps-[88px] 2xl:ps-[181px]">
         <div
           className="flex justify-between p-[80] "
         >
           <MainTitleHeading title="The Company is led by forward thinking partners Mr. Mukesh Purohit and Mr. Siddhant Purohit." />
         </div>
-        <div className="flex flex-col xl:flex-row gap-[22px] 3xl:gap-[120px] 2xl:gap-[56px]  pt-[200px] pe-[120px] ">
+        <div className="flex flex-col xl:flex-row gap-[22px] 4xl:gap-[120px] 2xl:gap-[56px] pt-[200px] md:pe-[120px]  pe-[53px]">
           <div
-            class="flex flex-wrap  xl:max-w-[50%]  items-start content-start gap-[48px]"
+            class="flex flex-col md:flex-row flex-wrap   items-start content-start gap-[48px] xl:basis-[60%] 3xl:flex-1"
           >
             {AboutText?.people?.map((item) =>
-              <div className="flex flex-col gap-[14px] ">
+              <div className="flex flex-col gap-[14px] md:max-w-[260px] lg:max-w-[340px] xl:max-w-[280px] 2xl:max-w-[300px]">
                 <BlueText title={item?.name} />
                 <BlueText title={item.post} />
-                <p className="max-w-[240px]">{item?.des}</p>
+                <p className="">{item?.des}</p>
                 {/* <AboutDesText title={item?.des} /> */}
               </div>)}
           </div>
-          <div className="flex flex-col xl:max-w-[50%] gap-[36px]">
+          <div className="flex flex-col  gap-[36px] xl:basis-[40%] 3xl:flex-1">
             <PageHeading title={"Founder"} />
             <ProductDesText text={"Advance Metal Powder was founded in 1988 by Late Mr. Parasram G Purohit. With a vision to serve the welding industry, the humble beginnings were marked by supplying iron powder to various clients across India. Late Mr. Purohit, a pioneering visionary of the industry, established the Company on strong founding values of business ethics and commitment to excellence and service. Over the next decade the Company grew and diversified in to supplying stainless steel wires. The standards of customer service, product quality and timely deliveries set by him continue to guide the Company even today in commanding respect and position of a preferred supplier across India."} />
           </div>
         </div>
-        <div className="absolute right-0 top-0">
+        <div className="hidden xl:flex absolute right-0 top-0">
           <img
             src={AboutGroup}
           />
