@@ -10,7 +10,7 @@ import ContactSection from "./Component/ContactSection"
 import Navbar from "./Navbar"
 
 const Home = () => {
-  const isMobile = useMediaQuery({ maxWidth: 1280 })
+  const isMobile = useMediaQuery({ maxHeight: 700 })
   return (
     <div >
       <Navbar showMenu={false}/>

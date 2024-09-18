@@ -32,7 +32,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
     <header className="fixed w-full bg-white z-50 mb-50">
       <div
         className="navbar flex flex-row justify-between
-         items-center pt-3 pb-6 px-[32px] md:px-[80px]"
+         items-center py-6  px-[15px] xl:px-[150px]"
       >
         <img
           src={Logo}
