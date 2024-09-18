@@ -1,6 +1,6 @@
 import toTop from "../assets/images/Banner/to-top.svg";
 
-const ScrollToTopButton = () => {
+const ScrollToTopButton = ({ className = "" }) => {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -10,7 +10,7 @@ const ScrollToTopButton = () => {
 
   return (
     <a href="#top" onClick={handleScrollToTop}>
-      <img src={toTop} alt="Scroll to Top" />
+      <img src={toTop} alt="Scroll to Top " className={`scroll-smooth ${className}`} />
     </a>
   );
 };

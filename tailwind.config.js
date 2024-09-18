@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const flowbite = require("flowbite-react/tailwind");
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    flowbite.content(),
+  ],
   theme: {
     backgroundSize: {
       'auto': 'auto',
@@ -48,6 +52,6 @@ module.exports = {
       // 'xs': '375px',
     }
   },
-  plugins: [],
+  plugins: [flowbite.plugin(),],
 }
 

@@ -306,7 +306,7 @@ export default function About() {
     ">
       <div className="flex flex-col gap-[48px]">
         <PageHeading title={"How it works?"} />
-        <div className="flex flex-row gap-[23px] xl:flex-col">
+        <div className="flex flex-row gap-[23px] xl:flex-col relative z-10">
           <div className="relative">
             <div className="absolute top-[0%] left-0 transform -translate-x-1/2 -translate-y-1/2">
               <img src={eclipseIcon} className="max-w-[20px]" alt="Eclipse Icon" />

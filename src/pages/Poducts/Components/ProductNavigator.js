@@ -1,34 +1,42 @@
+import { Link } from "react-router-dom"
+import { RoutesLink } from "../../../Utility/RoutesLink"
+
 export default function ProductNavigator({ }) {
   const productNavigateText = [
     {
       label1: "Advance",
       colorLabel: "CRAFT",
       color: "product-label-text-blue",
-      label2: "Stainless steel grades"
+      label2: "Stainless steel grades",
+      link: RoutesLink?.product1
     },
     {
       label1: "Advance",
       colorLabel: "PRO",
       color: "product-label-text-orange",
-      label2: "Nickel Alloy grades"
+      label2: "Nickel Alloy grades",
+      link: RoutesLink?.product1
     },
     {
       label1: "Advance",
       colorLabel: "FORGE",
       color: "product-label-text-green",
-      label2: "Other Alloy grades"
+      label2: "Other Alloy grades",
+      link: RoutesLink?.product1
     },
     {
       label1: "Hoganas Iron Powder",
       colorLabel: "",
       color: "",
-      label2: ""
+      label2: "",
+      link: RoutesLink?.product2
     },
     {
       label1: "6k Additive Powers",
       colorLabel: "",
       color: "",
-      label2: ""
+      label2: "",
+      link: RoutesLink?.product3
     }
   ]
   return productNavigateText?.map((item, index) => <div
@@ -36,12 +44,13 @@ export default function ProductNavigator({ }) {
     className={`relative  items-center  px-[12px] py-[8px]
        ${index !== productNavigateText.length - 1 ? 'border-end' : ''}`}
   >
-    <p className="product-label-text product-label-text-black">
-      {item?.label1}{" "}
-      {item?.colorLabel && <span className={"product-label-text" + " " + item.color}>{item?.colorLabel}</span>}
-    </p>
-    {item?.label2 && <span className="product-label-text-2"> {item?.label2}</span>}
-
+    <Link to={item?.link}>
+      <p className="product-label-text product-label-text-black">
+        {item?.label1}{" "}
+        {item?.colorLabel && <span className={"product-label-text" + " " + item.color}>{item?.colorLabel}</span>}
+      </p>
+      {item?.label2 && <span className="product-label-text-2"> {item?.label2}</span>}
+    </Link>
   </div>)
 }
 

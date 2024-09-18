@@ -1,10 +1,11 @@
 import './App.css';
+
 import CommonRoutes from './routes';
 
 function App() {
   return (
     <div >
-     <CommonRoutes />
+      <CommonRoutes />
     </div>
   );
 }

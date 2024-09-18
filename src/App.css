@@ -80,6 +80,13 @@ padding: 21px 26px 21px 24px;
 align-items: center;
 flex-shrink: 0;
 width: 100%;
+color: #8692A6;
+
+font-family: "Fira Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
 /* Responsive styles */

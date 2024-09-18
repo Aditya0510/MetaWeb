@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import upperArrow from "../assets/images/Banner/upperArrow.svg";
 
 import ScrollToTopButton from "./ScrollToTop";
+import { RoutesLink } from "../Utility/RoutesLink";
 
 export default function Footer() {
   const brochureText = "Brochure";
   const linkArray = [
-    { link: "", label: "Products" }, { link: "", label: "About Us" }, { link: "", label: "How it works" },
-    { link: "", label: "Careers" }, { link: "", label: "Contacts" }
+    { link: RoutesLink?.product1, label: "Products" }, { link: RoutesLink?.About, label: "About Us" }, { link: "", label: "How it works" },
+    { link: RoutesLink?.career, label: "Careers" }, { link: "", label: "Contacts" }
   ]
   const info = {
     contactLabel: "Contact Us",
@@ -56,8 +57,10 @@ export default function Footer() {
           />
         </div>
         <div className="flex flex-wrap">
-          {linkArray?.map((item) => <Link className="text-white
-          text-[16px]">{item?.label} {" /"}</Link>)}
+          {linkArray?.map((item, index) => <Link
+            to={item.link}
+            className="text-white
+          text-[16px]">{item?.label} {index + 1 < linkArray?.length ? " /" : ''}</Link>)}
         </div>
       </div>
       <div className="block  xl:hidden">

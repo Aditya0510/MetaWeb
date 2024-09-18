@@ -12,6 +12,7 @@ import Careers from "../pages/Careers"
 import Enquiry from "../pages/Enquiry"
 import Product3 from "../pages/Poducts/Product3"
 import ScrollToTop from "../Utility/ScrollToTop"
+import Certification from "../pages/Certification"
 const routeConfig = [{
   path: RoutesLink?.Home,
   element: <Home />,
@@ -49,6 +50,10 @@ const routeConfig = [{
 {
   path: RoutesLink?.product3,
   element: <Product3 />,
+},
+{
+  path: RoutesLink?.certification,
+  element: <Certification />,
 },
 ]
 const CommonRoutes = () => {

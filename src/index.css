@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Fira Sans';
   src: url('./assets/fonts/FiraSans-Regular.ttf') format('opentype');
@@ -36,6 +37,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-html {
-  /* scroll-behavior: smooth; */
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
