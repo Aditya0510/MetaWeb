@@ -17,6 +17,7 @@ export default function Careers() {
       <div className="flex justify-center items-center relative py-28">
         <FormContainer
           formTitle={"careers"}
+          className="bg-gradient-to-b from-[#F0FBFA] to-[#C1E4D9]"
           formDescription={"Join us and find numerous opportunities for advancement and professional development"}
         >
           <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
@@ -43,10 +44,6 @@ export default function Careers() {
             type="email"
             className={"form-input"}
           />
-          <FormInput
-            placeholder="Enter Company Name"
-            className={"form-input"}
-          />
           <FormSelect
             className={"form-input"}
             options={positionoptions}
@@ -59,12 +56,15 @@ export default function Careers() {
           <div>
             <label
               htmlFor="file-upload"
-              className="flex gap-1">
-              <img
-                src={attach}
-              />
-              <span className="text-[#51565B] font-[Fira Sans] text-[14px] font-medium underline">Attach CV here</span>
-              <button className="text-[#50555B] font-[Fira Sans] text-[14px] font-medium leading-[130%] tracking-[-0.28px] ">choose file</button>
+              className="flex gap-[20px]">
+              <div className="flex">
+                <img
+                  src={attach}
+                />
+                <span className="text-[#51565B] font-[Fira Sans] text-[14px] font-medium underline">Attach CV here</span>
+              </div>
+
+              <span className="flex py-[4px] px-3 items-center gap-2.5 border border-[#50555B] bg-white">choose file</span>
 
             </label>
             <input

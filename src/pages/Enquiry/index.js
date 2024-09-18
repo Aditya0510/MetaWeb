@@ -67,7 +67,7 @@ export default function Enquiry() {
     <Navbar />
     <div class="pt-[120px]">
       <div className="flex justify-center items-center relative py-28">
-        <FormContainer formTitle={"Send Enquiry"}>
+        <FormContainer formTitle={"Send Enquiry"} className="bg-gradient-to-b from-[#ECF3FB] to-[#B7D4EF]">
           <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
             <div>
               <FormInput
@@ -109,7 +109,8 @@ export default function Enquiry() {
               <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
 
                 Product
-                {ProductOptions?.map((prod, prodIndex) => {
+
+                {/* {ProductOptions?.map((prod, prodIndex) => {
                   if (prod?.checked) {
                     return (
 
@@ -122,7 +123,9 @@ export default function Enquiry() {
                     );
                   }
                   return null; // return null if the product is not checked
-                })}
+                })} */}
+
+
               </Accordion.Title>
               <Accordion.Content className="p-0">
                 {ProductOptions?.map((product, i) => <div class="flex py-4 px-10 justify-between items-center w-full bg-white border-b-[2px]" key={i}>
