@@ -42,13 +42,13 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
           <img
             src={Logo}
             alt="Advance metal logo"
-            className="max-sm:hidden main-logo"
+            className="max-sm:hidden main-logo cursor-pointer"
             onClick={() => navigate(RoutesLink?.Home)}
           />
           <img
             src={mobileLogo}
             alt="Advance metal logo"
-            className="sm:hidden main-logo"
+            className="sm:hidden main-logo cursor-pointer"
             onClick={() => navigate(RoutesLink?.Home)}
           />
         </div>
@@ -82,8 +82,9 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
           <img
             src={contactLogo}
             alt="call-icon"
-            className="contact-logo"
+            className="contact-logo cursor-pointer"
             onClick={() => (window.location.href = "tel:1234567890")}
+            title="Click to call"
           />
         </div>
       </div>
