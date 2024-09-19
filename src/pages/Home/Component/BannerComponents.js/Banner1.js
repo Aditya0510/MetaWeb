@@ -24,7 +24,7 @@ const Banner1 = ({ index = 1 }) => {
       bgImage={WeldingImage}
     >
       <div className="containerHeight items-center  flex">
-        <div className="flex flex-col  px-[15px] xl:px-[150px] my-[40px] ">
+        <div className="flex flex-col lg:mt-[100px]  px-[15px] xl:px-[150px] my-[40px] ">
           <p className="Slider-count mx-[15px] xl:mx-[0px]">1/5</p>
 
           {/* Grid layout */}

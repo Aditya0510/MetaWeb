@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Logo from "../../assets/images/Logo/Logo-1.svg"
 import contactLogo from "../../assets/images/Logo/contact-logo.svg"
+import mobileLogo from "../../assets/images/Logo/Mobile_Logo.svg"
 import hamburgerLogo from "../../assets/images/Logo/hamburger.svg"
 import "./Home.css"
 import { NavLink, useNavigate } from "react-router-dom"
@@ -20,26 +21,37 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
     { link: RoutesLink?.enquire, label: "Enquire" },
   ]
   window.onscroll = function () {
-    var navbar = document.querySelector(".navbar img")
+    var navbarImages = document.querySelectorAll(".navbar img")
+    var callIcon = document.querySelector(".callIcon img")
     if (window?.pageYOffset > 0) {
-      navbar?.classList?.add("small")
+      navbarImages?.forEach((image) => image.classList?.add("small"))
+      callIcon?.classList?.add("small")
     } else {
-      navbar?.classList?.remove("small")
+      navbarImages?.forEach((image) => image.classList?.remove("small"))
+      callIcon?.classList?.remove("small")
     }
   }
 
   return (
     <header className="fixed w-full bg-white z-50 mb-50">
       <div
-        className="navbar flex flex-row justify-between
-         items-center pt-3 pb-6 px-[32px] md:px-[80px]"
+        className="flex flex-row justify-between
+         items-center py-[12px] lg:py-[24px] px-[32px] lg:px-[80px]"
       >
-        <img
-          src={Logo}
-          alt="ek-sath"
-          className="main-logo"
-          onClick={() => navigate(RoutesLink?.Home)}
-        />
+        <div className="navbar">
+          <img
+            src={Logo}
+            alt="Advance metal logo"
+            className="max-sm:hidden main-logo"
+            onClick={() => navigate(RoutesLink?.Home)}
+          />
+          <img
+            src={mobileLogo}
+            alt="Advance metal logo"
+            className="sm:hidden main-logo"
+            onClick={() => navigate(RoutesLink?.Home)}
+          />
+        </div>
 
         {showMenu ? (
           <div className="hidden md:flex">
@@ -66,14 +78,18 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
           </div>
         ) : null}
 
-        <div className="flex items-center justify-center">
-          <img src={contactLogo} alt="ek-sath" className="contact-logo" />
+        <div className="callIcon flex items-center justify-center">
+          <img
+            src={contactLogo}
+            alt="call-icon"
+            className="contact-logo"
+            onClick={() => (window.location.href = "tel:1234567890")}
+          />
         </div>
       </div>
 
       {isMenuOpen ? (
         <>
-          
           <nav
             className="md:hidden bg-white flex flex-col 
         h-screen
@@ -99,10 +115,9 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
               </ul>
             </div>
             <div className="relative z-10">
-            <Footer />
-          </div>
+              <Footer />
+            </div>
           </nav>
-          
         </>
       ) : null}
     </header>

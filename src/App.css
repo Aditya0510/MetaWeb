@@ -13,11 +13,12 @@
   flex-shrink: 0;
   object-fit: contain;
 }
-.navbar img {
+.navbar img,
+.contact-logo {
   transition: all 0.5s;
 }
 
-.navbar img.small {
+.main-logo.small {
   width: 120px;
   height: 56px;
 }
@@ -25,6 +26,11 @@
 .contact-logo {
   width: 48px;
   height: 48px;
+}
+
+.contact-logo.small{
+  width: 32px;
+  height: 32px;
 }
 
 .hamburger-logo {
@@ -107,7 +113,7 @@ line-height: normal;
     height: 88px;
     flex-shrink: 0;
   }
-  .navbar img.small {
+  .main-logo.small {
     width: 70px;
     height: 44px;
   }
@@ -117,6 +123,10 @@ line-height: normal;
   .contact-logo {
     width: 45px;
     height: 45px;
+  }
+  .contact-logo.small{
+    width: 32px;
+    height: 32px;
   }
 
   .hamburger-logo {
@@ -136,24 +146,30 @@ padding: 21px 26px 21px 24px;
     height: 56px;
     flex-shrink: 0;
   }
-  .navbar img.small {
+  .main-logo.small {
     width: 45px;
     height: 30px;
   }
 
+  .contact-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact-logo.small{
+    width: 24px;
+    height: 24px;
+  }
+
   .product-label-text{
-font-size: 16px;
-letter-spacing: -0.32px;
+    font-size: 16px;
+    letter-spacing: -0.32px;
   }
   
   .form-container{
    padding: 40px 24px;
 }
 
-  .contact-logo {
-    width: 32px;
-    height: 32px;
-  }
 
   .hamburger-logo {
     width: 36.75px;
