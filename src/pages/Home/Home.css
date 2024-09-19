@@ -42,6 +42,15 @@ letter-spacing: -0.44px;
     
   }
 }
+.banner-products{
+  color: #483729;
+font-family: "Fira Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 21px */
+letter-spacing: -0.28px;
+}
 .Slider-count{
   color: #1A3F7C;
 font-family: "Fira Sans";
@@ -117,4 +126,10 @@ letter-spacing: -0.28px;
     height: calc(100vh - 80px);
     
   }
+}
+
+.productImagesDesign{
+  height: calc((100dvh - 100px)/4);
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
