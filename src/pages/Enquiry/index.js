@@ -71,7 +71,7 @@ export default function Enquiry() {
           <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
             <div>
               <FormInput
-                placeholder="first name"
+                placeholder="First name"
                 className={"form-input"}
               />
             </div>
@@ -85,7 +85,7 @@ export default function Enquiry() {
           <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
             <div>
               <FormInput
-                placeholder="Mobile Number"
+                placeholder="Enter mobile no."
                 type="number"
                 className={"form-input"}
               />
@@ -93,7 +93,7 @@ export default function Enquiry() {
             <div>
 
               <FormInput
-                placeholder="Email Address"
+                placeholder="Email address"
                 type="email"
                 className={"form-input"}
               />
@@ -101,7 +101,7 @@ export default function Enquiry() {
 
           </div>
           <FormInput
-            placeholder="Enter Company Name"
+            placeholder="Enter company name"
             className={"form-input"}
           />
           <Accordion className="rounded-none flex flex-col gap-[4px]">

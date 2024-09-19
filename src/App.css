@@ -95,6 +95,11 @@ font-weight: 500;
 line-height: normal;
 }
 
+.first\:rounded-t-lg:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
 /* Responsive styles */
 
 /* For 1440px screen width and below */
