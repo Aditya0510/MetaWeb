@@ -30,7 +30,11 @@ import shipment from "../../assets/images/Banner/shipment (1).png";
 import stepAsset from "../../assets/images/Banner/deliveryStepBanner.png";
 import { useState } from "react";
 import { Accordion } from "flowbite-react";
+import { useForm } from "react-hook-form";
+import { validateName } from "../../Utility/Validations";
+
 export default function About() {
+
   const AboutText = {
     title: "About",
     aboutDesc: {
@@ -138,6 +142,14 @@ export default function About() {
     }
   ];
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError,
+    clearErrors,
+  } = useForm();
+
   const [ProductOptions, setProductOption] = useState([{
     value: "Advance_craft",
     label: "Advance CRAFT",
@@ -187,6 +199,24 @@ export default function About() {
   const formCheckHandler = (isChecked, value, setState) => {
     setState(prevState => prevState.map(item => item.value === value ? { ...item, checked: isChecked } : item));
   }
+
+  const onSubmit = (data) => {
+    // Check if at least one checkbox is selected in ProductOptions
+    const isProductSelected = ProductOptions.some(option => option.checked);
+    const isFormSelected = FormOptions.some(option => option.checked);
+    // console.log(data);
+    if (!isProductSelected) {
+      setError("productForm", { type: "manual", message: "At least one product must be selected" });
+    }
+
+    if (!isFormSelected) {
+      setError("formOptions", { type: "manual", message: "At least one form must be selected" });
+    }
+
+    if (isProductSelected && isFormSelected) {
+      console.log(data); // Proceed with form submission
+    }
+  };
 
   return (<>
     <Navbar />
@@ -292,19 +322,33 @@ export default function About() {
 
     </div>
     <div className="flex justify-center items-center relative pt-[300px] pb-28">
-      <FormContainer formTitle={"Send Enquiry"} className="bg-gradient-to-b from-[#ECF3FB] to-[#B7D4EF]">
+      <FormContainer
+        formTitle={"Send Enquiry"}
+        className="bg-gradient-to-b from-[#ECF3FB] to-[#B7D4EF]"
+        handleSubmitForm={handleSubmit(onSubmit)}
+      >
         <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
           <div>
             <FormInput
               placeholder="first name"
               className={"form-input"}
+              registerData={register("firstName", {
+                required: "First name is required",
+                validate: validateName
+              })}
             />
+            {<p className="text-red-500">{errors?.firstName?.message}</p>}
           </div>
           <div >
             <FormInput
               placeholder="Last name"
               className={"form-input"}
+              registerData={register("lastName", {
+                required: "Last name is required",
+                validate: validateName
+              })}
             />
+            {<p className="text-red-500">{errors?.lastName?.message}</p>}
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
@@ -313,6 +357,13 @@ export default function About() {
               placeholder="Mobile Number"
               type="number"
               className={"form-input"}
+              registerData={register("mobile", {
+                required: "Mobile number is required",
+                pattern: {
+                  value: /^[0-9]{10}$/,
+                  message: "Please enter a valid 10-digit mobile number",
+                },
+              })}
             />
           </div>
           <div>
