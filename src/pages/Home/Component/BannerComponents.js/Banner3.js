@@ -10,7 +10,10 @@ import advanceForge from "../../../../assets/images/productImages/advanceForge.p
 import Button from "../../../../components/Button"
 import BannerContainer from "./BannerContainer"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner3.png"
+import { RoutesLink } from "../../../../Utility/RoutesLink"
+import { useNavigate } from "react-router-dom"
 const Banner3 = ({ index = 3, total = 5 }) => {
+  const navigate = useNavigate()
   const title = `The Ultimate Welding Allies`
   const subtitle = `The ability to supply large quantities of wires and powders in various grades, chemistries, and forms, with customization options for specific supplier needs.`
 
@@ -18,12 +21,12 @@ const Banner3 = ({ index = 3, total = 5 }) => {
     {
       title: "Advance Craft",
       image: advanceCraft,
-      productImage: brand1,
+      productImage: brand2,
     },
     {
       title: "Advance Pro",
       image: advancePro,
-      productImage: brand2,
+      productImage: brand1,
     },
     {
       title: "Advance Forge",
@@ -52,7 +55,7 @@ const Banner3 = ({ index = 3, total = 5 }) => {
               <p className="Banner-subtitle mt-[24px]">{subtitle}</p>
 
               {/* This will navigate to the product page        */}
-              <Button title="Know More" className="mt-[32px]" />
+              <Button title="Know More" className="mt-[32px]" onClick={() => navigate(RoutesLink?.product1)}/>
             </div>
 
             {/* column 2  */}
@@ -65,10 +68,10 @@ const Banner3 = ({ index = 3, total = 5 }) => {
                   }`}
                 >
                   <div className="col-span-2">
-                    <img src={product.image} alt="banner" className="" />
+                    <img src={product.image} alt="banner" className="productImagesDesign" />
                   </div>
                   <div className="col-span-3 ml-[24px]">
-                    <span className="productTitle">0 {i + 1}.</span>
+                    <span className="productTitle">0{i + 1}.</span>
                     <img
                       src={product.productImage}
                       alt="product"

@@ -13,7 +13,10 @@ import Sail from "./../../../../assets/images/expertise/Sailboat.svg"
 import Fan from "./../../../../assets/images/expertise/Fan.svg"
 import Cube from "./../../../../assets/images/expertise/Cube.svg"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner4.png"
+import { RoutesLink } from "../../../../Utility/RoutesLink"
+import { useNavigate } from "react-router-dom"
 const Banner4 = ({ index = 4, total = 5 }) => {
+  const navigate = useNavigate()
   const title = `Sponge iron powder high and uniform quality`
   const subtitle = `Wide range of powders with varying chemical and physical properties, all with low levels of impurities and narrow specifications, helps enhancing the characteristics and performance of covered electrodes as well
   as flux-cored and metal-cored wires.`
@@ -72,7 +75,7 @@ const Banner4 = ({ index = 4, total = 5 }) => {
               </div>
 
               {/* This will navigate to the product page        */}
-              <Button title="Know More" className="mt-[8px]" />
+              <Button title="Know More" className="mt-[8px]" onClick={() => navigate(RoutesLink?.product2)}/>
             </div>
           </div>
         </div>

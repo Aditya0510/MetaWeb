@@ -13,7 +13,10 @@ import Fan from "./../../../../assets/images/expertise/Fan.svg"
 import Cube from "./../../../../assets/images/expertise/Cube.svg"
 import Medical from "./../../../../assets/images/expertise/Medical.svg"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner5.png"
+import { useNavigate } from "react-router-dom"
+import { RoutesLink } from "../../../../Utility/RoutesLink"
 const Banner5 = ({ index = 5, total = 5 }) => {
+  const navigate = useNavigate()
   const title = `Additive Metal Powder`
   const subtitle = `A production-scale microwave plasma process`
   const subtitle2 = `Experts in the Industries`
@@ -66,7 +69,7 @@ const Banner5 = ({ index = 5, total = 5 }) => {
               </div>
 
               {/* This will navigate to the product page        */}
-              <Button title="Know More" className="mt-[8px]" />
+              <Button title="Know More" className="mt-[8px]" onClick={() => navigate(RoutesLink?.product3)}/>
             </div>
 
             {/* column 1 */}

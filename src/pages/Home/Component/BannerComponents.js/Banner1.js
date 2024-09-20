@@ -8,16 +8,17 @@ import BannerImage from "./../../../../assets/images/Banner/BannerImg1.svg"
 import Button from "../../../../components/Button"
 import BannerContainer from "./BannerContainer"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner1.png"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 import { RoutesLink } from "../../../../Utility/RoutesLink"
 const Banner1 = ({ index = 1 }) => {
   const title = `India's most sought-after new age brand for Welding Consumables`
   const subtitle = `Advance Metal Powder is India’s leading manufacturer and supplier
   of wide variety stainless steel wires, high performance nickel
-  alloy wires, other alloy wires in popular forms of for welding
-  applications`
+  alloy wires, other alloy wires in popular forms of `
+  const subtitle2 = `for welding applications.`
+  const products = ["TIG", "MIG", "SAW", "Cors", "Metal Powder"]
   const brands = [brand1, brand2, brand3]
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <BannerContainer
       containerStyle="bg-[#ECF3FB] pb-[60px] xl:pb-[0px]"
@@ -47,10 +48,24 @@ const Banner1 = ({ index = 1 }) => {
               </div>
 
               {/* description      */}
-              <p className="Banner-subtitle">{subtitle}</p>
+    
+              <p className="Banner-subtitle">{subtitle} {products?.map(
+                (item, index) => (
+                  <span
+                    key={index}
+                    className="banner-products uppercase first-of-type:ml-2 inline-block rounded-[150px] border border-[#483729] bg-white px-2 py-1 mr-2 mt-[1px] "
+                  >
+                    {item}
+                  </span>
+                )
+              )} {subtitle2}</p>
 
               {/* This will navigate to the product page        */}
-              <Button title="Know More" className="mt-[32px]" onClick={()=>navigate(RoutesLink?.product1)}/>
+              <Button
+                title="Know More"
+                className="mt-[32px]"
+                onClick={() => navigate(RoutesLink?.product1)}
+              />
             </div>
 
             {/* column 2  */}

@@ -41,7 +41,7 @@ export default function ProductNavigator({ }) {
   ]
   return productNavigateText?.map((item, index) => <div
     key={index}
-    className={`relative  items-center  px-[12px] py-[8px]
+    className={`flex justify-center relative  items-center  px-[12px] py-[8px]
        ${index !== productNavigateText.length - 1 ? 'border-end' : ''}`}
   >
     <Link to={item?.link}>

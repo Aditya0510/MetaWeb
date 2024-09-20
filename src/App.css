@@ -39,13 +39,17 @@
 }
 
 .nav-link {
+  color: #02111B;
+  font-family: "Fira Sans";
   font-size: 20px;
   font-style: normal;
-  /* font-family: "Fira Sans"; */
-  font-weight: 500;
+  font-weight: 400;
   line-height: 130%; /* 26px */
   letter-spacing: -0.4px;
   padding: 8px 12px;
+}
+.nav-link:last-child{
+  color: #1D3D7C
 }
 
 .nav-link.active {

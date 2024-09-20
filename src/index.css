@@ -18,7 +18,11 @@
   src: url('./assets/fonts/FiraCode-Medium.ttf') format('opentype');
   font-weight: 400;
 }
-
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./assets/fonts/FiraCode-Light.ttf') format('opentype');
+  font-weight: 300;
+}
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';

@@ -55,7 +55,7 @@ const Banner1 = ({ index = 2, total = 5 }) => {
                     first:border-l-[0px]
                     first:pl-[0px]
                     Banner-subtitle
-                    last:mt-[10px]
+                    last:max-md:mt-[10px]
                     `}
                   >
                     {content}
