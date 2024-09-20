@@ -34,7 +34,7 @@ export default function Careers() {
           formTitle={"careers"}
           className="bg-gradient-to-b from-[#F0FBFA] to-[#C1E4D9]"
           formDescription={"Join us and find numerous opportunities for advancement and professional development"}
-          formSubmitHandler={onSubmit}
+
           handleSubmitForm={handleSubmit(onSubmit)}
         >
           <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
