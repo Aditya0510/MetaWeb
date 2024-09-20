@@ -15,7 +15,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
   const TabsArray = [
     { link: RoutesLink?.product1, label: "Products" },
     { link: RoutesLink?.About, label: "About Us" },
-    { link: RoutesLink?.certification, label: "Certification" },
+    { link: RoutesLink?.certification, label: "Certifications" },
     { link: RoutesLink?.csr, label: "CSR" },
     { link: RoutesLink?.career, label: "Career" },
     { link: RoutesLink?.enquire, label: "Enquire" },

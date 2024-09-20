@@ -1,9 +1,9 @@
 .product-label-text{
 font-size: 18px;
 font-style: normal;
-font-weight: 350;
+font-weight: 400;
 line-height: 130%; /* 23.4px */
-letter-spacing: -0.36px; 
+letter-spacing: -0.36px;
 }
 
 .product-label-text-black{
@@ -24,9 +24,10 @@ letter-spacing: -0.36px;
   color: #51565B;
 font-size: 16px;
 font-style: normal;
-font-weight: 350;
+font-weight: 400;
 line-height: 130%; 
 letter-spacing: -0.32px;
+text-transform: capitalize;
 }
 .border-end{
   border-right:1px solid
@@ -62,7 +63,7 @@ height: 737px;
 font-family: "Fira Sans";
 font-size: 48px;
 font-style: normal;
-font-weight: 350;
+font-weight: 400;
 line-height: 105%; /* 50.4px */
 letter-spacing: -0.96px;
 text-transform: capitalize;
@@ -172,7 +173,7 @@ letter-spacing: 6px;
 
 .product-description{
   font-size: 16px;
-font-weight: 350;
+font-weight: 400;
 line-height: 150%; /* 24px */
 letter-spacing: -0.32px;
 }

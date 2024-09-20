@@ -447,7 +447,7 @@ xl:h-[1px]"></div>
                 src={item?.imgSrc}
                 className="w-[45px] h-[45px]"
               />
-              <h6 class="text-[#02111B] font-[Fira Sans] text-[24px] font-[350] leading-[105%] tracking-[-0.48px]">
+              <h6 class="text-[#02111B] font-[Fira Sans] text-[24px] font-[400] leading-[105%] tracking-[-0.48px]">
                 {item?.title1}<br />
                 {item?.title2}
               </h6>

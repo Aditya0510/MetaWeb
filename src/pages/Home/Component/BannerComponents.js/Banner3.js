@@ -21,12 +21,12 @@ const Banner3 = ({ index = 3, total = 5 }) => {
     {
       title: "Advance Craft",
       image: advanceCraft,
-      productImage: brand1,
+      productImage: brand2,
     },
     {
       title: "Advance Pro",
       image: advancePro,
-      productImage: brand2,
+      productImage: brand1,
     },
     {
       title: "Advance Forge",
@@ -71,7 +71,7 @@ const Banner3 = ({ index = 3, total = 5 }) => {
                     <img src={product.image} alt="banner" className="productImagesDesign" />
                   </div>
                   <div className="col-span-3 ml-[24px]">
-                    <span className="productTitle">0 {i + 1}.</span>
+                    <span className="productTitle">0{i + 1}.</span>
                     <img
                       src={product.productImage}
                       alt="product"
