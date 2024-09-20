@@ -72,7 +72,7 @@ export default function Enquiry() {
   }
 
   const onSubmit = (data) => {
-    // Check if at least one checkbox is selected in ProductOptions
+
     const isProductSelected = ProductOptions.some(option => option.checked);
     const isFormSelected = FormOptions.some(option => option.checked);
     // console.log(data);
@@ -85,7 +85,7 @@ export default function Enquiry() {
     }
 
     if (isProductSelected && isFormSelected) {
-      console.log(data); // Proceed with form submission
+      console.log(data); // Proceed with form submission here
     }
   };
 
@@ -163,7 +163,7 @@ export default function Enquiry() {
             })}
           />
           {<p className="text-red-500">{errors?.companyName?.message}</p>}
-          <Accordion className="rounded-none flex flex-col gap-[4px]">
+          <Accordion className="rounded-none flex flex-col gap-[4px]" collapseAll>
             <Accordion.Panel className="rounded-none">
               <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
 
@@ -229,6 +229,7 @@ export default function Enquiry() {
           <FormTextArea
             className={"form-input"}
             placeholder={"Leave a note"}
+            registerData={register("note")}
           />
           <div>
             <Button

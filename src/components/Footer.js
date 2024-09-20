@@ -90,7 +90,7 @@ export default function Footer() {
           <p className="text-white  text-[20px]">{info?.address}</p>
         </div>
         <div>
-          <h4 class="text-[#D4D5D9]  text-[14px] leading-[18.2px] tracking-[1.12px] uppercase">{info?.addressLabel}</h4>
+          <h4 class="text-[#D4D5D9]  text-[14px] leading-[18.2px] tracking-[1.12px] uppercase">{info?.openHoursLabel}</h4>
           <p className="text-white  text-[20px]">{info?.openHour}</p>
         </div>
       </div>

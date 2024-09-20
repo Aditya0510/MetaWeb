@@ -28,7 +28,7 @@ export default function Product3() {
     <div className="product-container-2 flex flex-col gap-28 relative">
       <div className="flex flex-col gap-28 relative z-10 pe-[50px] md:pe-[0px]">
         <MainTitleHeading title={product3Slogan} />
-        <div className="flex flex-col max-w-[1600px] gap-[56px]  3xl:gap-[88px]  md:flex-row">
+        <div className="flex flex-col max-w-[95%] gap-[56px]  3xl:gap-[88px]  md:flex-row">
           <div className="flex flex-col items-start  gap-[24px] md:max-w-[60%]">
             <img
               src={additive}

@@ -37,6 +37,11 @@ import ProductGroup from "../../assets/images/Banner/ProductGroup.svg"
 import MainContainer from "../../components/Containers/MainContainer";
 import { useState } from "react";
 import { Accordion } from "flowbite-react";
+import { useForm } from "react-hook-form";
+import { validateName } from "../../Utility/Validations";
+import tigImage from "../../assets/images/product/tigImage.png";
+import tigPrimaryImage from "../../assets/images/product/tigPrimaryImage.png";
+
 export default function Product1() {
   const productTitle1 = "Its not just supplying, its also customizing";
   const productTitle2 = "Weld with Confidence, Achieve Superior Results.";
@@ -47,10 +52,16 @@ export default function Product1() {
   const product1DesTiles = ["ER307", "ER308", "ER308L", "ER309", "ER309L", "ER309LMo", "ER310", "ER312", "ER316", "ER316L", "ER317L", "ER318", "ER347", "ER430"]
 
 
-
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError,
+    clearErrors,
+  } = useForm();
 
   const product1 = {
-    productTitle: "TIG",
+    productTitle: "MIG",
     productDes: "The MIG wires are supplied in bright as well as in matte finish and the wire is specially cleaned to avoid weld contamination. Stainless steel MIG wires can be supplied in plastic spool. The wires have suitable cast / helix to ensure perfect “Pay-Off”.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: product1PrimaryImage,
@@ -82,6 +93,40 @@ export default function Product1() {
 
   }
 
+  const productTig = {
+    productTitle: "TIG",
+    productDes: "We manufacture high quality stainless steel TIG wires in 36” & 1,000 mm cutlengths, with embossing on both sides above 1.0 mm wires as per customer’s requirements.TIG wires are supplied in bright and clean finish to avoid all possible contamination.No oil is used in processing of TIG wires.",
+    sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
+    primaryImage: tigPrimaryImage,
+    size: [
+      { mm: "1.00", inch: '0.040"', fraction: "---" },
+      { mm: "1.20", inch: '0.045"', fraction: "---" },
+      { mm: "1.60", inch: '0.062"', fraction: '"1/16"' },
+      { mm: "2.00", inch: '0.078"', fraction: "---" },
+      { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
+      { mm: "3.20", inch: '0.125"', fraction: '1/18"' },
+      { mm: "4.00", inch: '0.156"', fraction: '5/32"' },
+    ],
+    spoolImages: [
+      {
+        image: tigImage,
+        title: "Plastic Spool SD300",
+        size: ["12.5 kgs", "15 kgs", "20 kgs", "25 lbs", "30 lbs"]
+      },
+      {
+        image: product1Spool2Image,
+        title: "Plastic Spool SD200",
+        size: ["5 kgs", "10 lbs"]
+      },
+      {
+        image: product1Spool3Image,
+        title: "Plastic Spool SD100",
+        size: ["1 kgs", "2 lbs"]
+      }
+
+    ]
+
+  }
 
   const productSaw = {
     productTitle: "SAW",
@@ -117,6 +162,7 @@ export default function Product1() {
     productTitle: "CORE",
     productDes: "We manufacture high quality stainless steel wire for welding electrodes in sizes 2.00 mm (0.078”) - 5.00 mm (0.187”) in bright as well as in matte finish. The stainless steel wire for welding electrodes are supplied in coil as well as in cut length as per AWS, DIN, BS, JIS and other equivalent international standards or as per the customer’s requirement.",
     primaryImage: "",
+    sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     size: [
 
       { mm: 2.00, inch: '0.078"', fraction: "---" },
@@ -144,6 +190,14 @@ export default function Product1() {
   }
 
   const productSub = {
+
+    image: tigImage,
+    title: "Plastic tube",
+    size: ["5 kgs", "10 kgs", "10 lbs", "20 lbs"]
+
+  }
+
+  const productTigCard = {
 
     image: product1Spool1Image,
     title: "Plastic Spool SD300",
@@ -197,10 +251,28 @@ export default function Product1() {
   },
   ]);
 
-  const formCheckHandler = (isChecked, value, setState) => {
+  const formCheckHandler = (isChecked, value, setState, errorValue) => {
     setState(prevState => prevState.map(item => item.value === value ? { ...item, checked: isChecked } : item));
+    clearErrors(errorValue);
   }
 
+  const onSubmit = (data) => {
+    // Check if at least one checkbox is selected in ProductOptions
+    const isProductSelected = ProductOptions.some(option => option.checked);
+    const isFormSelected = FormOptions.some(option => option.checked);
+    // console.log(data);
+    if (!isProductSelected) {
+      setError("productForm", { type: "manual", message: "At least one product must be selected" });
+    }
+
+    if (!isFormSelected) {
+      setError("formOptions", { type: "manual", message: "At least one form must be selected" });
+    }
+
+    if (isProductSelected && isFormSelected) {
+      console.log(data); // Proceed with form submission here .
+    }
+  };
 
   return (
     <>
@@ -277,7 +349,7 @@ export default function Product1() {
               />
 
               <ProductDetail1
-                product1={product1}
+                product1={productTig}
               />
 
 
@@ -295,20 +367,20 @@ export default function Product1() {
         <div className="relative">
           <div className="product-container-2 flex flex-col gap-28">
 
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-28">
               <h6 className="product-1-title z-10">{productTitle3}</h6>
               <div className="flex flex-col items-center 
                3xl:gap-[88px] 
                 2xl:gap-[56px]
                md:gap-[20px]
                product-des-container
-               gap-20px 
+               gap-[20px] 
                md:flex-row
                ">
                 <ProductDetail1
                   product1={productSaw}
                 />
-                <div className="flex max-w-2/4 gap-3 flex-wrap">
+                <div className="flex max-w-2/4 gap-[40px] flex-wrap">
                   {productSaw?.spoolImages?.map((item, index) => <ProductCard item={item} index={index} />
                   )}
                 </div>
@@ -355,45 +427,79 @@ export default function Product1() {
           </div>
         </BannerContainer>
         <div className="flex justify-center items-center relative py-28">
-          <FormContainer formTitle={"Send Enquiry"} className="bg-gradient-to-b from-[#ECF3FB] to-[#B7D4EF]">
+          <FormContainer
+            formTitle={"Send Enquiry"}
+            className="bg-gradient-to-b from-[#ECF3FB] to-[#B7D4EF]"
+            handleSubmitForm={handleSubmit(onSubmit)}
+          >
             <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
               <div>
                 <FormInput
-                  placeholder="First name"
+                  placeholder="first name"
                   className={"form-input"}
+                  registerData={register("firstName", {
+                    required: "First name is required",
+                    validate: validateName
+                  })}
                 />
+                {<p className="text-red-500">{errors?.firstName?.message}</p>}
               </div>
               <div >
                 <FormInput
                   placeholder="Last name"
                   className={"form-input"}
+                  registerData={register("lastName", {
+                    required: "Last name is required",
+                    validate: validateName
+                  })}
                 />
+                {<p className="text-red-500">{errors?.lastName?.message}</p>}
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
               <div>
                 <FormInput
-                  placeholder="Mobile no."
+                  placeholder="Mobile Number"
                   type="number"
                   className={"form-input"}
+                  registerData={register("mobile", {
+                    required: "Mobile number is required",
+                    pattern: {
+                      value: /^[0-9]{10}$/,
+                      message: "Please enter a valid 10-digit mobile number",
+                    },
+                  })}
                 />
+                {<p className="text-red-500">{errors?.mobile?.message}</p>}
               </div>
               <div>
 
                 <FormInput
-                  placeholder="Email address"
+                  placeholder="Email Address"
                   type="email"
                   className={"form-input"}
+                  registerData={register("email", {
+                    required: "Email address is required",
+                    pattern: {
+                      value: /^\S+@\S+\.\S+$/,
+                      message: "Please enter a valid email address",
+                    },
+                  })}
                 />
+                {<p className="text-red-500">{errors?.email?.message}</p>}
               </div>
 
             </div>
             <FormInput
-              placeholder="Enter company name"
+              placeholder="Enter Company Name"
               className={"form-input"}
+              registerData={register("companyName", {
+                required: "Company name is required",
+              })}
             />
-            <Accordion className="rounded-none flex flex-col gap-[4px]">
-              <Accordion.Panel className="rounded-none">
+            {<p className="text-red-500">{errors?.companyName?.message}</p>}
+            <Accordion className="rounded-none flex flex-col gap-[4px]" collapseAll>
+              <Accordion.Panel className="rounded-none" >
                 <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
 
                   Product
@@ -425,13 +531,14 @@ export default function Product1() {
                       class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       checked={product.checked}
                       onClick={(e) => formCheckHandler(e.target.checked, product.value,
-                        setProductOption
+                        setProductOption, "productForm"
                       )}
                     />
 
                   </div>)}
                 </Accordion.Content>
               </Accordion.Panel>
+              {<p className="text-red-500">{errors?.productForm?.message}</p>}
               <Accordion.Panel>
                 <Accordion.Title className="flex h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none mt-[16px]">Form</Accordion.Title>
                 <Accordion.Content className="p-0">
@@ -444,18 +551,19 @@ export default function Product1() {
                       class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       checked={product.checked}
                       onClick={(e) => formCheckHandler(e.target.checked, product.value,
-                        setFormOption
+                        setFormOption, "formOptions"
                       )}
                     />
 
                   </div>)}
                 </Accordion.Content>
               </Accordion.Panel>
-
+              <p className="text-red-500">{errors?.formOptions?.message}</p>
             </Accordion>
             <FormTextArea
               className={"form-input"}
               placeholder={"Leave a note"}
+              registerData={register("note")}
             />
             <div>
               <Button

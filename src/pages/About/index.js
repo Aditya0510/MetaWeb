@@ -196,8 +196,9 @@ export default function About() {
   },
   ]);
 
-  const formCheckHandler = (isChecked, value, setState) => {
+  const formCheckHandler = (isChecked, value, setState, errorValue) => {
     setState(prevState => prevState.map(item => item.value === value ? { ...item, checked: isChecked } : item));
+    clearErrors(errorValue);
   }
 
   const onSubmit = (data) => {
@@ -214,7 +215,7 @@ export default function About() {
     }
 
     if (isProductSelected && isFormSelected) {
-      console.log(data); // Proceed with form submission
+      console.log(data); // Proceed with form submission here .
     }
   };
 
@@ -223,7 +224,7 @@ export default function About() {
     <div class="pt-[100px] relative">
       <HorizontalLine />
       <div className="pt-[100px] px-[32px] md:ps-[101px] relative">
-        <div className="flex flex-col gap-[72px] max-w-[800px] pb-[150px] relative z-10">
+        <div className="flex flex-col gap-[72px] max-w-[60%] pb-[150px] relative z-10">
           <div className="flex flex-col gap-4">
             <PageHeading title={AboutText?.title} />
             <div className="flex flex-col gap-8">
@@ -249,7 +250,7 @@ export default function About() {
           />
         </div>
         <div className="absolute right-[0px]   top-8 
-        2xl:right-[50px] xl:right-[35px]">
+        2xl:right-[10%] xl:right-[35px]">
           <img
             className="w-[342.78px] h-[435px] xl:w-[404.8px] xl:h-[563px]"
             // className="max-xl:w-[404.8px] max-xl:h-[563px] w-[342.78px] h-[435px]"
@@ -298,7 +299,7 @@ export default function About() {
     </div>
     <div className="flex ps-[37px] xl:ps-[88px] 2xl:ps-[180px]  items-center relative pt-[200px]">
       <div className="flex flex-col xl:flex-row gap-[56px]   xl:gap-[104px]">
-        <div className="flex flex-col gap-[160px] max-w-[600px] 3xl:max-w-[800px]"
+        <div className="flex flex-col gap-[160px] max-w-[600px] 3xl:max-w-[50%]"
         // style={{ width: "800px" }}
         >
           <MainTitleHeading title=" Different chemistries that make for a stronger bond." />
@@ -307,7 +308,7 @@ export default function About() {
             <ProductDesText text={"With our commitment to excellence, we have become the preferred single source of supply for all their stainless steel and metal powder requirements for our customers. We provide immediate delivery, as all products are in stock, round the clock."} />
           </div>
         </div>
-        <div class="flex flex-wrap  xl:max-w-[529px] items-start content-start gap-[24px]">
+        <div class="flex flex-wrap  xl:max-w-[32%] items-start content-start gap-[24px]">
           {AboutText?.services?.map((item, index) => (
             <div className="flex flex-col gap-[14px] max-w-[280px] xl:max-w-[180px]">
               {/* <BlueText title={item?.name} /> */}
@@ -365,6 +366,7 @@ export default function About() {
                 },
               })}
             />
+            {<p className="text-red-500">{errors?.mobile?.message}</p>}
           </div>
           <div>
 
@@ -372,16 +374,28 @@ export default function About() {
               placeholder="Email Address"
               type="email"
               className={"form-input"}
+              registerData={register("email", {
+                required: "Email address is required",
+                pattern: {
+                  value: /^\S+@\S+\.\S+$/,
+                  message: "Please enter a valid email address",
+                },
+              })}
             />
+            {<p className="text-red-500">{errors?.email?.message}</p>}
           </div>
 
         </div>
         <FormInput
           placeholder="Enter Company Name"
           className={"form-input"}
+          registerData={register("companyName", {
+            required: "Company name is required",
+          })}
         />
-        <Accordion className="rounded-none flex flex-col gap-[4px]">
-          <Accordion.Panel className="rounded-none">
+        {<p className="text-red-500">{errors?.companyName?.message}</p>}
+        <Accordion className="rounded-none flex flex-col gap-[4px]" collapseAll>
+          <Accordion.Panel className="rounded-none" >
             <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
 
               Product
@@ -413,13 +427,14 @@ export default function About() {
                   class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   checked={product.checked}
                   onClick={(e) => formCheckHandler(e.target.checked, product.value,
-                    setProductOption
+                    setProductOption, "productForm"
                   )}
                 />
 
               </div>)}
             </Accordion.Content>
           </Accordion.Panel>
+          {<p className="text-red-500">{errors?.productForm?.message}</p>}
           <Accordion.Panel>
             <Accordion.Title className="flex h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none mt-[16px]">Form</Accordion.Title>
             <Accordion.Content className="p-0">
@@ -432,18 +447,19 @@ export default function About() {
                   class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   checked={product.checked}
                   onClick={(e) => formCheckHandler(e.target.checked, product.value,
-                    setFormOption
+                    setFormOption, "formOptions"
                   )}
                 />
 
               </div>)}
             </Accordion.Content>
           </Accordion.Panel>
-
+          <p className="text-red-500">{errors?.formOptions?.message}</p>
         </Accordion>
         <FormTextArea
           className={"form-input"}
           placeholder={"Leave a note"}
+          registerData={register("note")}
         />
         <div>
           <Button
