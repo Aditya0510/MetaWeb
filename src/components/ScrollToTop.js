@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import toTop from "../assets/images/Banner/to-top.svg";
 
 const ScrollToTopButton = ({ className = "" }) => {
@@ -9,9 +10,11 @@ const ScrollToTopButton = ({ className = "" }) => {
   };
 
   return (
-    <a href="#top" onClick={handleScrollToTop}>
+    <Link to=""
+    // onClick={handleScrollToTop}
+    >
       <img src={toTop} alt="Scroll to Top " className={`scroll-smooth ${className}`} />
-    </a>
+    </Link>
   );
 };
 

@@ -56,7 +56,20 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
         {showMenu ? (
           <div className="hidden md:flex">
             {TabsArray?.map(({ link, label }, index) => (
-              <NavLink key={index} className={"nav-link"} to={link}>
+              <NavLink key={index}
+                  className={({ isActive }) => {
+      const currentPath = window.location.pathname;
+      // Check if it's product1 or other product links like product2
+      if (link === RoutesLink.product1 && 
+          (currentPath.includes(RoutesLink.product1) || currentPath.includes(RoutesLink.product2)||currentPath.includes(RoutesLink?.product3))) {
+        return "nav-link active"; // Make product1 active if product1 or product2 link is active
+      } else if (isActive) {
+        return "nav-link active"; // Active state for other tabs
+      } else {
+        return "nav-link"; // Default state for non-active tabs
+      }
+    }}
+                to={link}>
                 {label}
               </NavLink>
             ))}

@@ -224,8 +224,8 @@ export default function About() {
     <div class="pt-[100px] relative">
       <HorizontalLine />
       <div className="pt-[100px] px-[32px] md:ps-[101px] relative">
-        <div className="flex flex-col gap-[72px] max-w-[60%] pb-[150px] relative z-10">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-[72px] xl:max-w-[60%] pb-[150px] relative z-10">
+          <div className="flex flex-col gap-4 xl:max-w-[80%]">
             <PageHeading title={AboutText?.title} />
             <div className="flex flex-col gap-8">
               <ProductDesText text={AboutText?.aboutDesc?.desc1} />

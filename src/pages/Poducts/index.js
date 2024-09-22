@@ -277,9 +277,9 @@ export default function Product1() {
   return (
     <>
       <MainContainer>
-        <div className="product-container-2 flex flex-col gap-8  lg:gap-24  md:gap-28">
+        <div className="pt-[6rem] ps-[1rem] md:pt-[2rem]  md:ps-[2rem] flex flex-col gap-8  lg:gap-24  md:gap-28">
           <div className="relative">
-            <div className="flex flex-col gap-[8px] md:gap-28 relative z-10">
+            <div className="flex flex-col gap-[8px]  md:gap-28 relative z-10">
               <h6 className="product-1-title">{productTitle1}</h6>
               <div className="flex  product-des-container gap-2 flex-col sm:flex-row sm:items-center">
                 <div className="inline-flex flex-col items-start gap-6 product-des-sub-container">
@@ -365,7 +365,7 @@ export default function Product1() {
           </div>
         </BannerContainer>
         <div className="relative">
-          <div className="product-container-2 flex flex-col gap-28">
+          <div className="pt-[6rem] ps-[1rem] md:pt-[2rem] md:ps-[2rem] flex flex-col gap-28">
 
             <div className="flex flex-col gap-28">
               <h6 className="product-1-title z-10">{productTitle3}</h6>
@@ -406,7 +406,7 @@ export default function Product1() {
         <BannerContainer containerStyle="bg-[#ECF3FB] py-16 relative">
           <div
             className="flex flex-col relative z-10 gap-[88px]
-             md:justify-end pe-[40px] ps-[20px] md:pe-[150px] md:flex-row"
+             md:justify-end pe-[40px] ps-[20px] md:pe-[150px] md:flex-row md:items-center"
           // className="flex flex-wrap items-center  justify-end pe-[150px] max-sm:pe-[40px] relative z-10 max-sm:justify-start max-sm:ps-[20px]"
           >
             <div className="flex gap-2  md:justify-end flex-wrap">

@@ -18,8 +18,11 @@ export default function Careers() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
+
+  const selectedFile = watch("cv");
 
   const onSubmit = (data) => {
     console.log(data);
@@ -114,8 +117,12 @@ export default function Careers() {
               type="file"
               id="file-upload"
               className="hidden"
+              accept=".pdf,.doc,.docx,.xls,.xlsx"
               {...register("cv", { required: "CV is required" })}
             />
+            {selectedFile && selectedFile.length > 0 && (
+              <p className="text-gray-600 mt-2">{selectedFile[0].name}</p>
+            )}
             {errors.cv && <p className="text-red-500">{errors.cv.message}</p>}
           </div>
           <div>
