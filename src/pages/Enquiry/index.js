@@ -13,49 +13,55 @@ import { validateName } from "../../Utility/Validations";
 
 export default function Enquiry() {
 
-  const [ProductOptions, setProductOption] = useState([{
-    value: "Advance_craft",
-    label: "Advance CRAFT",
-    checked: false,
-  }, {
-    value: "Advance_pro",
-    label: "Advance PRO",
-    checked: false,
-  },
-  {
-    value: "Advance_forge",
-    label: "Advance FORGE",
-    checked: false,
-  },
-  {
-    value: "hoganas",
-    label: "Hoganas Iron Powder",
-    checked: false,
-  },
-  {
-    value: "6k_additive",
-    label: "6K Additive Metals",
-    checked: false,
-  },
+  const [ProductOptions, setProductOption] = useState([
+    {
+      value: "Advance_pro_nickel_alloy",
+      label: "Advance PRO (Nickel & Nickel Alloy)",
+      checked: false,
+    },
+    {
+      value: "Advance_craft_stainless_steel",
+      label: "Advance CRAFT (Stainless Steel)",
+      checked: false,
+    },
+    {
+      value: "Advance_forge_other_alloy",
+      label: "Advance FORGE (Other Alloys)",
+      checked: false,
+    },
+    {
+      value: "hoganas",
+      label: "Hoganas Iron Powder",
+      checked: false,
+    },
+    {
+      value: "6k_additive",
+      label: "6K Additive Metal Powder",
+      checked: false,
+    },
   ]);
   const [FormOptions, setFormOption] = useState([{
     value: "tig",
     label: "Tig",
     checked: false,
+    show: false,
   }, {
     value: "mig",
     label: "Mig",
     checked: false,
+    show: false,
   },
   {
     value: "saw",
     label: "Saw",
     checked: false,
+    show: false,
   },
   {
     value: "core",
     label: "Core",
     checked: false,
+    show: false,
   },
   ]);
   const {
@@ -68,6 +74,7 @@ export default function Enquiry() {
 
   const formCheckHandler = (isChecked, value, setState, errorValue) => {
     setState(prevState => prevState.map(item => item.value === value ? { ...item, checked: isChecked } : item));
+
     clearErrors(errorValue);
   }
 
@@ -206,7 +213,11 @@ export default function Enquiry() {
             {<p className="text-red-500">{errors?.productForm?.message}</p>}
             <Accordion.Panel>
               <Accordion.Title className="flex h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none mt-[16px]">Form</Accordion.Title>
-              <Accordion.Content className="p-0">
+              {ProductOptions.some(
+                (option) =>
+                  (option.value === "Advance_pro_nickel_alloy" && option.checked) ||
+                  (option.value === "Advance_craft_stainless_steel" && option.checked) || (option.value === "Advance_forge_other_alloy" && option.checked)
+              ) ? <Accordion.Content className="p-0">
                 {FormOptions?.map((product, i) => <div class="flex py-4 px-10 justify-between items-center w-full bg-white border-b-[2px]" key={i}>
                   <label for="option1" class="font-fira-sans text-base font-medium leading-normal text-gray-600">{product?.label}</label>
                   <input
@@ -221,7 +232,7 @@ export default function Enquiry() {
                   />
 
                 </div>)}
-              </Accordion.Content>
+              </Accordion.Content> : ""}
             </Accordion.Panel>
             <p className="text-red-500">{errors?.formOptions?.message}</p>
           </Accordion>

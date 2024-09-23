@@ -63,16 +63,16 @@ export default function Product2({ }) {
 
   return (<>
     <MainContainer>
-      <div className="product-container-2 flex flex-col gap-28 relative">
-        <div className="flex flex-col pe-[50px] gap-28 relative z-10 md:pe-[0px]">
+      <div className="ps-[40px] xl:ps-[120px] pt-[100px]  md:pt-[60px] flex flex-col gap-28 relative">
+        <div className="flex flex-col pe-[50px] gap-[100px] md:gap-[60px] relative z-10 md:pe-[0px]">
           <MainTitleHeading title={productTitle1} />
           <div className="flex flex-col max-w-[95%] gap-[56px]  3xl:gap-[88px]  md:flex-row">
             <div className="inline-flex flex-col items-start gap-6 
-            md:max-w-[40%]
+            md:max-w-[45%]
             ">
               <img
                 src={ironPowderImage}
-                className="xl:w-[465px] xl:h-[460px] md: md:h-[460px] 
+                className="xl:w-[465px] xl:h-[460px] md:w-[350px] md:h-[460px] 
                 w-[266px] h-[252px]"
               />
               <p class="text-[#02111B] font-[Fira Sans] text-[24px] font-[400] leading-[25.2px] tracking-[-0.48px] capitalize">Why HÖGANÄS Powder?</p>
@@ -87,7 +87,7 @@ export default function Product2({ }) {
                 )}
               </div>
             </div>
-            <div className="flex flex-col items-start  gap-[24px]     md:max-w-[60%]">
+            <div className="flex flex-col items-start  gap-[24px]     md:max-w-[55%]">
               <div className="flex flex-col gap-[24px]">
                 <PageHeading
                   title={ProductDetail?.prodTitle}

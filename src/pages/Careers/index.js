@@ -11,18 +11,58 @@ import attach from "../../assets/images/Banner/attachment.png";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { validateName } from "../../Utility/Validations";
+import { Accordion } from "flowbite-react";
 export default function Careers() {
   const positionoptions = [{ label: "select position", value: "" },
-  { label: "select position", value: "" }]
+  { label: "select position", value: "" }];
+
+  const [postOptions, setPostOptions] = useState([
+    {
+      value: "accounts",
+      label: "Accounts",
+      checked: false,
+    }, {
+      value: "administrator_office",
+      label: "Administrator Office",
+      checked: false,
+    },
+    {
+      value: "assembly_line",
+      label: "Assembly Line",
+      checked: false,
+    },
+    {
+      value: "sales_marketing",
+      label: "Sales & Marketing",
+      checked: false,
+    },
+    {
+      value: "production_manager",
+      label: "Production Manager",
+      checked: false,
+    },
+    {
+      value: "factory_manager",
+      label: "Factory Manager",
+      checked: false,
+    },
+  ]);
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
+    setError,
+    watch,
+    clearErrors,
   } = useForm();
 
   const selectedFile = watch("cv");
+
+  const formCheckHandler = (isChecked, value, setState, errorValue) => {
+    setState(prevState => prevState.map(item => item.value === value ? { ...item, checked: isChecked } : { ...item, checked: !isChecked }));
+    clearErrors(errorValue);
+  }
 
   const onSubmit = (data) => {
     console.log(data);
@@ -90,10 +130,51 @@ export default function Careers() {
             })}
           />
           {<p className="text-red-500">{errors?.email?.message}</p>}
-          <FormSelect
-            className={"form-input"}
-            options={positionoptions}
-          />
+          <Accordion className="rounded-none flex flex-col gap-[4px]" collapseAll>
+            <Accordion.Panel className="rounded-none">
+              <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
+
+                Select Position
+                {/* {ProductOptions?.map((prod, prodIndex) => {
+                  if (prod?.checked) {
+                    return (
+
+                      <span className="inline-flex items-center px-3 py-1 bg-blue-500 text-white rounded-full mx-1">
+                        {prod?.label}
+                        <button className="ml-2 text-white hover:text-gray-300 focus:outline-none">
+                          &times;
+                        </button>
+                      </span>
+                    );
+                  }
+                  return null; // return null if the product is not checked
+                })} */}
+
+
+              </Accordion.Title>
+              <Accordion.Content className="p-0">
+                {postOptions?.map((product, i) => <div class="flex py-4 px-10 justify-between items-center w-full bg-white border-b-[2px]" key={i}>
+                  <label
+                    for={i + 1}
+                    name="option121"
+                    class="font-fira-sans text-base font-medium leading-normal ml-2 text-gray-600">{product?.label}</label>
+                  <input
+                    id={i + 1}
+                    name="option121"
+                    type="checkbox"
+                    class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    checked={product.checked}
+                    onClick={(e) => formCheckHandler(e.target.checked, product.value,
+                      setPostOptions, "productForm"
+                    )}
+                  />
+
+                </div>)}
+              </Accordion.Content>
+            </Accordion.Panel>
+            {<p className="text-red-500">{errors?.productForm?.message}</p>}
+
+          </Accordion>
 
           <FormTextArea
             className={"form-input"}
