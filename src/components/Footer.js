@@ -43,24 +43,27 @@ export default function Footer() {
       <div
         className="flex flex-col items-start
         gap-12px pb-[4px]
-        md:gap-[128px]"
+        md:gap-[128px] md:max-w-[20%]"
       //   className="flex flex-col items-start gap-[128px] max-xs:gap-[12px]
       // max-xs:pb-[4px]
       // "
       >
-        <div className="flex  items-start gap-2">
-          <h4 class="text-white  text-[56px]">{brochureText}</h4>
+        <div className="flex  items-start gap-2 ">
+          <h4 class="text-white  text-[56px] font-[500]">{brochureText}</h4>
           <img
             src={upperArrow}
             alt="Upper arrow"
             className="mt-4"
           />
         </div>
-        <div className="flex flex-wrap">
-          {linkArray?.map((item, index) => <Link
-            to={item.link}
-            className="text-white
-          text-[16px]">{item?.label} {index + 1 < linkArray?.length ? " /" : ''}</Link>)}
+        <div className="flex gap-[12px] flex-wrap">
+          {linkArray?.map((item, index) => <>
+            <Link
+              to={item.link}
+              className="text-white
+          text-[16px]">{item?.label}</Link>
+            {index + 1 < linkArray?.length ? <h4 class="text-[#AFB2B3]  uppercase">/</h4> : ""}
+          </>)}
         </div>
       </div>
       <div className="block  xl:hidden">

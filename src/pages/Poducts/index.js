@@ -67,11 +67,11 @@ export default function Product1() {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: product1PrimaryImage,
     size: [
-      { mm: 0.80, inch: '0.030"', fraction: "---" },
-      { mm: 0.90, inch: '0.035"', fraction: "---" },
-      { mm: 1.00, inch: '0.040"', fraction: "---" },
-      { mm: 1.20, inch: '0.045"', fraction: "---" },
-      { mm: 1.60, inch: '0.062"', fraction: '1/16"' },
+      { mm: "0.80", inch: '0.030"', fraction: "---" },
+      { mm: "0.90", inch: '0.035"', fraction: "---" },
+      { mm: "1.00", inch: '0.040"', fraction: "---" },
+      { mm: "1.20", inch: '0.045"', fraction: "---" },
+      { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
     ],
     spoolImages: [
       {
@@ -135,12 +135,12 @@ export default function Product1() {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: productSawPrimary,
     size: [
-      { mm: 1.60, inch: '0.062"', fraction: "1/16" },
-      { mm: 2.00, inch: '0.078"', fraction: "---" },
-      { mm: 2.40, inch: '0.094"', fraction: "3/32" },
-      { mm: 3.20, inch: '0.125"', fraction: "1/8" },
-      { mm: 4.00, inch: '0.156"', fraction: '5/32"' },
-      { mm: 5.00, inch: '0.187"', fraction: '3/16"' },
+      { mm: "1.60", inch: '0.062"', fraction: "1/16" },
+      { mm: "2.00", inch: '0.078"', fraction: "---" },
+      { mm: "2.40", inch: '0.094"', fraction: "3/32" },
+      { mm: "3.20", inch: '0.125"', fraction: "1/8" },
+      { mm: "4.00", inch: '0.156"', fraction: '5/32"' },
+      { mm: "5.00", inch: '0.187"', fraction: '3/16"' },
     ],
     spoolImages: [
       {
@@ -166,12 +166,13 @@ export default function Product1() {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     size: [
 
-      { mm: 2.00, inch: '0.078"', fraction: "---" },
-      { mm: 2.40, inch: '0.094"', fraction: "3/32" },
-      { mm: 2.50, inch: '0.098"', fraction: "---" },
-      { mm: 3.15, inch: '0.124"', fraction: "---" },
-      { mm: 4.00, inch: '0.156"', fraction: '5/32"' },
-      { mm: 5.00, inch: '0.187"', fraction: '3/16"' },
+      { mm: "2.00", inch: '0.078"', fraction: "---" },
+      { mm: "2.40", inch: '0.094"', fraction: "3/32" },
+      { mm: "2.50", inch: '0.098"', fraction: "---" },
+      { mm: "3.15", inch: '0.124"', fraction: "---" },
+      { mm: "3.20", inch: '0.125"', fraction: '1/8"' },
+      { mm: "4.00", inch: '0.156"', fraction: '5/32"' },
+      { mm: "5.00", inch: '0.187"', fraction: '3/16"' },
     ],
     spoolImages: [
       {
@@ -283,10 +284,10 @@ export default function Product1() {
 
       <MainContainer>
 
-        <div className="pt-[6rem] ps-[1rem] md:pt-[2rem]  md:ps-[2rem] flex flex-col gap-8  lg:gap-24  md:gap-28">
+        <div className="pt-[6rem]  md:pt-[2rem] px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-[120px]  lg:gap-24  md:gap-28">
           <div className="relative">
-            <div className="flex flex-col gap-[8px]  md:gap-28 relative z-10">
-              <h6 className="product-1-title">{productTitle1}</h6>
+            <div className="flex flex-col gap-[40px]  md:gap-28 relative z-10">
+              <h6 className="product-1-title ps-[12px]">{productTitle1}</h6>
               <div className="flex  product-des-container gap-2 flex-col sm:flex-row sm:items-center">
                 <div className="inline-flex flex-col items-start gap-6 product-des-sub-container">
                   <img
@@ -300,7 +301,7 @@ export default function Product1() {
                     {product1DesTiles?.map((item, index) => (
                       <span
                         key={index}
-                        className="rounded-[150px] border border-[#483729] bg-white mr-2 mb-2 p-1"
+                        className="rounded-[150px] font-[Fira Sans] border border-[#483729] bg-white mr-2 mb-2 py-1 px-[10px] font-[500]"
                       >
                         {item}{" "}
                       </span>
@@ -338,8 +339,8 @@ export default function Product1() {
           <div>
           </div>
         </div>
-        <BannerContainer containerStyle="bg-[#ECF3FB] py-28 ps-[20px]
-        md:py-16 md:ps-[20px]
+        <BannerContainer containerStyle="bg-[#ECF3FB] py-28 
+        md:py-16  px-[20px] xl:px-[80px] md:px-[40px]
           relative">
           <div className="relative">
             <div
@@ -371,7 +372,7 @@ export default function Product1() {
           </div>
         </BannerContainer>
         <div className="relative">
-          <div className="pt-[6rem] ps-[1rem] md:pt-[2rem] md:ps-[2rem] flex flex-col gap-28">
+          <div className="pt-[6rem]  md:pt-[2rem]  px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-28">
 
             <div className="flex flex-col gap-28">
               <h6 className="product-1-title z-10">{productTitle3}</h6>
@@ -412,7 +413,7 @@ export default function Product1() {
         <BannerContainer containerStyle="bg-[#ECF3FB] py-16 relative">
           <div
             className="flex flex-col relative z-10 gap-[88px]
-             md:justify-end pe-[40px] ps-[20px] md:pe-[150px] md:flex-row md:items-center"
+             md:justify-end pe-[40px]  md:pe-[150px] md:flex-row md:items-center  px-[20px] xl:px-[80px] md:px-[40px]"
           // className="flex flex-wrap items-center  justify-end pe-[150px] max-sm:pe-[40px] relative z-10 max-sm:justify-start max-sm:ps-[20px]"
           >
             <div className="flex gap-2  md:justify-end flex-wrap">

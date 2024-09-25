@@ -1,3 +1,5 @@
 export default function ProductDesText({ text, className }) {
-  return (<p className={`product-description ${className}`}>{text}</p>)
+  return (<p
+    style={{ whiteSpace: "pre-line" }}
+    className={`product-description ${className}`}>{text}</p>)
 }

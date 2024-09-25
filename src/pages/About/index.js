@@ -32,7 +32,7 @@ import { useState } from "react";
 import { Accordion } from "flowbite-react";
 import { useForm } from "react-hook-form";
 import { validateName } from "../../Utility/Validations";
-
+import AboutFooterImage from "../../assets/images/Banner/aboutnewImage.png";
 export default function About() {
 
   const AboutText = {
@@ -76,13 +76,13 @@ export default function About() {
       },
       {
         name: "SIDDHANT PUROHIT",
-        post: "OPERATIONS",
+        post: "OPERATIONS HEAD",
         des: "Siddhant is a young leader who brings fresh thinking to the business. Siddhant is an Indusrial Engineering Graduate from Ohio State University. He has the right balance of new age thinking, engineering knowledge along with being well grounded in values. He, under the mentorship of the Partners and Mr. Easwar actively manages the operations of the entire organization. From increasing the operations efficiency to business development, Siddhant is well aware of the responsibility of taking forward a legacy built by the founders."
       },
       {
         name: "LATE SRV ISHWAR",
         post: "SENIOR BUSINESS CONSULTATANT",
-        des: "Mr. Easwar co-founded Advance Metal Powder with Late Mr. P.G.Purohit. Over the last 3 decades he has helped build the Company from a small trader to customized solution provider. He carries the wisdom of 3 decades with in-depth knowledge of products and product innovations as well as deep understanding of the various industries and nuances.He oversees all the operations and advices on various strategic business decisions.He mentors the current generation of leaders on understanding the business and adhering to core business values while delivering quality product in best price and in shortest possible time"
+        des: "Mr. Easwar co-founded Advance Metal Powder with Late Mr. P.G.Purohit. Over the last 3 decades he has helped build the Company from a small trader to customized solution provider. He carries the wisdom of 3 decades with in-depth knowledge of products and product innovations as well as deep understanding of the various industries and nuances.\n He oversees all the operations and advices on various strategic business decisions.He mentors the current generation of leaders on understanding the business and adhering to core business values while delivering quality product in best price and in shortest possible time"
       },
     ],
     services: [{
@@ -273,6 +273,7 @@ export default function About() {
         <div className="flex flex-col xl:flex-row gap-[22px] 4xl:gap-[120px] 2xl:gap-[56px] pt-[200px] md:pe-[120px]  pe-[53px]">
           <div
             class="flex flex-col md:flex-row flex-wrap   items-start content-start gap-[48px] xl:basis-[60%] 3xl:flex-1"
+            style={{ whiteSpace: "pre-line" }}
           >
             {AboutText?.people?.map((item) =>
               <div className="flex flex-col gap-[14px] md:max-w-[260px] lg:max-w-[340px] xl:max-w-[280px] 2xl:max-w-[300px]">
@@ -284,7 +285,7 @@ export default function About() {
           </div>
           <div className="flex flex-col  gap-[36px] xl:basis-[40%] 3xl:flex-1">
             <PageHeading title={"Founder"} />
-            <ProductDesText text={"Advance Metal Powder was founded in 1988 by Late Mr. Parasram G Purohit. With a vision to serve the welding industry, the humble beginnings were marked by supplying iron powder to various clients across India. Late Mr. Purohit, a pioneering visionary of the industry, established the Company on strong founding values of business ethics and commitment to excellence and service. Over the next decade the Company grew and diversified in to supplying stainless steel wires. The standards of customer service, product quality and timely deliveries set by him continue to guide the Company even today in commanding respect and position of a preferred supplier across India."} />
+            <ProductDesText text={"Advance Metal Powder was founded in 1988 by Late Mr. Parasram G Purohit. With a vision to serve the welding industry, the humble beginnings were marked by supplying iron powder to various clients across India. Late Mr. Purohit, a pioneering visionary of the industry, established the Company on strong founding values of business ethics and commitment to excellence and service.\n \n Over the next decade the Company grew and diversified in to supplying stainless steel wires. The standards of customer service, product quality and timely deliveries set by him continue to guide the Company even today in commanding respect and position of a preferred supplier across India."} />
           </div>
         </div>
         <div className="hidden xl:flex absolute right-0 top-0">
@@ -535,6 +536,12 @@ xl:h-[1px]"></div>
         <img src={stepAsset} />
       </div>
     </BannerContainer>
+    <div>
+      <img
+        src={AboutFooterImage}
+        className="w-full h-[600px]"
+      />
+    </div>
     <Footer />
   </>)
 }
