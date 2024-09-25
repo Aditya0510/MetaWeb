@@ -283,7 +283,6 @@ export default function Product1() {
     <>
 
       <MainContainer>
-
         <div className="pt-[6rem]  md:pt-[2rem] px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-[120px]  lg:gap-24  md:gap-28">
           <div className="relative">
             <div className="flex flex-col gap-[40px]  md:gap-28 relative z-10">
