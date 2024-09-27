@@ -196,3 +196,13 @@ padding: 16px 26px 16px 24px;
 
 }
 }
+
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(229 231 235 / var(--tw-divide-opacity));
+}
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+}

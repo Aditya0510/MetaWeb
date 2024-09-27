@@ -68,6 +68,12 @@ export default function Careers() {
     console.log(data);
   };
 
+  const formClickHandler = () => {
+    const isPostSelected = postOptions.some(option => option.checked);
+    if (!isPostSelected) {
+      setError("positionError", { type: "manual", message: "At least one position must be selected" });
+    }
+  }
 
   return (<>
     <Navbar />
@@ -130,11 +136,11 @@ export default function Careers() {
             })}
           />
           {<p className="text-red-500">{errors?.email?.message}</p>}
-          <Accordion className="rounded-none flex flex-col gap-[4px]" collapseAll>
+          <Accordion className="rounded-none flex flex-col gap-[4px] border-[0px]" collapseAll>
             <Accordion.Panel className="rounded-none">
               <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
 
-                Select Position
+                Select position
                 {/* {ProductOptions?.map((prod, prodIndex) => {
                   if (prod?.checked) {
                     return (
@@ -165,14 +171,14 @@ export default function Careers() {
                     class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     checked={product.checked}
                     onClick={(e) => formCheckHandler(e.target.checked, product.value,
-                      setPostOptions, "productForm"
+                      setPostOptions, "positionError"
                     )}
                   />
 
                 </div>)}
               </Accordion.Content>
             </Accordion.Panel>
-            {<p className="text-red-500">{errors?.productForm?.message}</p>}
+            {<p className="text-red-500 border-[0px] form-error-message">{errors?.positionError?.message}</p>}
 
           </Accordion>
 
@@ -190,7 +196,7 @@ export default function Careers() {
               <img
                 src={attach}
               />
-              <span className="text-[#51565B] font-[Fira Sans] text-[14px] font-medium underline">Attach CV here</span>
+              <span className="text-[#51565B] font-['Fira_Sans'] text-[14px] font-medium underline">Attach CV here</span>
               <span className="flex py-[4px] px-3 items-center gap-2.5 border border-[#50555B] bg-white ms-[24px]">choose file</span>
 
             </label>
@@ -209,6 +215,8 @@ export default function Careers() {
           <div>
             <Button
               title={"Submit"}
+              type="submit"
+              onClick={formClickHandler}
             />
           </div>
 

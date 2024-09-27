@@ -17,7 +17,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
     { link: RoutesLink?.About, label: "About Us" },
     { link: RoutesLink?.certification, label: "Certifications" },
     { link: RoutesLink?.csr, label: "CSR" },
-    { link: RoutesLink?.career, label: "Career" },
+    { link: RoutesLink?.career, label: "Careers" },
     { link: RoutesLink?.enquire, label: "Enquire" },
   ]
   window.onscroll = function () {

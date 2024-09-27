@@ -1,6 +1,6 @@
 import React from "react"
 
-const Button = ({ title, className = "", onClick }) => {
+const Button = ({ title, className = "", onClick, type = "button" }) => {
   return (
     <div>
       <button
@@ -18,6 +18,7 @@ const Button = ({ title, className = "", onClick }) => {
         }}
         className={`bg-white ${className}`}
         onClick={onClick}
+        type={type}
       >
         {title}
       </button>

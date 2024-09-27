@@ -32,7 +32,7 @@ export default function ProductNavigator({ }) {
       link: RoutesLink?.product2
     },
     {
-      label1: "6k Additive Powers",
+      label1: "6k Additive Metals",
       colorLabel: "",
       color: "",
       label2: "",

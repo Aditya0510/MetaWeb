@@ -7,7 +7,7 @@ import Navbar from "../Home/Navbar";
 import radialGroup from "../../assets/images/Banner/RadialGroup.svg";
 import FormContainer from "../../components/Containers/FormContainer";
 import { Accordion, AccordionPanel } from 'flowbite-react';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { validateName } from "../../Utility/Validations";
 
@@ -75,25 +75,54 @@ export default function Enquiry() {
   const formCheckHandler = (isChecked, value, setState, errorValue) => {
     setState(prevState => prevState.map(item => item.value === value ? { ...item, checked: isChecked } : item));
 
-    clearErrors(errorValue);
+    // Real-time validation for ProductOptions
+    if (setState === setProductOption) {
+      const isProductSelected = ProductOptions.some(option => option.checked || option.value === value && isChecked);
+      if (!isProductSelected) {
+        setError("productForm", { type: "manual", message: "At least one product must be selected" });
+      } else {
+        clearErrors("productForm");
+      }
+    }
+
+    // Real-time validation for FormOptions
+    if (setState === setFormOption) {
+      const isFormSelected = FormOptions.some(option => option.checked || option.value === value && isChecked);
+      if (!isFormSelected) {
+        setError("formOptions", { type: "manual", message: "At least one form must be selected" });
+      } else {
+        clearErrors("formOptions");
+      }
+    }
   }
 
-  const onSubmit = (data) => {
 
+  const formClickHandler = () => {
     const isProductSelected = ProductOptions.some(option => option.checked);
     const isFormSelected = FormOptions.some(option => option.checked);
     // console.log(data);
     if (!isProductSelected) {
       setError("productForm", { type: "manual", message: "At least one product must be selected" });
     }
-
-    if (!isFormSelected) {
-      setError("formOptions", { type: "manual", message: "At least one form must be selected" });
+    if (ProductOptions.some(
+      (option) =>
+        (option.value === "Advance_pro_nickel_alloy" && option.checked) ||
+        (option.value === "Advance_craft_stainless_steel" && option.checked) || (option.value === "Advance_forge_other_alloy" && option.checked)
+    )) {
+      if (!isFormSelected) {
+        setError("formOptions", { type: "manual", message: "At least one form must be selected" });
+      }
     }
 
-    if (isProductSelected && isFormSelected) {
-      console.log(data); // Proceed with form submission here
-    }
+
+    // if (isProductSelected && isFormSelected) {
+    //   onSubmit(); // Proceed with form submission here
+    // }
+  }
+
+  const onSubmit = (data) => {
+
+    console.log("DATaaaaa..", data);
   };
 
   return (<>
@@ -102,7 +131,9 @@ export default function Enquiry() {
       <div className="flex justify-center items-center relative py-28">
         <FormContainer
           formTitle={"Send Enquiry"} className="bg-gradient-to-b from-[#ECF3FB] to-[#B7D4EF]"
-          handleSubmitForm={handleSubmit(onSubmit)}
+          handleSubmitForm={
+            handleSubmit(onSubmit)
+          }
         >
           <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
             <div>
@@ -170,8 +201,8 @@ export default function Enquiry() {
             })}
           />
           {<p className="text-red-500">{errors?.companyName?.message}</p>}
-          <Accordion className="rounded-none flex flex-col gap-[4px]" collapseAll>
-            <Accordion.Panel className="rounded-none">
+          <Accordion className="rounded-none flex flex-col gap-[4px] border-[0px]" collapseAll>
+            <Accordion.Panel className="rounded-none border-[0px]">
               <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
 
                 Product
@@ -195,9 +226,9 @@ export default function Enquiry() {
               </Accordion.Title>
               <Accordion.Content className="p-0">
                 {ProductOptions?.map((product, i) => <div class="flex py-4 px-10 justify-between items-center w-full bg-white border-b-[2px]" key={i}>
-                  <label for="option1" class="font-fira-sans text-base font-medium leading-normal ml-2 text-gray-600">{product?.label}</label>
+                  <label for={product.value} class="font-fira-sans text-base font-medium leading-normal ml-2 text-gray-600">{product?.label}</label>
                   <input
-                    id="option1"
+                    id={product.value}
                     name="option1"
                     type="checkbox"
                     class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
@@ -210,7 +241,7 @@ export default function Enquiry() {
                 </div>)}
               </Accordion.Content>
             </Accordion.Panel>
-            {<p className="text-red-500">{errors?.productForm?.message}</p>}
+            {<p className="text-red-500 border-[0px] form-error-message">{errors?.productForm?.message}</p>}
             <Accordion.Panel>
               <Accordion.Title className="flex h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none mt-[16px]">Form</Accordion.Title>
               {ProductOptions.some(
@@ -219,9 +250,9 @@ export default function Enquiry() {
                   (option.value === "Advance_craft_stainless_steel" && option.checked) || (option.value === "Advance_forge_other_alloy" && option.checked)
               ) ? <Accordion.Content className="p-0">
                 {FormOptions?.map((product, i) => <div class="flex py-4 px-10 justify-between items-center w-full bg-white border-b-[2px]" key={i}>
-                  <label for="option1" class="font-fira-sans text-base font-medium leading-normal text-gray-600">{product?.label}</label>
+                  <label for={product.value} class="font-fira-sans text-base font-medium leading-normal text-gray-600">{product?.label}</label>
                   <input
-                    id="option1"
+                    id={product.value}
                     name="option1"
                     type="checkbox"
                     class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
@@ -236,7 +267,6 @@ export default function Enquiry() {
             </Accordion.Panel>
             <p className="text-red-500">{errors?.formOptions?.message}</p>
           </Accordion>
-
           <FormTextArea
             className={"form-input"}
             placeholder={"Leave a note"}
@@ -244,8 +274,11 @@ export default function Enquiry() {
           />
           <div>
             <Button
-              title={"Submit"}
+              type="submit"
+              onClick={formClickHandler}
+              title="Submit"
             />
+
           </div>
         </FormContainer>
         <div className="absolute">

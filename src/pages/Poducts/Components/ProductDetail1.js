@@ -19,12 +19,12 @@ export default function ProductDetail1({ product1 }) {
           className="2xl:w-2/5 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 w-full"
         >
           <thead
-            className="text-xs text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400"
+            className="text-xs text-gray-700  dark:bg-gray-700 dark:text-gray-400"
           >
             <tr>
               {product1?.sizeHeading?.map((item, index) => (
                 <th
-                  scope="col" className="py-1 text-[#54565A] capitalize border-b-[1px] border-[#2A7DE1]"
+                  scope="col" className="py-1 text-[#54565A]  border-b-[1px] border-[#2A7DE1]"
                   key={index}>
                   {item}
                 </th>

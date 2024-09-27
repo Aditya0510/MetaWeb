@@ -261,6 +261,30 @@ export default function Product1() {
     clearErrors(errorValue);
   }
 
+  const formClickHandler = () => {
+    const isProductSelected = ProductOptions.some(option => option.checked);
+    const isFormSelected = FormOptions.some(option => option.checked);
+    // console.log(data);
+    if (!isProductSelected) {
+      setError("productForm", { type: "manual", message: "At least one product must be selected" });
+    }
+    if (ProductOptions.some(
+      (option) =>
+        (option.value === "Advance_pro_nickel_alloy" && option.checked) ||
+        (option.value === "Advance_craft_stainless_steel" && option.checked) || (option.value === "Advance_forge_other_alloy" && option.checked)
+    )) {
+      if (!isFormSelected) {
+        setError("formOptions", { type: "manual", message: "At least one form must be selected" });
+      }
+    }
+
+
+    // if (isProductSelected && isFormSelected) {
+    //   onSubmit(); // Proceed with form submission here
+    // }
+  }
+
+
   const onSubmit = (data) => {
     // Check if at least one checkbox is selected in ProductOptions
     const isProductSelected = ProductOptions.some(option => option.checked);
@@ -296,11 +320,11 @@ export default function Product1() {
                   <p className="product-description">
                     {product1Des}
                   </p>
-                  <p class="text-black font-[Fira Sans] text-[22px] font-normal leading-[42px] tracking-[-0.44px]">{product1des2}{" "}
+                  <p class="text-black font-['Fira_Sans'] text-[22px] font-normal leading-[42px] tracking-[-0.44px]">{product1des2}{" "}
                     {product1DesTiles?.map((item, index) => (
                       <span
                         key={index}
-                        className="rounded-[150px] font-[Fira Sans] border border-[#483729] bg-white mr-2 mb-2 py-1 px-[10px] font-[500]"
+                        className="rounded-[150px] font-['Fira_Sans'] border border-[#483729] bg-white mr-2 mb-2 py-1 px-[10px] font-[500]"
                       >
                         {item}{" "}
                       </span>
@@ -441,7 +465,7 @@ export default function Product1() {
             <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
               <div>
                 <FormInput
-                  placeholder="first name"
+                  placeholder="First name"
                   className={"form-input"}
                   registerData={register("firstName", {
                     required: "First name is required",
@@ -465,7 +489,7 @@ export default function Product1() {
             <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
               <div>
                 <FormInput
-                  placeholder="Mobile Number"
+                  placeholder="Enter mobile no."
                   type="number"
                   className={"form-input"}
                   registerData={register("mobile", {
@@ -481,7 +505,7 @@ export default function Product1() {
               <div>
 
                 <FormInput
-                  placeholder="Email Address"
+                  placeholder="Email address"
                   type="email"
                   className={"form-input"}
                   registerData={register("email", {
@@ -497,14 +521,14 @@ export default function Product1() {
 
             </div>
             <FormInput
-              placeholder="Enter Company Name"
+              placeholder="Enter company name"
               className={"form-input"}
               registerData={register("companyName", {
                 required: "Company name is required",
               })}
             />
             {<p className="text-red-500">{errors?.companyName?.message}</p>}
-            <Accordion className="rounded-none flex flex-col gap-[4px]" collapseAll>
+            <Accordion className="rounded-none flex flex-col gap-[4px] border-[0px]" collapseAll>
               <Accordion.Panel className="rounded-none" >
                 <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
 
@@ -529,9 +553,9 @@ export default function Product1() {
                 </Accordion.Title>
                 <Accordion.Content className="p-0">
                   {ProductOptions?.map((product, i) => <div class="flex py-4 px-10 justify-between items-center w-full bg-white border-b-[2px]" key={i}>
-                    <label for="option1" class="font-fira-sans text-base font-medium leading-normal ml-2 text-gray-600">{product?.label}</label>
+                    <label for={product?.value} class="font-fira-sans text-base font-medium leading-normal ml-2 text-gray-600">{product?.label}</label>
                     <input
-                      id="option1"
+                      id={product?.value}
                       name="option1"
                       type="checkbox"
                       class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
@@ -553,9 +577,9 @@ export default function Product1() {
                     (option.value === "Advance_craft_stainless_steel" && option.checked) || (option.value === "Advance_forge_other_alloy" && option.checked)
                 ) ? <Accordion.Content className="p-0">
                   {FormOptions?.map((product, i) => <div class="flex py-4 px-10 justify-between items-center w-full bg-white border-b-[2px]" key={i}>
-                    <label for="option1" class="font-fira-sans text-base font-medium leading-normal text-gray-600">{product?.label}</label>
+                    <label for={product?.value} class="font-fira-sans text-base font-medium leading-normal text-gray-600">{product?.label}</label>
                     <input
-                      id="option1"
+                      id={product?.value}
                       name="option1"
                       type="checkbox"
                       class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
@@ -578,6 +602,8 @@ export default function Product1() {
             <div>
               <Button
                 title={"Submit"}
+                type="submit"
+                onClick={formClickHandler}
               />
             </div>
           </FormContainer>
