@@ -22,7 +22,7 @@ const Banner4 = ({ index = 4, total = 5 }) => {
   as flux-cored and metal-cored wires.`
   const subtitle2 = `Experts in the Industries`
   const expertise = [
-    { title: "Jeep", image: Jeep },
+    { title: "Automotive", image: Jeep },
     { title: "Construction", image: Crane },
     { title: "Aerospace & Turbines", image: Rocket },
     { title: "Shipping", image: Sail },

@@ -10,7 +10,7 @@ const OurActivities = () => {
   const description2 = `The CSR activities may include -`
   const activities = [
     "Eradicating hunger, poverty and malnutrition, promoting preventive health care and sanitation and making available safe drinking water",
-    "Promoting education, including special education and employment enhancing vocation skills especially",
+    "Promoting education, including special education and employment enhancing vocation skills especially among children, women, elderly, and the differently abled and livelihood enhancement projects.",
     "Promoting gender equality, empowering women, setting up homes and hostels for women and orphans; setting up old age homes, day care centers and such other facilities for senior citizens and measures for reducing inequalities faced by socially and economically backward groups.",
     "Ensuring environmental sustainability, ecological balance, protection of flora and fauna, animal welfare, agroforestry, conservation of natural resources and maintaining quality of soil, air and water.",
     "Ensuring environmental sustainability, ecological balance, protection of flora and fauna, animal welfare, agroforestry, conservation of natural resources and maintaining quality of soil, air and water.",

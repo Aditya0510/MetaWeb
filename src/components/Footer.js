@@ -3,7 +3,7 @@ import upperArrow from "../assets/images/Banner/upperArrow.svg";
 
 import ScrollToTopButton from "./ScrollToTop";
 import { RoutesLink } from "../Utility/RoutesLink";
-
+import MyPDF from "../assets/test.pdf";
 export default function Footer() {
   const brochureText = "Brochure";
   const linkArray = [
@@ -49,7 +49,7 @@ export default function Footer() {
       // "
       >
         <div className="flex  items-start gap-2 ">
-          <h4 class="text-white  text-[56px] font-[500]">{brochureText}</h4>
+          <a class="text-white  text-[56px] font-[500]"  href={MyPDF} download="My_File.pdf">{brochureText}</a>
           <img
             src={upperArrow}
             alt="Upper arrow"
