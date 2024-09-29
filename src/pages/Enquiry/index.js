@@ -1,135 +1,17 @@
-import Button from "../../components/Button";
 import Footer from "../../components/Footer";
-import FormInput from "../../components/Forms/FormInput";
-import FormSelect from "../../components/Forms/FormSelect";
-import FormTextArea from "../../components/Forms/FormTextArea";
 import Navbar from "../Home/Navbar";
 import radialGroup from "../../assets/images/Banner/RadialGroup.svg";
-import FormContainer from "../../components/Containers/FormContainer";
-import { Accordion, AccordionPanel } from 'flowbite-react';
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { validateName } from "../../Utility/Validations";
+
+import EnquiryForm from "../../components/Forms/EnquiryForm";
 
 export default function Enquiry() {
-
-  const [ProductOptions, setProductOption] = useState([
-    {
-      value: "Advance_pro_nickel_alloy",
-      label: "Advance PRO (Nickel & Nickel Alloy)",
-      checked: false,
-    },
-    {
-      value: "Advance_craft_stainless_steel",
-      label: "Advance CRAFT (Stainless Steel)",
-      checked: false,
-    },
-    {
-      value: "Advance_forge_other_alloy",
-      label: "Advance FORGE (Other Alloys)",
-      checked: false,
-    },
-    {
-      value: "hoganas",
-      label: "Hoganas Iron Powder",
-      checked: false,
-    },
-    {
-      value: "6k_additive",
-      label: "6K Additive Metal Powder",
-      checked: false,
-    },
-  ]);
-  const [FormOptions, setFormOption] = useState([{
-    value: "tig",
-    label: "Tig",
-    checked: false,
-    show: false,
-  }, {
-    value: "mig",
-    label: "Mig",
-    checked: false,
-    show: false,
-  },
-  {
-    value: "saw",
-    label: "Saw",
-    checked: false,
-    show: false,
-  },
-  {
-    value: "core",
-    label: "Core",
-    checked: false,
-    show: false,
-  },
-  ]);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    setError,
-    clearErrors,
-  } = useForm();
-
-  const formCheckHandler = (isChecked, value, setState, errorValue) => {
-    setState(prevState => prevState.map(item => item.value === value ? { ...item, checked: isChecked } : item));
-
-    // Real-time validation for ProductOptions
-    if (setState === setProductOption) {
-      const isProductSelected = ProductOptions.some(option => option.checked || option.value === value && isChecked);
-      if (!isProductSelected) {
-        setError("productForm", { type: "manual", message: "At least one product must be selected" });
-      } else {
-        clearErrors("productForm");
-      }
-    }
-
-    // Real-time validation for FormOptions
-    if (setState === setFormOption) {
-      const isFormSelected = FormOptions.some(option => option.checked || option.value === value && isChecked);
-      if (!isFormSelected) {
-        setError("formOptions", { type: "manual", message: "At least one form must be selected" });
-      } else {
-        clearErrors("formOptions");
-      }
-    }
-  }
-
-
-  const formClickHandler = () => {
-    const isProductSelected = ProductOptions.some(option => option.checked);
-    const isFormSelected = FormOptions.some(option => option.checked);
-    // console.log(data);
-    if (!isProductSelected) {
-      setError("productForm", { type: "manual", message: "At least one product must be selected" });
-    }
-    if (ProductOptions.some(
-      (option) =>
-        (option.value === "Advance_pro_nickel_alloy" && option.checked) ||
-        (option.value === "Advance_craft_stainless_steel" && option.checked) || (option.value === "Advance_forge_other_alloy" && option.checked)
-    )) {
-      if (!isFormSelected) {
-        setError("formOptions", { type: "manual", message: "At least one form must be selected" });
-      }
-    }
-
-
-    // if (isProductSelected && isFormSelected) {
-    //   onSubmit(); // Proceed with form submission here
-    // }
-  }
-
-  const onSubmit = (data) => {
-
-    console.log("DATaaaaa..", data);
-  };
 
   return (<>
     <Navbar />
     <div class="pt-[120px]">
       <div className="flex justify-center items-center relative py-28">
-        <FormContainer
+        <EnquiryForm />
+        {/* <FormContainer
           formTitle={"Send Enquiry"} className="bg-gradient-to-b from-[#ECF3FB] to-[#B7D4EF]"
           handleSubmitForm={
             handleSubmit(onSubmit)
@@ -204,25 +86,7 @@ export default function Enquiry() {
           <Accordion className="rounded-none flex flex-col gap-[4px] border-[0px]" collapseAll>
             <Accordion.Panel className="rounded-none border-[0px]">
               <Accordion.Title className="flex flex-wrap h-16 py-[21px] px-[24px] justify-between items-center self-stretch bg-white/95 rounded-none">
-
                 Product
-
-                {/* {ProductOptions?.map((prod, prodIndex) => {
-                  if (prod?.checked) {
-                    return (
-
-                      <span className="inline-flex items-center px-3 py-1 bg-blue-500 text-white rounded-full mx-1">
-                        {prod?.label}
-                        <button className="ml-2 text-white hover:text-gray-300 focus:outline-none">
-                          &times;
-                        </button>
-                      </span>
-                    );
-                  }
-                  return null; // return null if the product is not checked
-                })} */}
-
-
               </Accordion.Title>
               <Accordion.Content className="p-0">
                 {ProductOptions?.map((product, i) => <div class="flex py-4 px-10 justify-between items-center w-full bg-white border-b-[2px]" key={i}>
@@ -280,7 +144,7 @@ export default function Enquiry() {
             />
 
           </div>
-        </FormContainer>
+        </FormContainer> */}
         <div className="absolute">
           <img
             src={radialGroup}

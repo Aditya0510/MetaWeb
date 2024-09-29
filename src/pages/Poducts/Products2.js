@@ -11,6 +11,8 @@ import hoganosLogo from "../../assets/images/Logo/HoganasLogo.png";
 import MainTitleHeading from "../../components/Headings/MainTitleHeading";
 import PageHeading from "../../components/Headings/PageHeading";
 import MainContainer from "../../components/Containers/MainContainer";
+import { Link } from "react-router-dom";
+import { RoutesLink } from "../../Utility/RoutesLink";
 export default function Product2({ }) {
   const productTitle1 = "We stock, customize and supply";
 
@@ -108,7 +110,8 @@ tracking- [-0.96px]">{ProductDetail?.prodSubTitle}</p>
                 <ProductDesText text={ProductDetail?.prodDesc3} />
               </div>
               <div className="flex gap-2">
-                <OrangeButton title={"Enquire"} />
+                <Link className="nav-link active" to={RoutesLink?.enquire} >Enquire</Link>
+                {/* <OrangeButton title={"Enquire"} /> */}
                 <Button title={"Download Brochure"} />
               </div>
             </div>

@@ -8,6 +8,8 @@ import Button from "../../components/Button";
 import ProductDesText from "./Components/ProductDesText";
 import additive from "../../assets/images/product/additive.png";
 import spine from "../../assets/images/Banner/spine.png";
+import { Link } from "react-router-dom";
+import { RoutesLink } from "../../Utility/RoutesLink";
 export default function Product3() {
   const product3Slogan = "transform your most ambitious designs into reality."
 
@@ -55,7 +57,8 @@ export default function Product3() {
               )}
             </div>
             <div className="flex gap-2">
-              <OrangeButton title={"Enquire"} />
+              {/* <OrangeButton title={"Enquire"} /> */}
+              <Link className="nav-link active" to={RoutesLink?.enquire} >Enquire</Link>
               <Button title={"Download Brochure"} />
             </div>
           </div>

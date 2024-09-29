@@ -7,7 +7,6 @@ import Product1 from "../pages/Poducts"
 import { RoutesLink } from "../Utility/RoutesLink"
 import Product2 from "../pages/Poducts/Products2"
 import About from "../pages/About"
-import Practice from "../pages/Practice"
 import Careers from "../pages/Careers"
 import Enquiry from "../pages/Enquiry"
 import Product3 from "../pages/Poducts/Product3"
@@ -35,10 +34,6 @@ const routeConfig = [{
 {
   path: RoutesLink?.csr,
   element: <CSRScreen />,
-},
-{
-  path: RoutesLink?.practice,
-  element: <Practice />,
 },
 {
   path: RoutesLink?.career,

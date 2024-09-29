@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
 import OrangeButton from "../../../components/OrangeButton";
+import { RoutesLink } from "../../../Utility/RoutesLink";
 
 export default function ProductDetail1({ product1 }) {
   return (<>
@@ -53,8 +55,15 @@ export default function ProductDetail1({ product1 }) {
       </div>
 
       <div className="flex gap-2">
-        <OrangeButton title={"Enquire"}
-        />
+        <Link
+          to={RoutesLink?.enquire}
+          className="nav-link active"
+        >
+          Enquire
+        </Link>
+        {/* <OrangeButton
+          title={"Enquire"}
+        /> */}
 
         <Button title="Download Brochure"
         // className="mt-[32px]"
