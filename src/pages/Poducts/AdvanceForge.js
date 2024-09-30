@@ -120,8 +120,7 @@ const AdvanceForge = () => {
     productDes:
       "Forge TIG combines versatility with strength, designed to excel in industrial applications requiring reliable and durable solutions.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: tigPrimaryImage,
-    secondaryImage: TIGPacked,
+    primaryImage: TIGPacked,
     size: [
       { mm: "1.60", inch: '0.062"', fraction: '"1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
@@ -153,8 +152,7 @@ const AdvanceForge = () => {
     productDes:
       "Nickel Alloy-enhanced Pro SAW wires offer robust performance and reliability, perfect for the most demanding industrial tasks.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: productSawPrimary,
-    secondaryImage: SAWPacked,
+    primaryImage: SAWPacked,
     size: [
       { mm: "1.60", inch: '0.062"', fraction: "1/16" },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
@@ -181,7 +179,7 @@ const AdvanceForge = () => {
   const productCore = {
     productTitle: "CORE",
     productDes:
-      "We manufacture high quality Copper and copper alloys wire for welding electrodes in sizes 2.00 mm (0.078”) - 5.00 mm (0.187”) in bright as well as in matte finish. The Copper and copper alloys wire for welding electrodes are supplied in coil as well as in cut length as per AWS, DIN, BS, JIS and other equivalent international standards or as per the customer’s requirement.",
+      "We manufacture high quality Copper and copper alloy wires for welding electrodes in sizes 2.00 mm (0.078”) - 5.00 mm (0.187”) in bright as well as in matte finish. The Copper and copper alloy wires for welding electrodes are supplied in coil as well as in cut length as per AWS, DIN, BS, JIS and other equivalent international standards or as per the customer’s requirement.",
     primaryImage: "",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     size: [
@@ -343,7 +341,7 @@ const AdvanceForge = () => {
           <div className="relative">
             <div className="flex flex-col gap-[40px]  md:gap-28 relative z-10">
               {/* <h6 className="product-1-title ps-[12px]">{productTitle1}</h6> */}
-              <div className="flex  product-des-container gap-2 flex-col sm:flex-row sm:items-center">
+              <div className="flex  product-des-container gap-[88px] flex-col sm:flex-row sm:items-center">
                 <div className="inline-flex flex-col items-start gap-6 product-des-sub-container">
                   <img
                     src={brandImage}
@@ -360,7 +358,7 @@ const AdvanceForge = () => {
                     style={{ listStyleType: "disc" }}
                   >
                     {advanceForgeList?.reasons.map((item, index) => (
-                      <li key={index} className="ml-[60px]">
+                      <li key={index} className="ml-[20px]">
                         {item}
                       </li>
                     ))}
@@ -373,7 +371,7 @@ const AdvanceForge = () => {
                     style={{ listStyleType: "disc" }}
                   >
                     {otherUsefulList?.reasons.map((item, index) => (
-                      <li key={index} className="ml-[60px]">
+                      <li key={index} className="ml-[20px]">
                         {item}
                       </li>
                     ))}
@@ -390,8 +388,10 @@ const AdvanceForge = () => {
                         {item}
                       </span>
                     ))}
-                    {" "}{product1des3}
+                    {" "}
                   </p>
+                  <p className="product-description">{product1des3}</p>
+                  
                 </div>
                 <div>
                   <img src={HeroImage} className="product-image" />
