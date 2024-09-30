@@ -8,8 +8,10 @@ import { NavLink, useNavigate } from "react-router-dom"
 import { RoutesLink } from "../../Utility/RoutesLink"
 import Footer from "../../components/Footer"
 import navImage from "../../assets/images/Banner/navbarGroup.png"
+import ProductNavigator from "../../pages/Poducts/Components/ProductNavigator";
+import HorizontalLine from "../../components/HorizontalLine"
 
-const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
+const Navbar = ({ showMenu = true, handleClick, navigateToModule,productNavigation=false }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigate = useNavigate()
   const TabsArray = [
@@ -134,6 +136,20 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
           </nav>
         </>
       ) : null}
+    {productNavigation&&<>
+        <div class="flex flex-col justify-center items-start gap-1 px-[8px] xl:px-[80px] md:px-[40px] md:pb-[12px]">
+        <div
+          class="flex flex-wrap"
+        >
+          <ProductNavigator
+
+          />
+        
+        </div>
+      </div>
+          <HorizontalLine />
+      </>}
+      
     </header>
   )
 }

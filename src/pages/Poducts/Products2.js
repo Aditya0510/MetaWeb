@@ -64,7 +64,7 @@ export default function Product2({ }) {
   ]
 
   return (<>
-    <MainContainer>
+    <MainContainer productNav={true}>
       <div className="ps-[40px] xl:ps-[120px] pt-[100px]  md:pt-[60px] flex flex-col gap-28 relative">
         <div className="flex flex-col pe-[50px] gap-[100px] md:gap-[60px] relative z-10 md:pe-[0px]">
           <MainTitleHeading title={productTitle1} />
