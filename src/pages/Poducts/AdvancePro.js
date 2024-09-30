@@ -123,8 +123,7 @@ const AdvancePro = () => {
     productDes:
       "Our Nickel Alloy TIG solutions provide exceptional wear resistance and strength, ideal for high-impact welding tasks. In TIG welding, argon-hydrogen gas mixtures tend to produce cleaner welds.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: tigPrimaryImage,
-    secondaryImage: TIGPacked,
+    primaryImage: TIGPacked,
     size: [
       { mm: "1.60", inch: '0.062"', fraction: '"1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
@@ -156,8 +155,7 @@ const AdvancePro = () => {
     productDes:
       "Nickel Alloy-enhanced Pro SAW wires offer robust performance and reliability, perfect for the most demanding industrial tasks.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: productSawPrimary,
-    secondaryImage: SAWPacked,
+    primaryImage: SAWPacked,
     size: [
       { mm: "1.60", inch: '0.062"', fraction: "1/16" },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
@@ -345,8 +343,8 @@ const AdvancePro = () => {
         <div className="pt-[6rem]  md:pt-[2rem] px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-[120px]  lg:gap-24  md:gap-28">
           <div className="relative">
             <div className="flex flex-col gap-[40px]  md:gap-28 relative z-10">
-              <h6 className="product-1-title ps-[12px]">{productTitle1}</h6>
-              <div className="flex  product-des-container gap-2 flex-col sm:flex-row sm:items-center">
+              {/* <h6 className="product-1-title ps-[12px]">{productTitle1}</h6> */}
+              <div className="flex  product-des-container gap-[88px] flex-col sm:flex-row sm:items-center">
                 <div className="inline-flex flex-col items-start gap-6 product-des-sub-container">
                   <img
                     src={brandImage}
@@ -356,7 +354,7 @@ const AdvancePro = () => {
                   <p className="product-description">{nikckelList?.title}</p>
                   <ul className="product-description" style={{ listStyleType: "disc" }}>
                     {nikckelList?.reasons.map((item, index) => (
-                      <li key={index} className="ml-[60px]">{item}</li>
+                      <li key={index} className="ml-[20px]">{item}</li>
                     ))}
                   </ul>
                   <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">

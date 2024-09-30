@@ -50,9 +50,16 @@ export default function Product1() {
   const productTitle3 = "Different chemistries that make for a stronger bond.";
   const product1des2 = "The commonly manufactured grades are AWS";
   const product1des3 = "with low and normal silicon contents.";
-  const product1Des = "Most stainless steels are considered to have good weldability and may be welded by several welding processes including the arc welding processes, resistance welding, electron and laser beam welding, friction welding and brazing. For any of these processes, joint surfaces and any filler metal must be clean.";
-  const product1DesTiles = ["ER307", "ER308", "ER308L", "ER309", "ER309L", "ER309LMo", "ER310", "ER312", "ER316", "ER316L", "ER317L", "ER318", "ER347", "ER430"]
+  const product1Des = "Advance Craft stainless steel wires are engineering materials that are capable of meeting a broad range of design criteria. They exhibit excellent:";
+  const productDescription = "They are selected for a broad range of consumer,commercial and industrial applications. They are used for demanding requirements of chemical processing to the delicate handling of food and pharmaceuticals. They are preferred over many other materials because of their performance in even the most aggressive environments, and they are fabricated by methods common to most manufacturers. Most stainless steels are considered to have good weldability and may be welded by several welding processes including the arc welding processes, resistance welding , electron and laser beam welding, friction welding and brazing. For any of these processes, joint surfaces and any filler metal must be clean."
+  const product1DesTiles = ["304L", "ER 308L", "ER 308L (10%)", "ER 309L", "ER 309H", "ER 316L", "ER 316H", "ER 310", "ER 312", "ER 309LMo", "ER 317L", "ER 318", "ER 347H", "ER 430L"];
 
+  const corrisionList = [
+    "Corrosion resistance",
+    "Strength at elevated temperature",
+    "Toughness at cryogenic temperatures",
+    "Fabrication characteristics"
+  ];
 
   const {
     register,
@@ -101,8 +108,6 @@ export default function Product1() {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: tigPrimaryImage,
     size: [
-      { mm: "1.00", inch: '0.040"', fraction: "---" },
-      { mm: "1.20", inch: '0.045"', fraction: "---" },
       { mm: "1.60", inch: '0.062"', fraction: '"1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
       { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
@@ -312,7 +317,7 @@ export default function Product1() {
           <div className="relative">
             <div className="flex flex-col gap-[40px]  md:gap-28 relative z-10">
               <h6 className="product-1-title ps-[12px]">{productTitle1}</h6>
-              <div className="flex  product-des-container gap-2 flex-col sm:flex-row sm:items-center">
+              <div className="flex  product-des-container gap-[88px] flex-col sm:flex-row sm:items-center">
                 <div className="inline-flex flex-col items-start gap-6 product-des-sub-container">
                   <img
                     src={brandImage}
@@ -321,17 +326,31 @@ export default function Product1() {
                   <p className="product-description">
                     {product1Des}
                   </p>
-                  <p class="text-black font-['Fira_Sans'] text-[22px] font-normal leading-[42px] tracking-[-0.44px]">{product1des2}{" "}
+                  <ul
+                    className="product-description"
+                    style={{ listStyleType: "disc" }}
+                  >
+                    {corrisionList?.map((item, index) => (
+                      <li key={index} className="ml-[20px]">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="product-description">
+                      {productDescription}
+                    </p>
+                  <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
+                    {product1des2}{" "}
                     {product1DesTiles?.map((item, index) => (
                       <span
                         key={index}
-                        className="rounded-[150px] font-['Fira_Sans'] border border-[#483729] bg-white mr-2 mb-2 py-1 px-[10px] font-[500]"
+                        className="banner-products uppercase first-of-type:ml-2 inline-block rounded-[150px] border border-[#483729] bg-white px-2 py-[1px] mr-2 mt-[5px] "
                       >
-                        {item}{" "}
+                        {item}
                       </span>
                     ))}
-                    {product1des3}
                   </p>
+                
                 </div>
                 <div>
                   <img
