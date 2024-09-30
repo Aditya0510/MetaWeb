@@ -5,7 +5,7 @@ import { RoutesLink } from "../../../Utility/RoutesLink";
 
 export default function ProductDetail1({ product1 }) {
   return (<>
-    <div className=" flex flex-col gap-6 z-20 md:max-w-[50%]">
+    <div className=" flex flex-col gap-6 z-20 md:max-w-[50%] 4xl:max-w-[60%]">
       <h4 className="product-primary-title">{product1?.productTitle}</h4>
       <div>
         <img
