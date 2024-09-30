@@ -2,7 +2,6 @@ import React from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Home from "../pages/Home"
 import CSRScreen from "../pages/CSR"
-
 import Product1 from "../pages/Poducts"
 import { RoutesLink } from "../Utility/RoutesLink"
 import Product2 from "../pages/Poducts/Products2"
@@ -12,6 +11,8 @@ import Enquiry from "../pages/Enquiry"
 import Product3 from "../pages/Poducts/Product3"
 import ScrollToTop from "../Utility/ScrollToTop"
 import Certification from "../pages/Certification"
+import AdvanceForge from "../pages/Poducts/AdvanceForge"
+import AdvancePro from "../pages/Poducts/AdvancePro"
 const routeConfig = [{
   path: RoutesLink?.Home,
   element: <Home />,
@@ -50,6 +51,15 @@ const routeConfig = [{
   path: RoutesLink?.certification,
   element: <Certification />,
 },
+{
+  path: RoutesLink?.advancePro,
+  element: <AdvancePro/>
+},
+{
+  path: RoutesLink?.advanceForge,
+  element: <AdvanceForge/>
+},
+
 ]
 const CommonRoutes = () => {
   return (

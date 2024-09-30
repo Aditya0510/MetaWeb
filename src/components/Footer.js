@@ -16,9 +16,9 @@ export default function Footer() {
     openHoursLabel: "Opening Hours",
     openHour: "9am-7am",
     address: "84, Mittal Chamber,Nariman Point, Mumbai - 400021 T: 91 022 2202 14 72, 2204 57 31",
-    phone: "+91 022 2202 14 72",
+    phone: "+91 8369135778",
     emailLabel: "Email",
-    email: "info@example.com",
+    email: "sales@advancemetalpowder.com",
     socialMedia: [
       { icon: "facebook", link: "#" },
     ]

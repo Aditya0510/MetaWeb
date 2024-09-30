@@ -61,7 +61,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule }) => {
       const currentPath = window.location.pathname;
       // Check if it's product1 or other product links like product2
       if (link === RoutesLink.product1 && 
-          (currentPath.includes(RoutesLink.product1) || currentPath.includes(RoutesLink.product2)||currentPath.includes(RoutesLink?.product3))) {
+          (currentPath.includes(RoutesLink.product1) || currentPath.includes(RoutesLink.product2)||currentPath.includes(RoutesLink?.product3)||currentPath.includes(RoutesLink?.advanceForge)||currentPath.includes(RoutesLink?.advancePro))) {
         return "nav-link active"; // Make product1 active if product1 or product2 link is active
       } else if (isActive) {
         return "nav-link active"; // Active state for other tabs
