@@ -6,6 +6,8 @@ export const RoutesLink = {
   product1: "/product-1",
   product2: "/product-2",
   product3: "/product-3",
+  advanceForge: "/advanceForge",
+  advancePro: "/advancePro",
   certification: "/certification",
   career: "/careers",
   enquire: "/enquire",

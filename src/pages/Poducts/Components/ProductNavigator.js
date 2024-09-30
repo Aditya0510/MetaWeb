@@ -15,14 +15,14 @@ export default function ProductNavigator({ }) {
       colorLabel: "PRO",
       color: "product-label-text-orange",
       label2: "Nickel Alloy grades",
-      link: RoutesLink?.product1
+      link: RoutesLink?.advancePro
     },
     {
       label1: "Advance",
       colorLabel: "FORGE",
       color: "product-label-text-green",
       label2: "Other Alloy grades",
-      link: RoutesLink?.product1
+      link: RoutesLink?.advanceForge
     },
     {
       label1: "Hoganas Iron Powder",
