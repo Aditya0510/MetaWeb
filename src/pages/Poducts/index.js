@@ -313,7 +313,7 @@ export default function Product1() {
     <>
 
       <MainContainer productNav={true}>
-        <div className="pt-[6rem]  md:pt-[2rem] px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-[120px]  lg:gap-24  md:gap-28">
+        <div className="pt-[100px]  md:pt-[100px] px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-[120px]  lg:gap-24  md:gap-28">
           <div className="relative">
             <div className="flex flex-col gap-[40px]  md:gap-28 relative z-10">
               <h6 className="product-1-title ps-[12px]">{productTitle1}</h6>
@@ -337,8 +337,8 @@ export default function Product1() {
                     ))}
                   </ul>
                   <p className="product-description">
-                      {productDescription}
-                    </p>
+                    {productDescription}
+                  </p>
                   <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
                     {product1des2}{" "}
                     {product1DesTiles?.map((item, index) => (
@@ -350,7 +350,7 @@ export default function Product1() {
                       </span>
                     ))}
                   </p>
-                
+
                 </div>
                 <div>
                   <img

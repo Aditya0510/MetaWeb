@@ -336,11 +336,11 @@ const AdvanceForge = () => {
 
   return (
     <>
-      <MainContainer>
-        <div className="pt-[6rem]  md:pt-[2rem] px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-[120px]  lg:gap-24  md:gap-28">
+      <MainContainer productNav={true}>
+        <div className="pt-[100px]  md:pt-[100px] px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-[120px]  lg:gap-24  md:gap-28">
           <div className="relative">
             <div className="flex flex-col gap-[40px]  md:gap-28 relative z-10">
-              {/* <h6 className="product-1-title ps-[12px]">{productTitle1}</h6> */}
+              <h6 className="product-1-title ps-[12px]">{productTitle1}</h6>
               <div className="flex  product-des-container gap-[88px] flex-col sm:flex-row sm:items-center">
                 <div className="inline-flex flex-col items-start gap-6 product-des-sub-container">
                   <img
@@ -391,7 +391,7 @@ const AdvanceForge = () => {
                     {" "}
                   </p>
                   <p className="product-description">{product1des3}</p>
-                  
+
                 </div>
                 <div>
                   <img src={HeroImage} className="product-image" />
@@ -473,7 +473,7 @@ const AdvanceForge = () => {
             <img
               src={assetRelative}
               className="-z-0 max-sm:w-[288px] max-sm:h-[297px]"
-              // className="product-banner-1"
+            // className="product-banner-1"
             />
           </div>
         </div>
@@ -481,7 +481,7 @@ const AdvanceForge = () => {
           <div
             className="flex flex-col relative z-10 gap-[88px]
              md:justify-end pe-[40px]  md:pe-[150px] md:flex-row md:items-center  px-[20px] xl:px-[80px] md:px-[40px]"
-            // className="flex flex-wrap items-center  justify-end pe-[150px] max-sm:pe-[40px] relative z-10 max-sm:justify-start max-sm:ps-[20px]"
+          // className="flex flex-wrap items-center  justify-end pe-[150px] max-sm:pe-[40px] relative z-10 max-sm:justify-start max-sm:ps-[20px]"
           >
             <div className="flex gap-2  md:justify-end flex-wrap">
               {productCore?.spoolImages?.map((product, index) => (
@@ -502,7 +502,7 @@ const AdvanceForge = () => {
           <div className="absolute">
             <img
               src={radialGroup}
-              // className="product-banner-1"
+            // className="product-banner-1"
             />
           </div>
         </div>
