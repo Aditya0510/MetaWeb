@@ -7,7 +7,7 @@ import MyPDF from "../assets/test.pdf";
 export default function Footer() {
   const brochureText = "Brochure";
   const linkArray = [
-    { link: RoutesLink?.product1, label: "Products" }, { link: RoutesLink?.About, label: "About Us" }, { link: "", label: "How it works" },
+    { link: RoutesLink?.product1, label: "Products" }, { link: RoutesLink?.About, label: "About Us" },
     { link: RoutesLink?.career, label: "Careers" }, { link: "", label: "Contacts" }
   ]
   const info = {
@@ -43,13 +43,13 @@ export default function Footer() {
       <div
         className="flex flex-col items-start
         gap-12px pb-[4px]
-        md:gap-[128px] md:max-w-[20%]"
+        md:gap-[128px] md:max-w-[40%]"
       //   className="flex flex-col items-start gap-[128px] max-xs:gap-[12px]
       // max-xs:pb-[4px]
       // "
       >
         <div className="flex  items-start gap-2 ">
-          <a class="text-white  text-[56px] font-[500]"  href={MyPDF} download="My_File.pdf">{brochureText}</a>
+          <a class="text-white  text-[56px] font-[500]" href={MyPDF} download="My_File.pdf">{brochureText}</a>
           <img
             src={upperArrow}
             alt="Upper arrow"
@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
       <div
         className="flex flex-col 
-        items-center self-auto gap-[32px] "
+         self-auto gap-[32px] "
       // class="flex max-w-[25%] max-xs:max-w-none flex-col items-start gap-[32px] flex-shrink-0 self-stretch max-sm:items-center max-sm:self-auto"
       >
         <div>
