@@ -12,6 +12,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { validateName } from "../../Utility/Validations";
 import { Accordion } from "flowbite-react";
+import { sendEmail } from "../../Utility/Email/SendEmail";
 export default function Careers() {
   const positionoptions = [{ label: "select position", value: "" },
   { label: "select position", value: "" }];
@@ -65,7 +66,23 @@ export default function Careers() {
   }
 
   const onSubmit = (data) => {
-    console.log(data);
+    console.log("data",data);
+    const full_name = `${data.firstName} ${data.lastName}`;
+    const email = data.email;
+    const mobile = data.mobile;
+    const address = data.address;
+    const cv = data.cv[0];
+    const selectedPositions = postOptions.filter(option => option.checked).map(option => option.label).join(", ");
+    const attachments = [{ name: cv.name, data: cv }];
+    const params = {
+      full_name,
+      email,
+      mobile,
+      address,
+      selectedPositions
+    }
+    sendEmail({ templateId: "template_57wk5nk", params, attachments });
+
   };
 
   const formClickHandler = () => {
@@ -80,7 +97,7 @@ export default function Careers() {
     <div class="pt-[120px]">
       <div className="flex justify-center items-center relative py-28">
         <FormContainer
-          formTitle={"careers"}
+          formTitle={"careerss"}
           className="bg-gradient-to-b from-[#F0FBFA] to-[#C1E4D9]"
           formDescription={"Join us and find numerous opportunities for advancement and professional development"}
 

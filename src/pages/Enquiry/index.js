@@ -6,10 +6,12 @@ import FormTextArea from "../../components/Forms/FormTextArea";
 import Navbar from "../Home/Navbar";
 import radialGroup from "../../assets/images/Banner/RadialGroup.svg";
 import FormContainer from "../../components/Containers/FormContainer";
-import { Accordion, AccordionPanel } from 'flowbite-react';
+import { Accordion } from 'flowbite-react';
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { validateName } from "../../Utility/Validations";
+import { sendEmail } from "../../Utility/Email/SendEmail";
+
 
 export default function Enquiry() {
 
@@ -121,9 +123,28 @@ export default function Enquiry() {
   }
 
   const onSubmit = (data) => {
+    const full_name = data.firstName + " " + data.lastName
+    const mobile_number = data.mobile
+    const email = data.email
+    const company_name = data.companyName
+    const products = ProductOptions.filter((option) => option.checked)
+      .map((option) => option.label)
+      .join(", ")
+    const message = data.note
 
-    console.log("DATaaaaa..", data);
-  };
+    console.log("DATaaaaa.. 2", data)
+    sendEmail({
+      templateId: "template_57wk5nk",
+      params: {
+        full_name,
+        mobile_number,
+        email,
+        company_name,
+        products: products,
+        message: message,
+      },
+    })
+  }
 
   return (<>
     <Navbar />
