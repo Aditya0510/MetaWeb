@@ -10,6 +10,7 @@ import advanceForge from "../../../../assets/images/productImages/advanceForge.p
 import Button from "../../../../components/Button"
 import BannerContainer from "./BannerContainer"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner3.png"
+import WheelImage from "./../../../../assets/images/Banner/wheel.png"
 import { RoutesLink } from "../../../../Utility/RoutesLink"
 import { useNavigate } from "react-router-dom"
 const Banner3 = ({ index = 3, total = 5 }) => {
@@ -39,6 +40,8 @@ const Banner3 = ({ index = 3, total = 5 }) => {
       containerStyle="bg-[#ECF3FB] pb-[100px] xl:pb-[0px]"
       bgImage={WeldingImage}
       position="bottom -30px left "
+      bgImage2={WheelImage}
+      position2="center right"
     >
       <div className="containerHeight items-center  flex">
         <div className="flex flex-col  px-[15px] xl:px-[150px] my-[40px]">
@@ -55,7 +58,11 @@ const Banner3 = ({ index = 3, total = 5 }) => {
               <p className="Banner-subtitle mt-[24px]">{subtitle}</p>
 
               {/* This will navigate to the product page        */}
-              <Button title="Know More" className="mt-[32px]" onClick={() => navigate(RoutesLink?.product1)}/>
+              <Button
+                title="Know More"
+                className="mt-[32px]"
+                onClick={() => navigate(RoutesLink?.product1)}
+              />
             </div>
 
             {/* column 2  */}
@@ -68,7 +75,11 @@ const Banner3 = ({ index = 3, total = 5 }) => {
                   }`}
                 >
                   <div className="col-span-2">
-                    <img src={product.image} alt="banner" className="productImagesDesign" />
+                    <img
+                      src={product.image}
+                      alt="banner"
+                      className="productImagesDesign"
+                    />
                   </div>
                   <div className="col-span-3 ml-[24px]">
                     <span className="productTitle">0{i + 1}.</span>

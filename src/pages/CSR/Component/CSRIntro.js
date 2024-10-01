@@ -16,7 +16,7 @@ const CSRIntro = () => {
       <div className="items-center  flex">
         <div className="my-[40px]">
           {/* Grid layout */}
-          <div className="grid grid-cols-5 gap-x-4 px-[32px] md:px-[80px] xl:px-[150px]">
+          <div className="grid grid-cols-5 gap-x-[88px] px-[32px] md:px-[80px] xl:px-[150px]">
             {/* column 1 */}
 
             <div className="col-span-5 xl:col-span-3 flex flex-col justify-center">

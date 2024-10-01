@@ -5,18 +5,21 @@ const BannerContainer = ({
   containerStyle,
   position = "bottom left",
   bgImage,
+  position2,
+  bgImage2,
 }) => {
+  const bgPosition = position2 ? `${position}, ${position2}` : position
   return (
     <div
-      className={` flex justify-center align-center  ${containerStyle} bg-[length:171px_150px] lg:bg-[length:171px_300px]`}
+      className={` flex justify-center align-center  ${containerStyle} bg-[length:171px_150px,] lg:bg-[length:171px_300px,]`}
       style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundPosition: position,
+        backgroundImage: `url(${bgImage}) , url(${bgImage2})`,
+        backgroundPosition: bgPosition,
         backgroundRepeat: "no-repeat",
         objectFit: "contain",
       }}
     >
-      <div className="max-w-[1920px] ">{children}</div>
+      <div className="max-w-[1920px]">{children}</div>
     </div>
   )
 }
