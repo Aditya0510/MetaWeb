@@ -52,6 +52,9 @@ export default function Product1() {
   const product1des3 = "with low and normal silicon contents.";
   const product1Des = "Advance Craft stainless steel wires are engineering materials that are capable of meeting a broad range of design criteria. They exhibit excellent:";
   const productDescription = "They are selected for a broad range of consumer,commercial and industrial applications. They are used for demanding requirements of chemical processing to the delicate handling of food and pharmaceuticals. They are preferred over many other materials because of their performance in even the most aggressive environments, and they are fabricated by methods common to most manufacturers. Most stainless steels are considered to have good weldability and may be welded by several welding processes including the arc welding processes, resistance welding , electron and laser beam welding, friction welding and brazing. For any of these processes, joint surfaces and any filler metal must be clean."
+
+  const craftDesc = "Most stainless steels are considered to have good weldability and may be welded by several welding processes including the arc welding processes, resistance welding, electron and laser beam welding,friction welding and brazing.For any of these processes, joint surfaces and any filler metal must be clean."
+
   const product1DesTiles = ["304L", "ER 308L", "ER 308L (10%)", "ER 309L", "ER 309H", "ER 316L", "ER 316H", "ER 310", "ER 312", "ER 309LMo", "ER 317L", "ER 318", "ER 347H", "ER 430L"];
 
   const corrisionList = [
@@ -141,10 +144,10 @@ export default function Product1() {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: productSawPrimary,
     size: [
-      { mm: "1.60", inch: '0.062"', fraction: "1/16" },
+      { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
-      { mm: "2.40", inch: '0.094"', fraction: "3/32" },
-      { mm: "3.20", inch: '0.125"', fraction: "1/8" },
+      { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
+      { mm: "3.20", inch: '0.125"', fraction: '1/8"' },
       { mm: "4.00", inch: '0.156"', fraction: '5/32"' },
       { mm: "5.00", inch: '0.187"', fraction: '3/16"' },
     ],
@@ -323,10 +326,10 @@ export default function Product1() {
                     src={brandImage}
                     className="max-w-[280px] h-[88px] sm:max-w-[280px] sm:h-[88px] md:max-w-[280px] md:h-[88px] xl:max-w-[505px] xl:h-[160px]"
                   />
-                  <p className="product-description">
+                  {/* <p className="product-description">
                     {product1Des}
-                  </p>
-                  <ul
+                  </p> */}
+                  {/* <ul
                     className="product-description"
                     style={{ listStyleType: "disc" }}
                   >
@@ -335,9 +338,9 @@ export default function Product1() {
                         {item}
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                   <p className="product-description">
-                    {productDescription}
+                    {craftDesc}
                   </p>
                   <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
                     {product1des2}{" "}
@@ -415,7 +418,7 @@ export default function Product1() {
           </div>
         </BannerContainer>
         <div className="relative">
-          <div className="pt-[6rem]  md:pt-[2rem]  px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-28">
+          <div className="pt-[6rem]    px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-28">
 
             <div className="flex flex-col gap-28">
               <h6 className="product-1-title z-10">{productTitle3}</h6>

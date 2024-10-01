@@ -8,7 +8,7 @@ export default function ProductDetail1({ product1 }) {
     <>
       <div className=" flex flex-col gap-6 z-20 md:max-w-[50%] 4xl:max-w-[60%]">
         <h4 className="product-primary-title">{product1?.productTitle}</h4>
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row">
           {product1?.primaryImage && (
             <img
               src={product1?.primaryImage}
