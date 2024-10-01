@@ -147,7 +147,7 @@ export default function Product1() {
       { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
       { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
-      { mm: "3.20", inch: '0.125"', fraction: '1/8"' },
+      { mm: "3.20", inch: '0.125"', fraction: '"1/8"' },
       { mm: "4.00", inch: '0.156"', fraction: '5/32"' },
       { mm: "5.00", inch: '0.187"', fraction: '3/16"' },
     ],
@@ -326,10 +326,10 @@ export default function Product1() {
                     src={brandImage}
                     className="max-w-[280px] h-[88px] sm:max-w-[280px] sm:h-[88px] md:max-w-[280px] md:h-[88px] xl:max-w-[505px] xl:h-[160px]"
                   />
-                  {/* <p className="product-description">
+                  <p className="product-description">
                     {product1Des}
-                  </p> */}
-                  {/* <ul
+                  </p>
+                  <ul
                     className="product-description"
                     style={{ listStyleType: "disc" }}
                   >
@@ -338,9 +338,9 @@ export default function Product1() {
                         {item}
                       </li>
                     ))}
-                  </ul> */}
+                  </ul>
                   <p className="product-description">
-                    {craftDesc}
+                    {productDescription}
                   </p>
                   <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
                     {product1des2}{" "}

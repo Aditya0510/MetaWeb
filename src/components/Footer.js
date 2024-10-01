@@ -8,7 +8,7 @@ export default function Footer() {
   const brochureText = "Brochure";
   const linkArray = [
     { link: RoutesLink?.product1, label: "Products" }, { link: RoutesLink?.About, label: "About Us" },
-    { link: RoutesLink?.career, label: "Careers" }, { link: "", label: "Contacts" }
+    { link: RoutesLink?.career, label: "Careers" }, { link: RoutesLink?.enquire, label: "Contacts" }
   ]
   const info = {
     contactLabel: "Contact Us",

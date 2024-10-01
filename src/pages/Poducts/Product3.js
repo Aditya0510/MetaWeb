@@ -10,6 +10,7 @@ import additive from "../../assets/images/product/additive.png";
 import spine from "../../assets/images/Banner/spine.png";
 import { Link } from "react-router-dom";
 import { RoutesLink } from "../../Utility/RoutesLink";
+import weilding2 from "../../assets/images/Banner/hoganas-banner.jpg";
 
 export default function Product3() {
   const product3Slogan = "transform your most ambitious designs into reality."
@@ -94,10 +95,10 @@ export default function Product3() {
 
     <div>
       <div>
-        {/* <img
+        <img
           src={weilding2}
           className="w-full h-[600px]"
-        /> */}
+        />
       </div>
     </div>
   </MainContainer>)
