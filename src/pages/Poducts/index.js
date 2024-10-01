@@ -1,9 +1,4 @@
-import { NavLink } from "react-router-dom";
-import HeaderContainer from "../../components/Containers/HeaderContaner";
-import { RoutesLink } from "../../Utility/RoutesLink";
-import Navbar from "../Home/Navbar";
 import "../Poducts/product.css";
-import ProductNavigator from "./Components/ProductNavigator";
 import Product1Banner from "../../assets/images/Banner/product1Banner.svg";
 import mechHand from "../../assets/images/Banner/MechHand.png";
 import assetRelative from "../../assets/images/Banner/assetRelative.svg";
@@ -25,31 +20,23 @@ import radialImage from "../../assets/images/Banner/radialBanner.svg";
 import ProductCard from "./Components/ProductCard";
 import productCore1 from "../../assets/images/product/productCore1.png";
 import productCore2 from "../../assets/images/product/productCore2.png";
-import FormInput from "../../components/Forms/FormInput";
-import FormSelect from "../../components/Forms/FormSelect";
-import FormContainer from "../../components/Containers/FormContainer";
-import Button from "../../components/Button";
-import FormTextArea from "../../components/Forms/FormTextArea";
 import weildingImage from "../../assets/images/Banner/WeildingImage.png";
-import Footer from "../../components/Footer";
-import HorizontalLine from "../../components/HorizontalLine";
 import ProductGroup from "../../assets/images/Banner/ProductGroup.svg"
 import MainContainer from "../../components/Containers/MainContainer";
 import { useState } from "react";
-import { Accordion } from "flowbite-react";
 import { useForm } from "react-hook-form";
-import { validateName } from "../../Utility/Validations";
 import tigImage from "../../assets/images/product/tigImage.png";
 import tigPrimaryImage from "../../assets/images/product/tigPrimaryImage.png";
-import AnimatedPage from "../../Utility/AnimatedPage";
 import EnquiryForm from "../../components/Forms/EnquiryForm";
 
+import MIGPacked from "../../assets/images/product/AdvanceCraft/CRAFT-MIG.png"
+import TIGPacked from "../../assets/images/product/AdvanceCraft/CRAFT-TIG.png"
+import SAWPacked from "../../assets/images/product/AdvanceCraft/CRAFT-SAW.png" 
 export default function Product1() {
   const productTitle1 = "Its not just supplying, its also customizing";
   const productTitle2 = "Weld with Confidence, Achieve Superior Results.";
   const productTitle3 = "Different chemistries that make for a stronger bond.";
   const product1des2 = "The commonly manufactured grades are AWS";
-  const product1des3 = "with low and normal silicon contents.";
   const product1Des = "Advance Craft stainless steel wires are engineering materials that are capable of meeting a broad range of design criteria. They exhibit excellent:";
   const productDescription = "They are selected for a broad range of consumer,commercial and industrial applications. They are used for demanding requirements of chemical processing to the delicate handling of food and pharmaceuticals. They are preferred over many other materials because of their performance in even the most aggressive environments, and they are fabricated by methods common to most manufacturers. Most stainless steels are considered to have good weldability and may be welded by several welding processes including the arc welding processes, resistance welding , electron and laser beam welding, friction welding and brazing. For any of these processes, joint surfaces and any filler metal must be clean."
 
@@ -74,7 +61,7 @@ export default function Product1() {
     productTitle: "MIG",
     productDes: "The MIG wires are supplied in bright as well as in matte finish and the wire is specially cleaned to avoid weld contamination. Stainless steel MIG wires can be supplied in plastic spool. The wires have suitable cast / helix to ensure perfect “Pay-Off”.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: product1PrimaryImage,
+    primaryImage: MIGPacked,
     size: [
       { mm: "0.80", inch: '0.030"', fraction: "---" },
       { mm: "0.90", inch: '0.035"', fraction: "---" },
@@ -107,7 +94,7 @@ export default function Product1() {
     productTitle: "TIG",
     productDes: "We manufacture high quality stainless steel TIG wires in 36” & 1,000 mm cutlengths, with embossing on both sides above 1.0 mm wires as per customer’s requirements.TIG wires are supplied in bright and clean finish to avoid all possible contamination.No oil is used in processing of TIG wires.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: tigPrimaryImage,
+    primaryImage: TIGPacked,
     size: [
       { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
@@ -140,7 +127,7 @@ export default function Product1() {
     productTitle: "SAW",
     productDes: "We manufacture clean & layer wound wire for submerged arc welding from 1.60 mm(0.062”) to 5.00 mm(0.187”) in various grades in bright as well as in matte finish.The wires tensile strength, helix and cast diameter is engineered to precise tolerance to ensure perfect “Pay- Off”.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: productSawPrimary,
+    primaryImage: SAWPacked,
     size: [
       { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
