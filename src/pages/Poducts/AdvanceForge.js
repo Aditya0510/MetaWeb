@@ -93,7 +93,7 @@ const AdvanceForge = () => {
       { mm: "0.90", inch: '0.035"', fraction: "---" },
       { mm: "1.00", inch: '0.040"', fraction: "---" },
       { mm: "1.20", inch: '0.045"', fraction: "---" },
-      { mm: "1.60", inch: '0.062"', fraction: '"1/16"' },
+      { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
     ],
 
     spoolImages: [
@@ -122,7 +122,7 @@ const AdvanceForge = () => {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: TIGPacked,
     size: [
-      { mm: "1.60", inch: '0.062"', fraction: '"1/16"' },
+      { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
       { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
       { mm: "3.20", inch: '0.125"', fraction: '1/18"' },
@@ -154,10 +154,10 @@ const AdvanceForge = () => {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: SAWPacked,
     size: [
-      { mm: "1.60", inch: '0.062"', fraction: "1/16" },
+      { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
-      { mm: "2.40", inch: '0.094"', fraction: "3/32" },
-      { mm: "3.20", inch: '0.125"', fraction: "1/8" },
+      { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
+      { mm: "3.20", inch: '0.125"', fraction: '1/8"' },
       { mm: "4.00", inch: '0.156"', fraction: '5/32"' },
       { mm: "5.00", inch: '0.187"', fraction: '3/16"' },
     ],
@@ -184,7 +184,7 @@ const AdvanceForge = () => {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     size: [
       { mm: "2.00", inch: '0.078"', fraction: "---" },
-      { mm: "2.40", inch: '0.094"', fraction: "3/32" },
+      { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
       { mm: "2.50", inch: '0.098"', fraction: "---" },
       { mm: "3.15", inch: '0.124"', fraction: "---" },
       { mm: "3.20", inch: '0.125"', fraction: '1/8"' },

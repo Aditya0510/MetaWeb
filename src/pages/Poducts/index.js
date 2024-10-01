@@ -53,8 +53,6 @@ export default function Product1() {
   const product1Des = "Advance Craft stainless steel wires are engineering materials that are capable of meeting a broad range of design criteria. They exhibit excellent:";
   const productDescription = "They are selected for a broad range of consumer,commercial and industrial applications. They are used for demanding requirements of chemical processing to the delicate handling of food and pharmaceuticals. They are preferred over many other materials because of their performance in even the most aggressive environments, and they are fabricated by methods common to most manufacturers. Most stainless steels are considered to have good weldability and may be welded by several welding processes including the arc welding processes, resistance welding , electron and laser beam welding, friction welding and brazing. For any of these processes, joint surfaces and any filler metal must be clean."
 
-  const craftDesc = "Most stainless steels are considered to have good weldability and may be welded by several welding processes including the arc welding processes, resistance welding, electron and laser beam welding,friction welding and brazing.For any of these processes, joint surfaces and any filler metal must be clean."
-
   const product1DesTiles = ["304L", "ER 308L", "ER 308L (10%)", "ER 309L", "ER 309H", "ER 316L", "ER 316H", "ER 310", "ER 312", "ER 309LMo", "ER 317L", "ER 318", "ER 347H", "ER 430L"];
 
   const corrisionList = [
@@ -111,7 +109,7 @@ export default function Product1() {
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: tigPrimaryImage,
     size: [
-      { mm: "1.60", inch: '0.062"', fraction: '"1/16"' },
+      { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
       { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
       { mm: "3.20", inch: '0.125"', fraction: '1/18"' },
@@ -147,7 +145,7 @@ export default function Product1() {
       { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
       { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
-      { mm: "3.20", inch: '0.125"', fraction: '"1/8"' },
+      { mm: "3.20", inch: '0.125"', fraction: '1/8"' },
       { mm: "4.00", inch: '0.156"', fraction: '5/32"' },
       { mm: "5.00", inch: '0.187"', fraction: '3/16"' },
     ],
@@ -176,7 +174,7 @@ export default function Product1() {
     size: [
 
       { mm: "2.00", inch: '0.078"', fraction: "---" },
-      { mm: "2.40", inch: '0.094"', fraction: "3/32" },
+      { mm: "2.40", inch: '0.094"', fraction: '3/32"' },
       { mm: "2.50", inch: '0.098"', fraction: "---" },
       { mm: "3.15", inch: '0.124"', fraction: "---" },
       { mm: "3.20", inch: '0.125"', fraction: '1/8"' },
