@@ -51,9 +51,9 @@ export default function Product2({ }) {
   const ProductDetail = {
     prodTitle: "Hoganas Iron Powder",
     prodSubTitle: "Sponge iron powders",
-    prodDesc1: "The Höganäs sponge grades for welding applications are renowned for their high and uniform quality. Ourwide range of powders with varying chemical and physical properties, all with low levels of impurities and narrow specifications, helps enhancing the characteristics and performance of covered electrodes as well as flux- cored and metal-cored wires.",
+    prodDesc1: "The Höganäs sponge grades for welding applications are renowned for their high and uniform quality. Our wide range of powders with varying chemical and physical properties, all with low levels of impurities and narrow specifications, helps enhancing the characteristics and performance of covered electrodes as well as flux- cored and metal-cored wires.",
     prodDesc2: "The commonly manufactured grades are HIL 40.29 IRON POWDER, WI 40.29, WI 40.37, WI100.25, CAI 300: 25, Melting Flakes.",
-    prodDesc3: "Additions of high - purity iron powders in welding electrodes have a positive effect on final weld quality.This is particularly important for electrodes used for critical applications and where the demands on mechanical properties are high.",
+    prodDesc3: "Additions of high - purity iron powders in welding electrodes have a positive effect on final weld quality. This is particularly important for electrodes used for critical applications and where the demands on mechanical properties are high.",
   }
   const featureTiles = [
     "Wide range of iron powders developed for welding applications",

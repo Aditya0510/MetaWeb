@@ -98,7 +98,7 @@ const Navbar = ({ showMenu = true, handleClick, navigateToModule,productNavigati
             src={contactLogo}
             alt="call-icon"
             className="contact-logo cursor-pointer"
-            onClick={() => (window.location.href = "tel:1234567890")}
+            onClick={() => (window.location.href = "tel:+918369135778")}
             title="Click to call"
           />
         </div>

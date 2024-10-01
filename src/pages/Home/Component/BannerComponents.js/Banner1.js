@@ -16,7 +16,7 @@ const Banner1 = ({ index = 1 }) => {
   of wide variety stainless steel wires, high performance nickel
   alloy wires, other alloy wires in popular forms of `
   const subtitle2 = `for welding applications.`
-  const products = ["TIG", "MIG", "SAW", "Cors", "Metal Powder"]
+  const products = ["TIG", "MIG", "SAW", "Core", "Metal Powder"]
   const brands = [brand1, brand2, brand3]
   const navigate = useNavigate()
   return (
