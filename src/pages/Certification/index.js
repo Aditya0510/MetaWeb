@@ -43,7 +43,7 @@ export default function Certification() {
         <div className="pt-[10px]  md:pt-[10px] px-[20px] xl:px-[80px] md:px-[40px] flex flex-col gap-[120px]  lg:gap-24  md:gap-28">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
             {pdfs?.map((item) => (
-              <div className="thumbnail" onClick={() => handlePDFClick(item)}>
+              <div className="thumbnail cursor-pointer" onClick={() => handlePDFClick(item)} >
                 <img
                   src={item.thumbnail}
                   alt="PDF Thumbnail"

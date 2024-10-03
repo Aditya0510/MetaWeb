@@ -24,11 +24,11 @@ export default function CSRNavigator({ }) {
         <div
           key={index}
           className={`flex justify-center relative  items-center  px-[12px] py-[8px]
-       ${index !== csrItems.length - 1 ? "border-end" : ""}`}
+       ${index !== csrItems.length - 1 ? "border-end" : ""} cursor-pointer`}
+       onClick={() => onLinkClicked(item.files)}
         >
           <p
             className="product-label-text product-label-text-black"
-            onClick={() => onLinkClicked(item.files)}
           >
             {item?.label}{" "}
             {item?.colorLabel && (
