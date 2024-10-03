@@ -42,14 +42,10 @@ const AdvanceForge = () => {
   const productTitle2 = "EFFICIENCY AND DURABILITY WITH MIG WELDING"
   const productTitle3 = "ROBUST SOLUTIONS FOR EVERY CHALLENGE"
   const product1des2 = "The Commonly manufactured grades are AWS"
-  const product1des3 = "Sourced entirely from Europe, these grades guarantee exceptional quality, featuring flawless casting and helix accuracy—not from China. "
-  const product1des4 =
-    "Exclusively European-sourced, these grades ensure unmatched quality, with flawless casting and helix precision—no sourcing from China."
-  const product1Des =
-    "Advance PRO nickel alloys can be fusion welded using gas shielded processes like TIG or MIG. Of the flux processes, MMA is frequently used but the SAW process is restricted to solid solution alloys and is less widely used."
 
   const advanceForgeList = {
-    title: "Advance FORGE products are widely used because of their:",
+    title: "ADVANCE FORGE Copper and Copper Alloys offer a unique combination of material properties that makes them advantageous for many manufacturing environments.",
+    description: 'They are widely used because of their:',
     reasons: [
       "excellent electrical and thermal conductivities",
       "outstanding resistance to corrosion",
@@ -351,7 +347,8 @@ const AdvanceForge = () => {
 
                   {/* List of Advance FORGE characterstics */}
                   <p className="product-description">
-                    {advanceForgeList?.title}
+                    {advanceForgeList?.title} <br />
+                    {advanceForgeList?.description}
                   </p>
                   <ul
                     className="product-description"
@@ -390,7 +387,6 @@ const AdvanceForge = () => {
                     ))}
                     {" "}
                   </p>
-                  <p className="product-description">{product1des3}</p>
 
                 </div>
                 <div>

@@ -10,8 +10,8 @@ import Navbar from "../Home/Navbar"
 const CSRScreen = () => {
   return (
     <div>
-      <Navbar/>
-      <div className="pt-[100px]"/>
+      <Navbar csrNavigation/>
+      <div className="pt-[140px]"/>
       <CSRIntro />
       <OurActivities />
       <div>
