@@ -15,6 +15,7 @@ import Medical from "./../../../../assets/images/expertise/Medical.svg"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner5.png"
 import { useNavigate } from "react-router-dom"
 import { RoutesLink } from "../../../../Utility/RoutesLink"
+import { motion } from "framer-motion"
 const Banner5 = ({ index = 5, total = 5 }) => {
   const navigate = useNavigate()
   const title = `Additive Metal Powder`
@@ -39,9 +40,13 @@ const Banner5 = ({ index = 5, total = 5 }) => {
           <p className="Slider-count mx-[15px] xl:mx-[0px]">{`${index}/${total}`}</p>
 
           {/* Grid layout */}
-          <div className="grid  grid-cols-6 gap-x-4 px-[15px] xl:px-[130px] flex-wrap">
+          <div className="grid  grid-cols-6 gap-x-4 px-[15px] xl:px-[130px] flex-wrap overflow-x-hidden">
             {/* column 2  */}
-            <div className="col-span-6  md:col-span-3 lg:col-span-4 flex flex-col justify-center">
+            <motion.div 
+               initial={{ opacity: 0, x: 100}}
+               whileInView={{ opacity: 1, x: 0 }}
+               transition={{ duration: 0.8 }}
+             className="col-span-6  md:col-span-3 lg:col-span-4 flex flex-col justify-center">
               <img
                 src={brand1}
                 alt="product"
@@ -70,12 +75,16 @@ const Banner5 = ({ index = 5, total = 5 }) => {
 
               {/* This will navigate to the product page        */}
               <Button title="Know More" className="mt-[8px]" onClick={() => navigate(RoutesLink?.product3)}/>
-            </div>
+            </motion.div >
 
             {/* column 1 */}
-            <div className="col-span-6 md:col-span-3 lg:col-span-2 flex flex-col justify-center items-center xl:ml-[80px] mt-[60px] md:mt[0px]">
+            <motion.div 
+            initial={{ opacity: 0, x: -100}}
+               whileInView={{ opacity: 1, x: 0 }}
+               transition={{ duration: 0.7 }} 
+               className="col-span-6 md:col-span-3 lg:col-span-2 flex flex-col justify-center items-center xl:ml-[80px] mt-[60px] md:mt[0px]">
               <img src={BannerImage} alt="banner" className="Banner" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

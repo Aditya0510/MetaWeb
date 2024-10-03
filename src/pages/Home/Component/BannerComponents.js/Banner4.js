@@ -15,6 +15,7 @@ import Cube from "./../../../../assets/images/expertise/Cube.svg"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner4.png"
 import { RoutesLink } from "../../../../Utility/RoutesLink"
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 const Banner4 = ({ index = 4, total = 5 }) => {
   const navigate = useNavigate()
   const title = `Sponge iron powder high and uniform quality`
@@ -60,17 +61,20 @@ const Banner4 = ({ index = 4, total = 5 }) => {
 
               <p className="Banner-subtitle2 mt-[12px] 2xl:mt-[24px]">{subtitle2}</p>
 
-              <div className="grid 4xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 mt-[12px] 2xl:mt-[24px] ">
+              <div className="grid 4xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 mt-[12px] 2xl:mt-[24px] overflow-x-hidden">
                 {expertise.map(({ title, image }, i) => (
-                  <span
-                    key={i}
+                  <motion.span
+                  key={i}
+                  initial={{ opacity: 0, x: i+1*50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
                     className="flex flex-col justify-center items-center mb-[12px] 3xl:mb-[35px]"
                   >
                     <img src={image} alt="Jeep" className="w-[40px] h-[40px]" />
                     <span className="expertiseSectorTitle text-center">
                       {title}
                     </span>
-                  </span>
+                  </motion.span>
                 ))}
               </div>
 

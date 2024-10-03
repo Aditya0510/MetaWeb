@@ -13,6 +13,8 @@ import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner3.png"
 import WheelImage from "./../../../../assets/images/Banner/wheel.png"
 import { RoutesLink } from "../../../../Utility/RoutesLink"
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
+
 const Banner3 = ({ index = 3, total = 5 }) => {
   const navigate = useNavigate()
   const title = `The Ultimate Welding Allies`
@@ -66,10 +68,13 @@ const Banner3 = ({ index = 3, total = 5 }) => {
             </div>
 
             {/* column 2  */}
-            <div className="col-span-6  md:col-span-3 flex justify-end flex-col mt-[60px] md:mt-[0px]">
+            <div className="col-span-6  md:col-span-3 flex justify-end flex-col mt-[60px] md:mt-[0px] overflow-hidden">
               {weldingProducts.map((product, i) => (
-                <div
+                <motion.div
                   key={i}
+                  initial={{ opacity: 0, x: i+1*50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
                   className={`grid grid-cols-5 mb-[24px] last:mb-0 ${
                     i % 2 === 0 ? "self-end xl:ml-[20px]" : ""
                   }`}
@@ -89,7 +94,7 @@ const Banner3 = ({ index = 3, total = 5 }) => {
                       className="w-[227px]"
                     />
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

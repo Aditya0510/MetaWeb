@@ -6,6 +6,7 @@ import brand2 from "./../../../../assets/images/Banner/6k-logo.png"
 import BannerImage from "./../../../../assets/images/Banner/BannerImg2.svg"
 import BannerContainer from "./BannerContainer"
 import WeldingImage from "./../../../../assets/images/Banner/WeldingBanner2.png"
+import { motion } from "framer-motion"
 const Banner1 = ({ index = 2, total = 5 }) => {
   const title = `High Quality Welding Consumables, Hoganas Iron Powder and 6K Additive Metal Powder`
   const contents = [
@@ -32,7 +33,11 @@ const Banner1 = ({ index = 2, total = 5 }) => {
             </div>
 
             {/* column 2  */}
-            <div className="col-span-6  md:col-span-3 flex flex-col justify-center mt-[60px] md:mt[0px]">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }} 
+              className="col-span-6  md:col-span-3 flex flex-col justify-center mt-[60px] md:mt[0px]">
               <h2 className="Banner-title">{title}</h2>
 
               {/* Brands logo  */}
@@ -62,7 +67,7 @@ const Banner1 = ({ index = 2, total = 5 }) => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
