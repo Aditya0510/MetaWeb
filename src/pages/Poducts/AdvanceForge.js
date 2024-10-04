@@ -36,6 +36,8 @@ import { useForm } from "react-hook-form"
 import tigImage from "../../assets/images/product/tigImage.png"
 import tigPrimaryImage from "../../assets/images/product/tigPrimaryImage.png"
 import EnquiryForm from "../../components/Forms/EnquiryForm"
+import AdvanceForgePdf from "../../assets/brochure/ADVANCE-FORGE.pdf"
+import { downloadPDF } from "../../Utility/download"
 
 const AdvanceForge = () => {
   const productTitle1 = "Its not just supplying, its also customizing"
@@ -47,26 +49,28 @@ const AdvanceForge = () => {
     title: "ADVANCE FORGE Copper and Copper Alloys offer a unique combination of material properties that makes them advantageous for many manufacturing environments.",
     description: 'They are widely used because of their:',
     reasons: [
-      "excellent electrical and thermal conductivities",
-      "outstanding resistance to corrosion",
-      "ease of fabrication",
-      "good strength and fatigue resistance",
+      "Excellent electrical and thermal conductivities",
+      "Outstanding resistance to corrosion",
+      "Ease of fabrication",
+      "Good strength and fatigue resistance",
     ],
   }
   const otherUsefulList = {
     title: "Other useful characteristics include:",
     reasons: [
-      "spark resistance",
-      "metal-to-metal wear resistance",
-      "low-permeability properties",
-      "distinctive color",
+      "Spark resistance",
+      "Metal-to-metal wear resistance",
+      "Low-permeability properties",
+      "Distinctive color",
     ],
   }
   const product1DesTiles = [
-    "Monel",
-    "Aluminium Bronze",
-    "Phosphorus Bronze",
-    "Silicon Bronze",
+      "MONEL",
+      "ER CUAL A2",
+      "ER CUSN A",
+      "ER CUSI A",
+      "ER CUNI (70:30)",
+      "ER CUNI (90:10)"  
   ]
 
   const {
@@ -402,7 +406,7 @@ const AdvanceForge = () => {
           <div className="flex flex-col gap-28 w-[90%]">
             <h6 className="product-1-title">{productTitle2}</h6>
             <div className="flex flex-col items-start gap-[56px] xl:gap-[56px] 2xl:items-end md:flex-row">
-              <ProductDetail1 product1={productMIG} />
+              <ProductDetail1 product1={productMIG} onClick={()=>downloadPDF(AdvanceForgePdf,'Advance-Forge' )}/>
               <div className="flex 4xl:max-w-[40%] 2xl:max-w-[50%] gap-3 flex-wrap">
                 {productMIG?.spoolImages?.map((item, index) => (
                   <ProductCard item={item} index={index} />
@@ -428,7 +432,7 @@ const AdvanceForge = () => {
             >
               <ProductCard item={productSub} index={0} />
 
-              <ProductDetail1 product1={productTig} />
+              <ProductDetail1 product1={productTig} onClick={()=>downloadPDF(AdvanceForgePdf,'Advance-Forge.pdf' )}/>
             </div>
           </div>
           <div className="absolute left-0 top-0">
@@ -452,7 +456,7 @@ const AdvanceForge = () => {
                md:flex-row
                "
               >
-                <ProductDetail1 product1={productSaw} />
+                <ProductDetail1 product1={productSaw} onClick={()=>downloadPDF(AdvanceForgePdf,'Advance-Forge.pdf' )}/>
                 <div className="flex max-w-2/4 gap-[40px] flex-wrap">
                   {productSaw?.spoolImages?.map((item, index) => (
                     <ProductCard item={item} index={index} />
@@ -484,7 +488,7 @@ const AdvanceForge = () => {
                 <ProductCard item={product} index={index} />
               ))}
             </div>
-            <ProductDetail1 product1={productCore} />
+            <ProductDetail1 product1={productCore} onClick={()=>downloadPDF(AdvanceForgePdf,'Advance-Forge.pdf' )}/>
           </div>
           <div className="absolute left-2 top-0">
             <img src={radialImage} />

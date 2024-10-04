@@ -3,7 +3,7 @@ import Button from "../../../components/Button"
 import OrangeButton from "../../../components/OrangeButton"
 import { RoutesLink } from "../../../Utility/RoutesLink"
 
-export default function ProductDetail1({ product1 }) {
+export default function ProductDetail1({ product1,onClick=()=>{} }) {
   return (
     <>
       <div className=" flex flex-col gap-6 z-20 md:max-w-[50%] 4xl:max-w-[60%]">
@@ -58,13 +58,12 @@ export default function ProductDetail1({ product1 }) {
           <Link to={RoutesLink?.enquire} className="nav-link active">
             Enquire
           </Link>
-          {/* <OrangeButton
-          title={"Enquire"}
-        /> */}
+          
 
           <Button
             title="Download Brochure"
           // className="mt-[32px]"
+          onClick={onClick}
           />
           {/* <button className="secondary-button">Download Brochure</button> */}
         </div>

@@ -117,6 +117,7 @@ letter-spacing: -0.44px;
   width: 142.685px;
 height: 99.138px;
 flex-shrink: 0;
+object-fit: contain;
 }
 .product-des-sub-container{
     width:60%;

@@ -32,6 +32,8 @@ import EnquiryForm from "../../components/Forms/EnquiryForm";
 import MIGPacked from "../../assets/images/product/AdvanceCraft/CRAFT-MIG.png"
 import TIGPacked from "../../assets/images/product/AdvanceCraft/CRAFT-TIG.png"
 import SAWPacked from "../../assets/images/product/AdvanceCraft/CRAFT-SAW.png" 
+import { downloadPDF } from "../../Utility/download";
+import AdvanceCraftPdf from "../../assets/brochure/ADVANCE-CRAFT.pdf"
 export default function Product1() {
   const productTitle1 = "Its not just supplying, its also customizing";
   const productTitle2 = "Weld with Confidence, Achieve Superior Results.";
@@ -61,7 +63,8 @@ export default function Product1() {
     productTitle: "MIG",
     productDes: "The MIG wires are supplied in bright as well as in matte finish and the wire is specially cleaned to avoid weld contamination. Stainless steel MIG wires can be supplied in plastic spool. The wires have suitable cast / helix to ensure perfect “Pay-Off”.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: MIGPacked,
+    primaryImage: product1PrimaryImage,
+    secondaryImage: MIGPacked,
     size: [
       { mm: "0.80", inch: '0.030"', fraction: "---" },
       { mm: "0.90", inch: '0.035"', fraction: "---" },
@@ -360,6 +363,7 @@ export default function Product1() {
             <div className="flex flex-col items-start gap-[56px] xl:gap-[56px] 2xl:items-end md:flex-row">
               <ProductDetail1
                 product1={product1}
+                onClick={() => downloadPDF(AdvanceCraftPdf, "Advance-Craft.pdf")}
               />
               <div className="flex 4xl:max-w-[40%] 2xl:max-w-[50%] gap-3 flex-wrap">
                 {product1?.spoolImages?.map((item, index) => <ProductCard item={item} index={index} />
@@ -388,6 +392,7 @@ export default function Product1() {
 
               <ProductDetail1
                 product1={productTig}
+                onClick={() => downloadPDF(AdvanceCraftPdf, "Advance-Craft.pdf")}
               />
 
 
@@ -417,6 +422,7 @@ export default function Product1() {
                ">
                 <ProductDetail1
                   product1={productSaw}
+                  onClick={() => downloadPDF(AdvanceCraftPdf, "Advance-Craft.pdf")}
                 />
                 <div className="flex max-w-2/4 gap-[40px] flex-wrap">
                   {productSaw?.spoolImages?.map((item, index) => <ProductCard item={item} index={index} />
@@ -455,6 +461,7 @@ export default function Product1() {
             </div>
             <ProductDetail1
               product1={productCore}
+              onClick={() => downloadPDF(AdvanceCraftPdf, "Advance-Craft.pdf")}
             />
           </div>
           <div className="absolute left-2 top-0">

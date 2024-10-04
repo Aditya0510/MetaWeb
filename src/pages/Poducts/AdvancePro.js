@@ -34,7 +34,8 @@ import { useForm } from "react-hook-form"
 import tigImage from "../../assets/images/product/tigImage.png"
 import tigPrimaryImage from "../../assets/images/product/tigPrimaryImage.png"
 import EnquiryForm from "../../components/Forms/EnquiryForm"
-
+import AdvanceProPdf from "../../assets/brochure/ADVANCE-PRO.pdf"
+import { downloadPDF } from "../../Utility/download"
 const AdvancePro = () => {
   const productTitle1 = "Its not just supplying, its also customizing"
   const productTitle2 = "STRENGTH AND EFFICIENCY COMBINED"
@@ -54,6 +55,27 @@ const AdvancePro = () => {
       "low temperature properties",
     ],
   }
+
+  const description = "Types of nickel alloys are identified and guidance is given on welding processes and techniques which can be used in fabricating nickel alloy components without impairing their corrosion or mechanical properties or introducing flaws into the weld."
+
+  const typeList = {
+    title: "Common imperfections found on welding are:",
+    reasons: [
+        "Porosity",
+        "Oxide inclusions and lack of inter-run fusion",
+        "Weld metal solidification cracking",
+        "Microfissuring",
+    ],
+  }
+
+  const aditionalList = {
+    title: "Common imperfections found on welding are:",
+    reasons: [
+      "Post-weld heat treatment cracking",
+      "Stress corrosion cracking",
+    ],
+  }
+
   const product1DesTiles = [
     "ER NICRMO3",
     "ER NICRMO4",
@@ -155,7 +177,8 @@ const AdvancePro = () => {
     productDes:
       "Nickel Alloy-enhanced Pro SAW wires offer robust performance and reliability, perfect for the most demanding industrial tasks.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
-    primaryImage: SAWPacked,
+    primaryImage:productSawPrimary,
+    secondaryImage: SAWPacked,
     size: [
       { mm: "1.60", inch: '0.062"', fraction: '1/16"' },
       { mm: "2.00", inch: '0.078"', fraction: "---" },
@@ -357,6 +380,22 @@ const AdvancePro = () => {
                       <li key={index} className="ml-[20px]">{item}</li>
                     ))}
                   </ul>
+                  <p className="product-description">{description}</p>
+                  <p className="product-description">{typeList?.title}</p>
+                  <ul className="product-description" style={{ listStyleType: "disc" }}>
+                    {typeList?.reasons.map((item, index) => (
+                      <li key={index} className="ml-[20px]">{item}</li>
+                    ))}
+                  </ul>
+                  <p className="product-description">{aditionalList?.title}</p>
+                  <ul className="product-description" style={{ listStyleType: "disc" }}>
+                    {aditionalList?.reasons.map((item, index) => (
+                      <li key={index} className="ml-[20px]">{item}</li>
+                    ))}
+                  </ul>
+                  
+
+
                   <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
                     {product1des2}{" "}
                     {product1DesTiles?.map((item, index) => (
@@ -386,7 +425,7 @@ const AdvancePro = () => {
           <div className="flex flex-col gap-28 w-[90%]">
             <h6 className="product-1-title">{productTitle2}</h6>
             <div className="flex flex-col items-start gap-[56px] xl:gap-[56px] 2xl:items-end md:flex-row">
-              <ProductDetail1 product1={product1} />
+              <ProductDetail1 product1={product1} onClick={() => downloadPDF(AdvanceProPdf, "Advance-Pro.pdf")}/>
               <div className="flex 4xl:max-w-[40%] 2xl:max-w-[50%] gap-3 flex-wrap">
                 {product1?.spoolImages?.map((item, index) => (
                   <ProductCard item={item} index={index} />
@@ -412,7 +451,7 @@ const AdvancePro = () => {
             >
               <ProductCard item={productSub} index={0} />
 
-              <ProductDetail1 product1={productTig} />
+              <ProductDetail1 product1={productTig}  onClick={() => downloadPDF(AdvanceProPdf, "Advance-Pro.pdf")} />
             </div>
           </div>
           <div className="absolute left-0 top-0">
@@ -436,7 +475,7 @@ const AdvancePro = () => {
                md:flex-row
                "
               >
-                <ProductDetail1 product1={productSaw} />
+                <ProductDetail1 product1={productSaw} onClick={() => downloadPDF(AdvanceProPdf, "Advance-Pro.pdf")}/>
                 <div className="flex max-w-2/4 gap-[40px] flex-wrap">
                   {productSaw?.spoolImages?.map((item, index) => (
                     <ProductCard item={item} index={index} />
@@ -468,7 +507,7 @@ const AdvancePro = () => {
                 <ProductCard item={product} index={index} />
               ))}
             </div>
-            <ProductDetail1 product1={productCore} />
+            <ProductDetail1 product1={productCore} onClick={() => downloadPDF(AdvanceProPdf, "Advance-Pro.pdf")}/>
           </div>
           <div className="absolute left-2 top-0">
             <img src={radialImage} />
