@@ -95,7 +95,7 @@ const Navbar = ({
         ) : null}
 
         {showMenu ? (
-          <div class="md:hidden">
+          <div class="lg:hidden">
             <button
               class="navbar-burger flex items-center text-[#3C3C3B] p-3"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -122,7 +122,7 @@ const Navbar = ({
 
       {isMenuOpen ? (
         <>
-          <nav className="md:hidden bg-white flex flex-col h-screen justify-between" >
+          <nav className="lg:hidden bg-white flex flex-col h-screen justify-between" >
             <div className="relative">
               <ul className="  flex flex-col relative z-10" style={{}}>
                 {TabsArray.map((item, index) => (

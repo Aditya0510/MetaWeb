@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { validateName } from "../../Utility/Validations";
 import attach from "../../assets/images/Banner/attachment.png";
 import { toast } from "react-toastify";
+import emailjs from '@emailjs/browser';
 
 export default function CareerForm() {
   const [isPositionAccordionOpen, setIsPositionAccordionOpen] = useState(true);
@@ -73,6 +74,20 @@ export default function CareerForm() {
       }))
     );
     setIsPositionAccordionOpen(false);
+    window.Email.send({
+      Host: "smtp.gmail.com",  // SMTP host (e.g., smtp.gmail.com)
+      Username: "jeetsingh4199@gmail.com",      // Your email address
+      Password: "jeeetat4199",       // Your email password
+      To: 'jeetda420e@gmail.com',       // The recipient's email
+      From: data?.email,                  // The sender's email (user's email)
+      Subject: `Message from `,  // Email subject
+      Body: "dummyy bodyyy...",                // Email body
+    })
+      .then((message) => {
+        console.log("Email sent successfully!", message);
+        alert("Email sent successfully!")
+      })
+      .catch((error) => alert("Failed to send email."));
   };
 
   const formClickHandler = () => {
@@ -84,14 +99,14 @@ export default function CareerForm() {
 
   return (<>
     <FormContainer
-      formTitle={"careers"}
-      className="bg-gradient-to-b from-[#F0FBFA] to-[#C1E4D9] font-Fira-Sans"
+      formTitle={"Careers"}
+      className="bg-gradient-to-b from-[#F0FBFA] to-[#C1E4D9] font-Fira-Sans p-[40px]"
       formDescription={"Join us and find numerous opportunities for advancement and professional development"}
 
       handleSubmitForm={handleSubmit(onSubmit)}
     >
       <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
-        <div>
+        <div className="w-[100%] md:w-[50%]">
           <FormInput
             placeholder="First name"
             className={"form-input"}
@@ -103,7 +118,7 @@ export default function CareerForm() {
           />
           {<p className="text-red-500">{errors?.firstName?.message}</p>}
         </div>
-        <div >
+        <div className="w-[100%] md:w-[50%]">
           <FormInput
             placeholder="Last name"
             className={"form-input"}
@@ -223,7 +238,6 @@ export default function CareerForm() {
           onClick={formClickHandler}
         />
       </div>
-
     </FormContainer>
   </>)
 }
