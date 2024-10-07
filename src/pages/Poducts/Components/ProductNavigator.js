@@ -60,11 +60,11 @@ export default function ProductNavigator({ handleDrawerToggle, productDrawer }) 
     </div>
     <Drawer open={productDrawer} onClose={handleDrawerToggle} position="bottom">
       {/* <Drawer.Header title="Drawer" /> */}
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col items-start justify-start">
         {productNavigateText?.map((item, index) => <div
           key={index}
-          className={`flex justify-center relative   px-[12px] py-[8px]
-       ${index !== productNavigateText.length - 1 ? 'border-bottom' : ''}`}
+          className={`flex relative   px-[16px] py-[18px]
+       ${index !== productNavigateText.length - 1 ? 'border-b' : ''}`}
         >
           <Link to={item?.link} onClick={handleDrawerToggle}>
             <p className="product-label-text product-label-text-black">
