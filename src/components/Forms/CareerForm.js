@@ -75,10 +75,10 @@ export default function CareerForm() {
     );
     setIsPositionAccordionOpen(false);
     window.Email.send({
-      Host: "smtp.gmail.com",  // SMTP host (e.g., smtp.gmail.com)
-      Username: "jeetsingh4199@gmail.com",      // Your email address
-      Password: "jeeetat4199",       // Your email password
-      To: 'jeetda420e@gmail.com',       // The recipient's email
+      Host: "smtp.elasticemail.com", // SMTP host (e.g., smtp.gmail.com)
+      Username: "jitender",      // Your email address
+      Password: "40AFFA9EDB7A8EBC67F56250DA5744A5B90C632744C887D74F86CF558A6C455A88B5D1CE60DF31AC2755A93442126E50",       // Your email password
+      To: 'jeetsingh4199@gmail.com',       // The recipient's email
       From: data?.email,                  // The sender's email (user's email)
       Subject: `Message from `,  // Email subject
       Body: "dummyy bodyyy...",                // Email body
