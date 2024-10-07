@@ -68,9 +68,7 @@ const AdvanceForge = () => {
       "MONEL",
       "ER CUAL A2",
       "ER CUSN A",
-      "ER CUSI A",
-      "ER CUNI (70:30)",
-      "ER CUNI (90:10)"  
+      "ER CUSI A"
   ]
 
   const {

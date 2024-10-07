@@ -4,7 +4,7 @@ import upperArrow from "../assets/images/Banner/upperArrow.svg";
 import ScrollToTopButton from "./ScrollToTop";
 import { RoutesLink } from "../Utility/RoutesLink";
 import MyPDF from "../assets/test.pdf";
-export default function Footer() {
+export default function Footer({containerStyle}) {
   const brochureText = "Brochure";
   const linkArray = [
     { link: RoutesLink?.product1, label: "Products" }, { link: RoutesLink?.About, label: "About Us" },
@@ -26,15 +26,15 @@ export default function Footer() {
 
   return (
     <div
-      className="flex flex-col items-start 
+      className={`flex flex-col items-start 
        md:flex-row 
        md:flex-wrap  md:items-center  bg-[#1D3D7C]
       px-[40px] pt-[80px] pb-[24px] gap-[24px]
       md:px-[40px]
        
         xl:gap-[24px] 4xl:px-[160px] 4xl:pt-[80px] 4xl:pb-[24px]
-        xl:justify-between xl:items-start xl:self-stretch
-        "
+        xl:justify-between xl:items-start xl:self-stretch ${containerStyle}
+        `}
     //   className="flex px-[160px] 
     // max-sm:px-[40px] pt-[80px] pb-[24px] justify-between items-start 
     // max-md:gap-[24px] 
