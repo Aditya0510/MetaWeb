@@ -17,8 +17,10 @@ const Navbar = ({
   productNavigation = false,
   csrNavigation = false,
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const navigate = useNavigate()
+   const [productDrawer, setProductDrawer] = useState(false);
+  const handleDrawerToggle = () => setProductDrawer(!productDrawer);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
   const TabsArray = [
     { link: RoutesLink?.product1, label: "Products" },
     { link: RoutesLink?.About, label: "About Us" },
@@ -121,7 +123,7 @@ const Navbar = ({
       {isMenuOpen ? (
         <>
           <nav className="md:hidden bg-white flex flex-col h-screen justify-between" >
-            <div className="relative ">
+            <div className="relative">
               <ul className="  flex flex-col relative z-10" style={{}}>
                 {TabsArray.map((item, index) => (
                   <li
@@ -132,7 +134,7 @@ const Navbar = ({
                       background: "rgba(255, 255, 255, 0.85)",
                     }}
                   >
-                    <NavLink to={item.link}> {item?.label}</NavLink>
+                    <NavLink className={"font-Fira-Sans"} to={item.link}  onClick={() => setIsMenuOpen(!isMenuOpen)}> {item?.label}</NavLink>
                   </li>
                 ))}
                 <div className="absolute">
@@ -148,9 +150,21 @@ const Navbar = ({
       ) : null}
       {productNavigation && (
         <>
+           <div class="md:hidden flex justify-end">
+        <button
+          class="navbar-burger  text-[#3C3C3B] p-3"
+          onClick={handleDrawerToggle}
+        >
+          <img
+            src={hamburgerLogo}
+            alt="ek-sath"
+            className="hamburger-logo"
+          />
+        </button>
+      </div>
           <div class="flex flex-col justify-center items-start gap-1 px-[8px] xl:px-[80px] md:px-[40px] md:pb-[12px]">
             <div class="flex flex-wrap">
-              <ProductNavigator />
+              <ProductNavigator productDrawer={ productDrawer} handleDrawerToggle={handleDrawerToggle} />
             </div>
           </div>
           <HorizontalLine />
