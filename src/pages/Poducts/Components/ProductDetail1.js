@@ -12,7 +12,7 @@ export default function ProductDetail1({ product1,onClick=()=>{} }) {
           {product1?.primaryImage && (
             <img
               src={product1?.primaryImage}
-              className="w-[50%] max-w-[400px]  object-contain"
+              className="max-w-[270px] aspect-square  object-contain"
             />
           )}
           {product1?.secondaryImage && (

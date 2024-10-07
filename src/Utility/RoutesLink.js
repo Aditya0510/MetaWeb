@@ -11,5 +11,6 @@ export const RoutesLink = {
   certification: "/certification",
   career: "/careers",
   enquire: "/enquire",
+  download: "/download",
   csr: "/csr",
 }

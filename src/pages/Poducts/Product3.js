@@ -54,7 +54,7 @@ export default function Product3() {
 
                 <div className="flex flex-col gap-2 max-w-[250px]">
                   <h4 className="product-spool-number">{`${String(index + 1).padStart(2, '0')}.`}</h4>
-                  <p className="text-[#50555B] font-['Fira_Sans'] text-[14px] font-[400] leading-[22.4px] tracking-[-0.28px]">{item}</p>
+                  <p className="text-[#50555B] font-Fira-Sans text-[14px] font-[400] leading-[22.4px] tracking-[-0.28px]">{item}</p>
                 </div>
               )}
             </div>

@@ -396,7 +396,7 @@ const AdvancePro = () => {
                   
 
 
-                  <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
+                  <p class="text-black flex-wrap flex items-center font-Fira-Sans text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
                     {product1des2}{" "}
                     {product1DesTiles?.map((item, index) => (
                       <span
@@ -443,9 +443,6 @@ const AdvancePro = () => {
         >
           <div className="relative">
             <div
-              //   className="flex flex-wrap items-center gap-[88px] max-sm:gap-[24px] justify-end pe-[150px] relative z-10 max-sm:ps-[40px]
-              // max-md:pe-[80px]
-              // max-sm:pe-[40px] max-sm:justify-start"
               className="flex flex-wrap md:items-center
                px-[40px]  gap-[24px] xl:gap-[88px] md:justify-end"
             >

@@ -84,7 +84,7 @@ const AdvanceForge = () => {
   const productMIG = {
     productTitle: "MIG",
     productDes:
-      "Forge MIG products are crafted for adaptability and strength, ensuring dependable performance in various welding tasks.",
+      "FORGE MIG products are crafted for adaptability and strength, ensuring dependable performance in various welding tasks.",
     sizeHeading: ["Size(mm)", "Size(inch)", "Fraction"],
     primaryImage: MIG,
     secondaryImage: MIGPacked,
@@ -379,7 +379,7 @@ const AdvanceForge = () => {
                   </ul>
                   {/* closing of the list     */}
 
-                  <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
+                  <p class="text-black flex-wrap flex items-center font-Fira-Sans text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
                     {product1des2}{" "}
                     {product1DesTiles?.map((item, index) => (
                       <span

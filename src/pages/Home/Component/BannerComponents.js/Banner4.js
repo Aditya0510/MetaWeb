@@ -61,20 +61,20 @@ const Banner4 = ({ index = 4, total = 5 }) => {
 
               <p className="Banner-subtitle2 mt-[12px] 2xl:mt-[24px]">{subtitle2}</p>
 
-              <div className="grid 4xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 mt-[12px] 2xl:mt-[24px] overflow-x-hidden">
+              <div className="grid 4xl:grid-cols-4 xl:grid-cols-3 grid-cols-2 mt-[12px] 2xl:mt-[24px] overflow-Y-hidden">
                 {expertise.map(({ title, image }, i) => (
-                  <motion.span
-                  key={i}
-                  initial={{ opacity: 0, x: i+1*50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
+                  <span
                     className="flex flex-col justify-center items-center mb-[12px] 3xl:mb-[35px]"
                   >
                     <img src={image} alt="Jeep" className="w-[40px] h-[40px]" />
-                    <span className="expertiseSectorTitle text-center">
+                    < motion.span
+                  key={i}
+                  initial={{ opacity: 0, y: i+1*50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7 }} className="expertiseSectorTitle text-center">
                       {title}
-                    </span>
-                  </motion.span>
+                    </motion.span>
+                  </span>
                 ))}
               </div>
 

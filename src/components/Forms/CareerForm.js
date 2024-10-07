@@ -85,7 +85,7 @@ export default function CareerForm() {
   return (<>
     <FormContainer
       formTitle={"careers"}
-      className="bg-gradient-to-b from-[#F0FBFA] to-[#C1E4D9]"
+      className="bg-gradient-to-b from-[#F0FBFA] to-[#C1E4D9] font-Fira-Sans"
       formDescription={"Join us and find numerous opportunities for advancement and professional development"}
 
       handleSubmitForm={handleSubmit(onSubmit)}
@@ -200,7 +200,7 @@ export default function CareerForm() {
           <img
             src={attach}
           />
-          <span className="text-[#51565B] font-['Fira_Sans'] text-[14px] font-medium underline">Attach CV here</span>
+          <span className="text-[#51565B] font-Fira-Sans text-[14px] font-medium underline">Attach CV here</span>
           <span className="flex py-[4px] px-3 items-center gap-2.5 border border-[#50555B] bg-white ms-[24px]">choose file</span>
 
         </label>

@@ -13,6 +13,7 @@ import ScrollToTop from "../Utility/ScrollToTop"
 import Certification from "../pages/Certification"
 import AdvanceForge from "../pages/Poducts/AdvanceForge"
 import AdvancePro from "../pages/Poducts/AdvancePro"
+import Download from "../pages/Download"
 const routeConfig = [{
   path: RoutesLink?.Home,
   element: <Home />,
@@ -58,6 +59,10 @@ const routeConfig = [{
 {
   path: RoutesLink?.advanceForge,
   element: <AdvanceForge/>
+},
+{
+  path: RoutesLink?.download,
+  element: <Download/>
 },
 
 ]

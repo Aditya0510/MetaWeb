@@ -13,11 +13,6 @@ import AboutGroup from "../../assets/images/Banner/aboutGroup.svg";
 import Footer from "../../components/Footer";
 import mechPicker from "../../assets/images/Banner/mechPicker.png";
 import radialGroup from "../../assets/images/Banner/RadialGroup.svg";
-import FormContainer from "../../components/Containers/FormContainer";
-import FormInput from "../../components/Forms/FormInput";
-import FormSelect from "../../components/Forms/FormSelect";
-import FormTextArea from "../../components/Forms/FormTextArea";
-import Button from "../../components/Button";
 import BannerContainer from "../Home/Component/BannerComponents.js/BannerContainer";
 import eclipseIcon from "../../assets/images/Banner/Ellipse 2.svg";
 
@@ -29,9 +24,7 @@ import coins from "../../assets/images/Banner/coins.png";
 import shipment from "../../assets/images/Banner/shipment (1).png";
 import stepAsset from "../../assets/images/Banner/deliveryStepBanner.png";
 import { useState } from "react";
-import { Accordion } from "flowbite-react";
 import { useForm } from "react-hook-form";
-import { validateName } from "../../Utility/Validations";
 import AboutFooterImage from "../../assets/images/Banner/aboutnewImage.png";
 import EnquiryForm from "../../components/Forms/EnquiryForm";
 export default function About() {
@@ -398,7 +391,7 @@ xl:h-[1px]"></div>
                 src={item?.imgSrc}
                 className="w-[45px] h-[45px]"
               />
-              <h6 class="text-[#02111B] font-['Fira_Sans'] text-[24px] font-[400] leading-[105%] tracking-[-0.48px]">
+              <h6 class="text-[#02111B] font-Fira-Sans text-[24px] font-[400] leading-[105%] tracking-[-0.48px]">
                 {item?.title1}<br />
                 {item?.title2}
               </h6>

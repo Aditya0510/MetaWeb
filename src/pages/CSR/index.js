@@ -11,7 +11,7 @@ const CSRScreen = () => {
   return (
     <div>
       <Navbar csrNavigation/>
-      <div className="pt-[140px]"/>
+      <div className="pt-[140px] md:pt-[180px]"/>
       <CSRIntro />
       <OurActivities />
       <div>

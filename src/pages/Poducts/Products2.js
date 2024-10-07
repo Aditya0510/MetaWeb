@@ -77,13 +77,13 @@ export default function Product2({ }) {
                 className="xl:w-[465px] xl:h-[460px] md:w-[350px] md:h-[460px] 
                 w-[266px] h-[252px]"
               />
-              <p class="text-[#02111B] font-['Fira_Sans'] text-[24px] font-[400] leading-[25.2px] tracking-[-0.48px] capitalize">Why HÖGANÄS Powder?</p>
+              <p class="text-[#02111B] font-Fira-Sans text-[24px] font-[400] leading-[25.2px] tracking-[-0.48px] capitalize">Why HÖGANÄS Powder?</p>
               <div className="flex gap-[12px] flex-wrap">
                 {featureTiles?.map((item, index) =>
 
                   <div className="flex flex-col gap-2 max-w-[250px]">
                     <h4 className="product-spool-number">{`${String(index + 1).padStart(2, '0')}.`}</h4>
-                    <p className="text-[#50555B] font-['Fira_Sans'] text-[14px] font-[400] leading-[22.4px] tracking-[-0.28px]">{item}</p>
+                    <p className="text-[#50555B] font-Fira-Sans text-[14px] font-[400] leading-[22.4px] tracking-[-0.28px]">{item}</p>
                   </div>
 
                 )}
@@ -95,7 +95,7 @@ export default function Product2({ }) {
                   title={ProductDetail?.prodTitle}
                 />
 
-                <p className="text-#50555B font-['Fira_Sans'] text-[24px]      
+                <p className="text-#50555B font-Fira-Sans text-[24px]      
               font-[400]
                leading-[86%]
 tracking- [-0.96px]">{ProductDetail?.prodSubTitle}</p>

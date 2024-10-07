@@ -12,7 +12,11 @@ import ProductNavigator from "../../pages/Poducts/Components/ProductNavigator"
 import HorizontalLine from "../../components/HorizontalLine"
 import CSRNavigator from "../CSR/Component/CSRNavigator"
 
-const Navbar = ({ showMenu = true, productNavigation = false, csrNavigation=false }) => {
+const Navbar = ({
+  showMenu = true,
+  productNavigation = false,
+  csrNavigation = false,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigate = useNavigate()
   const TabsArray = [
@@ -21,6 +25,7 @@ const Navbar = ({ showMenu = true, productNavigation = false, csrNavigation=fals
     { link: RoutesLink?.certification, label: "Certifications" },
     { link: RoutesLink?.csr, label: "CSR" },
     { link: RoutesLink?.career, label: "Careers" },
+    { link: RoutesLink?.download, label: "Downloads" },
     { link: RoutesLink?.enquire, label: "Enquire" },
   ]
   window.onscroll = function () {
@@ -57,7 +62,7 @@ const Navbar = ({ showMenu = true, productNavigation = false, csrNavigation=fals
         </div>
 
         {showMenu ? (
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex justify-center items-center">
             {TabsArray?.map(({ link, label }, index) => (
               <NavLink
                 key={index}
@@ -115,11 +120,7 @@ const Navbar = ({ showMenu = true, productNavigation = false, csrNavigation=fals
 
       {isMenuOpen ? (
         <>
-          <nav
-            className="md:hidden bg-white flex flex-col 
-        h-screen
-        justify-between"
-          >
+          <nav className="md:hidden bg-white flex flex-col h-screen justify-between" >
             <div className="relative ">
               <ul className="  flex flex-col relative z-10" style={{}}>
                 {TabsArray.map((item, index) => (

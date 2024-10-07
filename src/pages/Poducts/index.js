@@ -39,7 +39,7 @@ export default function Product1() {
   const productTitle2 = "Weld with Confidence, Achieve Superior Results.";
   const productTitle3 = "Different chemistries that make for a stronger bond.";
   const product1des2 = "The commonly manufactured grades are AWS";
-  const product1Des = "Advance Craft stainless steel wires are engineering materials that are capable of meeting a broad range of design criteria. They exhibit excellent:";
+  const product1Des = " stainless steel wires are engineering materials that are capable of meeting a broad range of design criteria. They exhibit excellent:";
   const productDescription = "They are selected for a broad range of consumer,commercial and industrial applications. They are used for demanding requirements of chemical processing to the delicate handling of food and pharmaceuticals. They are preferred over many other materials because of their performance in even the most aggressive environments, and they are fabricated by methods common to most manufacturers. Most stainless steels are considered to have good weldability and may be welded by several welding processes including the arc welding processes, resistance welding , electron and laser beam welding, friction welding and brazing. For any of these processes, joint surfaces and any filler metal must be clean."
 
   const product1DesTiles = ["304L", "ER 308L", "ER 308L (10%)", "ER 309L", "ER 309H", "ER 316L", "ER 316H", "ER 310", "ER 312", "ER 309LMo", "ER 317L", "ER 318", "ER 347H", "ER 430L"];
@@ -315,7 +315,7 @@ export default function Product1() {
                     className="max-w-[280px] h-[88px] sm:max-w-[280px] sm:h-[88px] md:max-w-[280px] md:h-[88px] xl:max-w-[505px] xl:h-[160px]"
                   />
                   <p className="product-description">
-                    {product1Des}
+                    <span >ADVANCE </span><span className="font-[500]">CRAFT</span>{product1Des}
                   </p>
                   <ul
                     className="product-description"
@@ -330,7 +330,7 @@ export default function Product1() {
                   <p className="product-description">
                     {productDescription}
                   </p>
-                  <p class="text-black flex-wrap flex items-center font-['Fira_Sans'] text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
+                  <p class="text-black flex-wrap flex items-center font-Fira-Sans text-[22px] font-normal leading-[30px] tracking-[-0.44px]">
                     {product1des2}{" "}
                     {product1DesTiles?.map((item, index) => (
                       <span

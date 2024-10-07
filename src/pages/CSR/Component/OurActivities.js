@@ -3,7 +3,7 @@ import "./../../../App.css"
 import "../../Home/Home.css"
 import "./../CSR.css"
 import BannerContainer from "../../Home/Component/BannerComponents.js/BannerContainer"
-
+import { motion } from "framer-motion"
 const OurActivities = () => {
   const title = `Our Activities`
   const description = `The CSR activities we pursue will be in line with our stated Vision and Mission, focused not just around our plants and offces, but also in other geographies based on the needs of the communities.`
@@ -44,12 +44,17 @@ const OurActivities = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-6 gap-x-4 px-[32px] md:px-[80px] xl:px-[150px]  mt-[36px]">
             {activities.map((activity, index) => (
-              <div className="col-span-1">
+              <motion.div
+                key={index}
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.5 }}
+               className="col-span-1">
                 <p className="activityTitle">
                   {(index + 1).toString().padStart(2, "0")}.
                 </p>
                 <p className="activityDescription">{activity}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
