@@ -147,7 +147,7 @@ export default function EnquiryForm() {
       }
     >
       <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
-        <div>
+        <div className="w-[100%] md:w-[50%]">
           <FormInput
             placeholder="First name"
             className={"form-input"}
@@ -158,7 +158,7 @@ export default function EnquiryForm() {
           />
           {<p className="text-red-500">{errors?.firstName?.message}</p>}
         </div>
-        <div >
+        <div className="w-[100%] md:w-[50%]">
           <FormInput
             placeholder="Last name"
             className={"form-input"}
@@ -171,7 +171,7 @@ export default function EnquiryForm() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-[16px] md:gap-2">
-        <div>
+        <div className="w-[100%] md:w-[50%]">
           <FormInput
             placeholder="Enter mobile no."
             type="number"
@@ -186,7 +186,7 @@ export default function EnquiryForm() {
           />
           {<p className="text-red-500">{errors?.mobile?.message}</p>}
         </div>
-        <div>
+        <div className="w-[100%] md:w-[50%]">
 
           <FormInput
             placeholder="Email address"

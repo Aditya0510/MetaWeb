@@ -1,22 +1,9 @@
-import Button from "../../components/Button";
-import FormContainer from "../../components/Containers/FormContainer";
-import FormInput from "../../components/Forms/FormInput";
-import FormSelect from "../../components/Forms/FormSelect";
-import FormTextArea from "../../components/Forms/FormTextArea";
 import Navbar from "../Home/Navbar";
-import radialGroup from "../../assets/images/Banner/RadialGroup.svg";
 import Footer from "../../components/Footer";
 import careerasset from '../../assets/images/product/careerAsset.png';
-
-
-import { Accordion } from "flowbite-react";
 import CareerForm from "../../components/Forms/CareerForm";
 
 export default function Careers() {
-
-
-
-
 
   return (<>
     <Navbar />
@@ -26,7 +13,11 @@ export default function Careers() {
         <div className="absolute">
           <img
             src={careerasset}
+            height={"100%"}
+            width={"100%"}
+            className="xl:h-[950px] xl:w-[750px]"
           // className="product-banner-1"
+          // className="w-[120%] h-[120%]"
           />
         </div>
       </div>
