@@ -93,8 +93,8 @@ const AdvancePro = () => {
     "ERNICRMO7",
     "ER Fe.Ni (36%)",
     "ER Fe.Ni (55%)",
-    "Inconel 825",
-    "Inconel 62",
+    "ERNIFECR1",
+    "ERNICRFE5",
     "Nickel Wire",
     "ER Fe.Ni(55%)Cu(4%)",
   ]

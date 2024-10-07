@@ -8,7 +8,7 @@ export default function ProductDetail1({ product1,onClick=()=>{} }) {
     <>
       <div className=" flex flex-col gap-6 z-20 md:max-w-[50%] 4xl:max-w-[60%]">
         <h4 className="product-primary-title">{product1?.productTitle}</h4>
-        <div className="flex flex-row">
+        <div className="flex flex-row flex-wrap">
           {product1?.primaryImage && (
             <img
               src={product1?.primaryImage}
@@ -18,7 +18,7 @@ export default function ProductDetail1({ product1,onClick=()=>{} }) {
           {product1?.secondaryImage && (
             <img
               src={product1?.secondaryImage}
-              className="w-[50%] max-w-[400px] object-contain"
+              className="max-w-[270px] aspect-square  object-contain"
             />
           )}
         </div>

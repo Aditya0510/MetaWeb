@@ -23,10 +23,11 @@ const contactData = [
 ]
 const ContactSection = () => {
   return (
-    <div className="containerHeight ">
-    <div className="p-[32px]">
+    <div className="containerHeight flex flex-col justify-between ">
+    <div className="p-[32px]  flex justify-center items-center min-h-[50dvh] px-[32px] lg:px-[80px]">
+      <div className="flex flex-col max-w-[1920px] ">
       <h2 className="contactTitle">Contact</h2>
-      <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-x-4 ">
+      <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-x-16 ">
         {contactData?.map(({ title, description }, i) => (
           <div key={i} className="col-span-1 mt-[32px]">
             <p className="contactSubtitle">{title}</p>
@@ -34,8 +35,9 @@ const ContactSection = () => {
           </div>
         ))}
       </div>
+      </div>
     </div>
-    <Footer />
+    <Footer containerStyle="min-h-[50dvh]" />
     </div>
   )
 }
