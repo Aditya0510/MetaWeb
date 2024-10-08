@@ -8,7 +8,7 @@ export default function Careers() {
   return (<>
     <Navbar />
     <div class="pt-[120px]">
-      <div className="flex justify-center items-center relative py-28">
+      <div className="flex justify-center items-center relative py-28 md:px-[16px]">
         <CareerForm />
         <div className="absolute">
           <img
